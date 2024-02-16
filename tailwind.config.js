@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -15,6 +10,23 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      meltow: ["MeltowSan100", "sans-serif"],
+      "meltow-bold": ["MeltowSan300", "sans-serif"],
+      segoeui: ["SegoeUI", "sans-serif"],
+      "segoeui-bold": ["SegoeUI-Bold", "sans-serif"],
+    },
+    fontSize: {
+      xs: ["12px", { lineHeight: "24px", letterSpacing: "-0.01rem" }],
+      sm: ["14px", { lineHeight: "24px", letterSpacing: "-0.01rem" }],
+      base: ["16px", { lineHeight: "26px", letterSpacing: "-0.02rem" }],
+      lg: ["18px", { lineHeight: "28px", letterSpacing: "-0.02rem" }],
+      xl: ["24px", { lineHeight: "36px", letterSpacing: "-0.02rem" }],
+      "2xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.022rem" }],
+      "3xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.022rem" }],
+      "4xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.022rem" }],
+      "5xl": ["80px", { lineHeight: "80px", letterSpacing: "-0.022rem" }],
     },
     extend: {
       colors: {
