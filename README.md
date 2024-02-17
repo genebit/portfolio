@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./public/imgs/thumbnail.png" />
-
 ## Professional Portfolio
 
 [View Live Demo](https://planttasker.web.app) • [Report a Bug](https://github.com/genebit/plantasker/issues)
+
+<img src="./public/imgs/thumbnail.png" />
 
 </div>
 
