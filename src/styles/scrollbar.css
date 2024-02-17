@@ -1,0 +1,9 @@
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-4 h-4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-[9999px] bg-clip-padding bg-primary border-4 border-solid border-transparent;
+  }
+}
