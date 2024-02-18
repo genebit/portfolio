@@ -62,7 +62,3 @@
     @apply font-segoeui bg-background text-foreground;
   }
 }
-
-.active-scroll-spy {
-  @apply text-white rounded bg-primary font-meltow-bold;
-}
