@@ -55,7 +55,7 @@
 
 @layer base {
   * {
-    @apply transition-all border-border;
+    @apply border-border;
   }
 
   body {
