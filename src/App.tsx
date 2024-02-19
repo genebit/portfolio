@@ -8,6 +8,7 @@ import { auth } from "@/lib/config"
 import SignInPage from "@/pages/Auth"
 import * as routes from "@/lib/routes"
 import LoadingPage from "@/pages/Loading"
+import { ThemeProvider } from "./components/ThemeProvider"
 
 /**
  * The main component of the application.
@@ -17,12 +18,14 @@ import LoadingPage from "@/pages/Loading"
  */
 const App = () => {
   return (
-    <Routes>
-      <Route path={routes.home} element={<PrivateRoute />}>
-        <Route index element={<HomePage />} />
-      </Route>
-      <Route path={routes.auth.signin} element={<SignInPage />} />
-    </Routes>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Routes>
+        <Route path={routes.home} element={<PrivateRoute />}>
+          <Route index element={<HomePage />} />
+        </Route>
+        <Route path={routes.auth.signin} element={<SignInPage />} />
+      </Routes>
+    </ThemeProvider>
   )
 }
 
