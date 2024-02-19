@@ -10,10 +10,10 @@ const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
   return (
     <Fragment>
       <TopNavbar />
-      <div className="relative z-20 animate-in fade-in">
+      <main className="relative z-20 animate-in fade-in">
         <ContactSidebarWrapper />
         {children}
-      </div>
+      </main>
       <div className="flex justify-center">
         <img className="absolute top-0 z-0 duration-1000 animate-in fade-in dark:hidden" src={splineCanvas} alt="" />
       </div>
