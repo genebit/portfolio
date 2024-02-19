@@ -29,6 +29,10 @@ module.exports = {
       "5xl": ["80px", { lineHeight: "80px", letterSpacing: "-0.022rem" }],
     },
     extend: {
+      transitionDuration: {
+        2000: "2000ms",
+        3000: "3000ms",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

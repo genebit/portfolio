@@ -1,12 +1,10 @@
 import { Fragment } from "react"
-
-import { GraduationCap } from "lucide-react"
 import { useNavigate } from "react-router-dom"
-
 import { auth, provider } from "@/lib/config"
-import { Button } from "@/components/ui/button"
 import { signInWithPopup, UserCredential } from "firebase/auth"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { GraduationCap } from "lucide-react"
 import * as constants from "@/lib/constants"
 
 /**
@@ -34,7 +32,7 @@ const SignInPage = () => {
   return (
     <Fragment>
       <main className="relative z-20 flex items-center justify-center h-screen animate-in fade-in">
-        <Card className="px-10 py-5 border-0 shadow-2xl shadow-rose-50">
+        <Card className="px-10 py-5 ">
           <CardHeader className="p-4">
             <CardTitle className="mx-auto text-2xl font-meltow-bold w-max">Welcome</CardTitle>
             <CardDescription>Please verify yourself to view portfolio.</CardDescription>
@@ -48,7 +46,7 @@ const SignInPage = () => {
         </Card>
       </main>
       <iframe
-        className="absolute bottom-0 z-0 w-full h-screen animate-in fade-in"
+        className="absolute bottom-0 z-0 w-full h-screen dark:hidden animate-in fade-in"
         src={constants.splineURLBottom}
       ></iframe>
     </Fragment>
