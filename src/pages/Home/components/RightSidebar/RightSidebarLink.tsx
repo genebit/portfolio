@@ -13,7 +13,11 @@ interface RightSidebarLinkProps {
  */
 const RightSidebarLink = ({ jumpTo, label }: RightSidebarLinkProps) => {
   return (
-    <Link className="py-2 no-underline transition-all ps-5 font-meltow" data-to-scrollspy-id={jumpTo} to={`#${jumpTo}`}>
+    <Link
+      className="py-2 text-sm no-underline transition-all ps-5 font-meltow sm:text-base"
+      data-to-scrollspy-id={jumpTo}
+      to={`#${jumpTo}`}
+    >
       {label}
     </Link>
   )

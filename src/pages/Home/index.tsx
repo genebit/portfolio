@@ -4,6 +4,8 @@ import HomeLayout from "@/layouts/HomeLayout"
 import RightSidebarHeading from "@/pages/Home/components/RightSidebar/RightSidebarHeading"
 import RightSidebarLink from "@/pages/Home/components/RightSidebar/RightSidebarLink"
 import RightSidebarWrapper from "@/pages/Home/components/RightSidebar/RightSidebarWrapper"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 const HomePage = () => {
   return (
@@ -11,68 +13,23 @@ const HomePage = () => {
       <article className="article-container">
         <ScrollSpy>
           <section data-section="ABOUT" id="about">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores
-              voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis
-              facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea,
-              asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum
-              perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat
-              odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque
-              dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui
-              illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum
-              cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi
-              voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa
-              repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim,
-              culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcae Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim,
-              culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in
-              enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati?
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores
-              voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis
-              facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea,
-              asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum
-              perspiciatis facilis obcae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit
-              ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque
-              dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui
-              illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum
-              cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi
-              voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcae Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa
-              repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim,
-              culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in
-              enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati?
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores
-              voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis
-              facilis obcae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea,
-              asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum
-              perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat
-              odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui illum, atque
-              dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum cumque qui
-              illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi voluptatum
-              cumque qui illum, atque dolorum perspiciatis facilis obcae Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa repudiandae modi
-              voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim, culpa
-              repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in enim,
-              culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati? Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus ea, asperiores voluptas id in
-              enim, culpa repudiandae modi voluptatum cumque qui illum, atque dolorum perspiciatis facilis obcaecati?
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugiat odit ducimus
-            </p>
+            <Card className="border-s-8 border-s-primary bg-slate-950 dark:bg-[#1C1917]">
+              <CardContent className="p-10 text-white">
+                <h1 className="text-xl font-meltow-bold">About Me 💭</h1>
+                <p>
+                  Hi! I am a Filipino-based Software Developer passionate about learning software technologies in
+                  general; immersed in the world of coding, designing, and software development. <br />
+                  <br /> Currently finishing my degree as a 3rd Year Bachelors of Science in Information Technology in
+                  Ateneo De Naga University. Seeking opportunities, equipped with 3+ years of experience on various
+                  software technology tools to create a beautiful system design.
+                </p>
+              </CardContent>
+              <CardFooter>
+                <Button variant="default" className="px-6 font-meltow-bold ms-auto">
+                  View Resume
+                </Button>
+              </CardFooter>
+            </Card>
           </section>
         </ScrollSpy>
       </article>
