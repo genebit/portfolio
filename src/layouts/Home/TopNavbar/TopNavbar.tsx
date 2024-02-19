@@ -69,7 +69,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
       </div>
       <div className="flex flex-row ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
         <RightSidebarLink jumpTo="about" label="ABOUT" />
-        <RightSidebarLink jumpTo="toolsIUse" label="TOOLS I USE" />
+        <RightSidebarLink jumpTo="tools" label="TOOLS I USE" />
         <RightSidebarLink jumpTo="projects" label="PROJECTS" />
       </div>
       {children}
