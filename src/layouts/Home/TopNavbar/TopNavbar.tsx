@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-import RightSidebarLink from "@/pages/Home/layouts/RightSidebar/RightSidebarLink"
-import ContactSidebarWrapper from "@/pages/Home/layouts/ContactSidebar/ContactSidebarWrapper"
+import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
+import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 import { useTheme } from "@/components/ThemeProvider"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 
@@ -25,7 +25,11 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
     return (
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="bg-transparent lg:hidden text-primary animate-in fade-in">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="bg-transparent xl:hidden text-primary hover:text-primary animate-in fade-in"
+          >
             <UserRoundSearch size={20} />
           </Button>
         </SheetTrigger>
@@ -63,7 +67,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <ToggleContactSidebar />
         <ToggleThemeMode />
       </div>
-      <div className="2xl:hidden fixed top-3 flex flex-row right-5 lg:left-[21rem] animate-in fade-in">
+      <div className="flex flex-row ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
         <RightSidebarLink jumpTo="about" label="ABOUT" />
         <RightSidebarLink jumpTo="toolsIUse" label="TOOLS I USE" />
         <RightSidebarLink jumpTo="projects" label="PROJECTS" />
