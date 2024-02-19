@@ -63,7 +63,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <ToggleContactSidebar />
         <ToggleThemeMode />
       </div>
-      <div className="2xl:hidden fixed top-3 right-5 lg:left-[21rem] animate-in fade-in">
+      <div className="2xl:hidden fixed top-3 flex flex-row right-5 lg:left-[21rem] animate-in fade-in">
         <RightSidebarLink jumpTo="about" label="ABOUT" />
         <RightSidebarLink jumpTo="toolsIUse" label="TOOLS I USE" />
         <RightSidebarLink jumpTo="projects" label="PROJECTS" />

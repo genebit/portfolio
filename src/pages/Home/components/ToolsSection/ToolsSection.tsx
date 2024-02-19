@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { HTMLAttributes, useRef } from "react"
 
 import Autoplay from "embla-carousel-autoplay"
 
@@ -10,9 +10,9 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
  *
  * @returns The rendered ToolsSection component.
  */
-const ToolsSection = () => {
+const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   const SkillsCarousel = () => {
-    const plugin = useRef(Autoplay({ delay: 1000, stopOnInteraction: false }))
+    const plugin = useRef(Autoplay({ delay: 1500, stopOnInteraction: false }))
 
     return (
       <Carousel plugins={[plugin.current]} className="w-full hover:cursor-grab active:cursor-grabbing">
@@ -28,7 +28,7 @@ const ToolsSection = () => {
   }
 
   return (
-    <section data-section="TOOLS I USE" id="toolsIUse">
+    <section className={className} {...props}>
       <div className="flex flex-col gap-5">
         <header>
           <h3 className="text-xl font-meltow-bold">LANGUAGES • TOOLS • FRAMEWORKS</h3>

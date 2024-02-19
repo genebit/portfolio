@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 interface RightSidebarLinkProps {
   jumpTo: string
   label: string
@@ -12,14 +10,31 @@ interface RightSidebarLinkProps {
  * @returns The rendered link component.
  */
 const RightSidebarLink = ({ jumpTo, label }: RightSidebarLinkProps) => {
+  const onScrollSpyNavigate = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault()
+
+    const target = window.document.getElementById(e.currentTarget.href.split("#")[1])
+    if (target) {
+      const headerOffset = 65
+      const elementPosition = target.getBoundingClientRect().top
+      const offsetPosition = elementPosition - headerOffset
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: "smooth",
+      })
+    }
+  }
+
   return (
-    <Link
-      className="py-2 text-sm no-underline transition-all ps-5 font-meltow sm:text-base"
-      data-to-scrollspy-id={jumpTo}
-      to={`#${jumpTo}`}
-    >
-      {label}
-    </Link>
+    <a href={`#${jumpTo}`} onClick={(e) => onScrollSpyNavigate(e)}>
+      <div
+        data-to-scrollspy-id={jumpTo}
+        className="py-2 text-sm no-underline transition-all ps-5 font-meltow sm:text-base"
+      >
+        {label}
+      </div>
+    </a>
   )
 }
 

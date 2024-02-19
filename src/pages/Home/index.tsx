@@ -1,13 +1,14 @@
 import ScrollSpy from "react-ui-scrollspy"
 
 import HomeLayout from "@/layouts/HomeLayout"
+import AboutSection from "@/pages/Home/components/AboutSection/AboutSection"
+import ToolsSection from "@/pages/Home/components/ToolsSection/ToolsSection"
 import RightSidebarLink from "@/pages/Home/layouts/RightSidebar/RightSidebarLink"
+import ProjectsSection from "@/pages/Home/components/ProjectsSection/ProjectsSection"
 import RightSidebarHeading from "@/pages/Home/layouts/RightSidebar/RightSidebarHeading"
 import RightSidebarWrapper from "@/pages/Home/layouts/RightSidebar/RightSidebarWrapper"
 
-import AboutSection from "./components/AboutSection/AboutSection"
-import ToolsSection from "./components/ToolsSection/ToolsSection"
-
+import "@/pages/Home/index.css"
 /**
  * Renders the home page.
  *
@@ -17,11 +18,10 @@ const HomePage = () => {
   return (
     <HomeLayout>
       <article className="article-container">
-        <ScrollSpy>
-          <div className="flex flex-col gap-20">
-            <AboutSection />
-            <ToolsSection />
-          </div>
+        <ScrollSpy scrollThrottle={10}>
+          <AboutSection className="mb-20" id="about" />
+          <ToolsSection className="mb-20" id="toolsIUse" />
+          <ProjectsSection className="mb-20" id="projects" />
         </ScrollSpy>
       </article>
       <RightSidebarWrapper>

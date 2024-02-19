@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { HTMLAttributes } from "react"
 
 /**
  * Renders the About section of the home page.
  * @returns JSX.Element
  */
-const AboutSection = () => {
+const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
-    <section data-section="ABOUT" id="about">
-      <Card className="border-s-8 border-s-primary bg-slate-950 dark:bg-[#1C1917]">
-        <CardContent className="p-10 text-white">
+    <section className={className} {...props}>
+      <Card className="border-s-8 border-s-primary bg-slate-950 dark:bg-stone-900">
+        <CardContent className="p-10 pb-5 text-white">
           <h3 className="text-xl font-meltow-bold">About Me 💭</h3>
           <p>
             Hi! I am a Filipino-based Software Developer passionate about learning software technologies in general;
@@ -19,7 +20,7 @@ const AboutSection = () => {
             technology tools to create a beautiful system design.
           </p>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="px-10">
           <Button variant="default" className="px-6 font-meltow-bold ms-auto">
             View Resume
           </Button>
