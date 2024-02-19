@@ -1,8 +1,8 @@
 import { Fragment, HTMLAttributes } from "react"
 
 import splineCanvas from "@/assets/svgs/SplineCanvasSnapshot.svg"
-import TopNavbar from "@/pages/Home/components/TopNavbar/TopNavbar"
-import ContactSidebarWrapper from "@/pages/Home/components/ContactSidebar/ContactSidebarWrapper"
+import TopNavbar from "@/pages/Home/layouts/TopNavbar/TopNavbar"
+import ContactSidebarWrapper from "@/pages/Home/layouts/ContactSidebar/ContactSidebarWrapper"
 
 import "@/pages/Home/index.css"
 

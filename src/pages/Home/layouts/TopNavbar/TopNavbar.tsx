@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-import RightSidebarLink from "@/pages/Home/components/RightSidebar/RightSidebarLink"
-import ContactSidebarWrapper from "@/pages/Home/components/ContactSidebar/ContactSidebarWrapper"
+import RightSidebarLink from "@/pages/Home/layouts/RightSidebar/RightSidebarLink"
+import ContactSidebarWrapper from "@/pages/Home/layouts/ContactSidebar/ContactSidebarWrapper"
 import { useTheme } from "@/components/ThemeProvider"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 

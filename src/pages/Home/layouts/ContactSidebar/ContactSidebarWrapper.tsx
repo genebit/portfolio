@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import pfp from "@/assets/imgs/PfpWFrame.png"
 import { Button } from "@/components/ui/button"
 
-import ContactSidebarLink from "@/pages/Home/components/ContactSidebar/ContactSidebarLink"
+import ContactSidebarLink from "@/pages/Home/layouts/ContactSidebar/ContactSidebarLink"
 
 /**
  * Wrapper component for the contact sidebar.
