@@ -12,7 +12,7 @@ import { HTMLAttributes } from "react"
  */
 const RightSidebarWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn(
-    "hidden 2xl:flex fixed top-16 right-[2rem] flex-col w-[20rem] max-w-[20rem] min-h-screen max-h-screen px-5 animate-in fade-in",
+    "hidden 2xl:flex sticky h-max top-16 right-[2rem] flex-col w-[20rem] max-w-[20rem] max-h-screen px-5 animate-in fade-in",
     className
   )
   return (

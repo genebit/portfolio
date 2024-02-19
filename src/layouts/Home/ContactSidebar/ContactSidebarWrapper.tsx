@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import pfp from "@/assets/imgs/PfpWFrame.png"
 import { Button } from "@/components/ui/button"
 
-import ContactSidebarLink from "@/pages/Home/components/ContactSidebar/ContactSidebarLink"
+import ContactSidebarLink from "@/layouts/Home/ContactSidebar/ContactSidebarLink"
 
 /**
  * Wrapper component for the contact sidebar.
@@ -18,7 +18,7 @@ import ContactSidebarLink from "@/pages/Home/components/ContactSidebar/ContactSi
  * @returns {JSX.Element} The rendered component.
  */
 const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
-  const compCn = cn("hidden lg:block fixed top-8 left-[2rem] p-3 px-5 w-max animate-in fade-in", className)
+  const compCn = cn("hidden xl:block sticky h-full top-8 left-[2rem] p-3 px-5 w-max animate-in fade-in", className)
 
   return (
     <aside className={compCn} {...props}>
