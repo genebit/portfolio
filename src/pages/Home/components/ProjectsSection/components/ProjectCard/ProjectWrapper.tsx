@@ -8,7 +8,7 @@ import { AlertDialog, AlertDialogContent, AlertDialogTrigger } from "@/component
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import CardIndicator from "./Card/CardIndicator"
 import CardCloseButton from "./Card/CardCloseButton"
-import { ProjectDateSpan, Tag, ProjectTitle, TagWrapper, ProjectDescription } from "."
+import { ProjectDateSpan, ProjectTag, ProjectTitle, TagWrapper, ProjectDescription } from "."
 
 const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("flex flex-col relative gap-5 md:flex-row", className)
@@ -23,10 +23,10 @@ const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLEl
               <header>
                 <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
                 <TagWrapper>
-                  <Tag>Cross Platform</Tag>
-                  <Tag>Artificial Intelligence</Tag>
-                  <Tag>UI/UX Design</Tag>
-                  <Tag>Lead Frontend Developer</Tag>
+                  <ProjectTag>Cross Platform</ProjectTag>
+                  <ProjectTag>Artificial Intelligence</ProjectTag>
+                  <ProjectTag>UI/UX Design</ProjectTag>
+                  <ProjectTag>Lead Frontend Developer</ProjectTag>
                 </TagWrapper>
               </header>
               <ProjectDescription>
@@ -82,9 +82,9 @@ const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLEl
               <header>
                 <ProjectTitle>eBayan</ProjectTitle>
                 <TagWrapper>
-                  <Tag>Mobile Development</Tag>
-                  <Tag>Project Management</Tag>
-                  <Tag>UI/UX Design</Tag>
+                  <ProjectTag>Mobile Development</ProjectTag>
+                  <ProjectTag>Project Management</ProjectTag>
+                  <ProjectTag>UI/UX Design</ProjectTag>
                 </TagWrapper>
               </header>
               <ProjectDescription>
@@ -144,9 +144,9 @@ const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLEl
               <header>
                 <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
                 <TagWrapper>
-                  <Tag>Government Project</Tag>
-                  <Tag>Full Stack .NET Web Development</Tag>
-                  <Tag>Data Processing</Tag>
+                  <ProjectTag>Government Project</ProjectTag>
+                  <ProjectTag>Full Stack .NET Web Development</ProjectTag>
+                  <ProjectTag>Data Processing</ProjectTag>
                 </TagWrapper>
               </header>
               <ProjectDescription>
