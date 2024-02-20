@@ -3,10 +3,10 @@ import { HTMLAttributes } from "react"
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 import TabTrigger from "@/pages/Home/components/ProjectsSection/components/TabTrigger"
 
-import RenderFigma from "@/pages/Home/components/ProjectsSection/TabContent/DesignFiles"
-import HighlightProjects from "@/pages/Home/components/ProjectsSection/TabContent/HighlightProjects"
+import HighlightProjects from "@/pages/Home/components/ProjectsSection/TabContent/HighlightProjects/HighlightProjects"
 
 import "@/pages/Home/components/ProjectsSection/ProjectsSection.css"
+import RenderFigma from "./TabContent/DesignFiles/DesignFiles"
 
 const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
