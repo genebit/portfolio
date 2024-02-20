@@ -51,7 +51,7 @@ const HighlightProjects = () => {
           <ProjectWrapper>
             <ProjectDateSpan>2023 - Present</ProjectDateSpan>
             <header>
-              <ProjectTitle>Ateneo De Naga University - MIS</ProjectTitle>
+              <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
               <TagWrapper>
                 <Tag>Linux</Tag>
                 <Tag>Software Security</Tag>
