@@ -189,7 +189,7 @@ const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLEl
             </AlertDialogTrigger>
           </DropdownMenuContent>
         </DropdownMenu>
-        <AlertDialogContent className="max-w-2xl">
+        <AlertDialogContent className="max-w-2xl gap-0">
           <CardCloseButton />
           <CardIndicator />
           <article className="flex flex-col gap-3">
