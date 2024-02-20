@@ -8,7 +8,7 @@ import { auth } from "@/lib/config"
 import SignInPage from "@/pages/Auth"
 import * as routes from "@/lib/routes"
 import LoadingPage from "@/pages/Loading"
-import { ThemeProvider } from "./components/ThemeProvider"
+import { ThemeProvider } from "@/components/ThemeProvider"
 
 /**
  * The main component of the application.

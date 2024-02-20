@@ -5,7 +5,7 @@ import TopNavbar from "@/layouts/Home/TopNavbar/TopNavbar"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 
 import "@/pages/Home/index.css"
-import Footer from "./Footer/Footer"
+import Footer from "@/layouts/Home/Footer/Footer"
 
 const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
   return (

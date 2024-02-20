@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { HTMLAttributes } from "react"
+import { Link } from "react-router-dom"
 
 interface ContactSidebarLinkProps extends HTMLAttributes<HTMLElement> {
   icon: JSX.Element
@@ -17,13 +18,15 @@ interface ContactSidebarLinkProps extends HTMLAttributes<HTMLElement> {
  * @param props - Additional props to pass to the link container.
  * @returns The rendered ContactSidebarLink component.
  */
-const ContactSidebarLink = ({ icon, link, label, className, ...props }: ContactSidebarLinkProps) => {
+const ContactSidebarLink = ({ icon, link = "", label, className, ...props }: ContactSidebarLinkProps) => {
   const compCn = cn("flex gap-2", className)
 
   return (
     <div className={compCn} {...props}>
       {icon}
-      <a href={link}>{label}</a>
+      <Link to={link} target="_blank">
+        {label}
+      </Link>
     </div>
   )
 }

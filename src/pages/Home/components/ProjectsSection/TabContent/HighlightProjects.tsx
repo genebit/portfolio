@@ -7,7 +7,7 @@ import {
   ProjectWrapper,
   Tag,
   TagWrapper,
-} from "../components/ProjectCard"
+} from "@/pages/Home/components/ProjectsSection/components/ProjectCard"
 
 const HighlightProjects = () => {
   return (

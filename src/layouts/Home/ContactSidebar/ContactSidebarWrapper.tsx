@@ -7,6 +7,7 @@ import pfp from "@/assets/imgs/PfpWFrame.png"
 import { Button } from "@/components/ui/button"
 
 import ContactSidebarLink from "@/layouts/Home/ContactSidebar/ContactSidebarLink"
+import { githubProfileLink, linkedInProfileLink } from "@/lib/constants"
 
 /**
  * Wrapper component for the contact sidebar.
@@ -31,11 +32,21 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
       <section className="flex flex-col my-5">
         <h3 className="text-lg font-meltow-bold">Contacts</h3>
         <div className="flex flex-col gap-2 mt-3">
-          <ContactSidebarLink icon={<Voicemail size={18} />} label="09703224661" />
+          <ContactSidebarLink icon={<Voicemail size={18} />} label="0970 322 4661" />
           <ContactSidebarLink icon={<LocateFixed size={18} />} label="Philippines" />
           <ContactSidebarLink icon={<Inbox size={18} />} label="genebitara@gmail.com" />
-          <ContactSidebarLink icon={<Github size={18} />} label="github.com/genebit" />
-          <ContactSidebarLink icon={<Linkedin size={18} />} label="in/johcel-gene-bitara-a413b9283" />
+          <ContactSidebarLink
+            icon={<Github size={18} />}
+            label="github.com/genebit"
+            className="hover:underline underline-offset-4"
+            link={githubProfileLink}
+          />
+          <ContactSidebarLink
+            icon={<Linkedin size={18} />}
+            label="in/johcel-gene-bitara-a413b9283"
+            className="hover:underline underline-offset-4"
+            link={linkedInProfileLink}
+          />
         </div>
       </section>
       {children}

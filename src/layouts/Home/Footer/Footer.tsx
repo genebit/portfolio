@@ -2,12 +2,22 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Github, Linkedin } from "lucide-react"
 import dotPattern from "@/assets/svgs/illustrations/dot-pattern.svg"
+import { Link } from "react-router-dom"
+import {
+  figmaLink,
+  firebaseLink,
+  githubProfileLink,
+  linkedInProfileLink,
+  reactLink,
+  skillsIconsLink,
+  splineLink,
+} from "@/lib/constants"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative flex justify-center p-20 bg-slate-950 mt-60 dark:bg-stone-900">
+    <footer className="relative flex justify-center p-20 bg-slate-950 md:mt-40 dark:bg-stone-900">
       <div className="flex flex-col gap-20">
         <section>
           <h3 className="text-xl text-white font-meltow-bold">Interested?</h3>
@@ -21,19 +31,33 @@ const Footer = () => {
         </section>
         <section className="flex flex-col gap-3">
           <p className="text-center text-white">@GeneBit © {currentYear}. Portfolio</p>
-          <div className="flex gap-3 mx-auto text-slate-400">
-            <Github size={18} />
-            <Linkedin size={18} />
+          <div className="flex gap-3 mx-auto text-slate-500">
+            <Link target="_blank" to={githubProfileLink}>
+              <Github size={18} />
+            </Link>
+            <Link target="_blank" to={linkedInProfileLink}>
+              <Linkedin size={18} />
+            </Link>
           </div>
         </section>
         <section className="flex flex-col gap-3">
           <p className="text-center text-white">Project Resources</p>
-          <div className="flex gap-3 mx-auto text-slate-400">
-            <small>Figma</small>
-            <small>Spline</small>
-            <small>Skill Icons</small>
-            <small>React</small>
-            <small>Firebase</small>
+          <div className="flex gap-3 mx-auto text-slate-500">
+            <Link target="_blank" className="hover:underline" to={figmaLink}>
+              Figma
+            </Link>
+            <Link target="_blank" className="hover:underline" to={splineLink}>
+              Spline
+            </Link>
+            <Link target="_blank" className="hover:underline" to={skillsIconsLink}>
+              Skill Icons
+            </Link>
+            <Link target="_blank" className="hover:underline" to={reactLink}>
+              React
+            </Link>
+            <Link target="_blank" className="hover:underline" to={firebaseLink}>
+              Firebase
+            </Link>
           </div>
         </section>
       </div>
