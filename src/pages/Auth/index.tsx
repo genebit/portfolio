@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import { useNavigate } from "react-router-dom"
 import { auth, provider } from "@/lib/config"
 import { signInWithPopup, UserCredential } from "firebase/auth"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { GraduationCap } from "lucide-react"
 import * as constants from "@/lib/constants"
@@ -34,13 +34,14 @@ const SignInPage = () => {
       <main className="relative z-20 flex items-center justify-center h-screen animate-in fade-in">
         <Card className="px-10 py-5 ">
           <CardHeader className="p-4">
-            <CardTitle className="mx-auto text-2xl font-meltow-bold w-max">Welcome</CardTitle>
+            <h1 className="text-xl text-center font-meltow-bold">WELCOME!</h1>
+            <hr />
             <CardDescription>Please verify yourself to view portfolio.</CardDescription>
           </CardHeader>
           <CardContent className="mx-auto w-max">
             <Button onClick={signInWithGoogle} className="gap-2">
               <GraduationCap size={20} />
-              Sign in with Google
+              Sign in with AdNU Gbox
             </Button>
           </CardContent>
         </Card>

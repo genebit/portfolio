@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/alert-dialog"
 import { HTMLAttributes } from "react"
 import { Link } from "react-router-dom"
-import CardCloseButton from "@/pages/Home/components/ProjectsSection/components/ProjectCard/Card/CardCloseButton"
-import CardIndicator from "@/pages/Home/components/ProjectsSection/components/ProjectCard/Card/CardIndicator"
+import CardCloseButton from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardCloseButton"
+import CardIndicator from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardIndicator"
 import * as constants from "@/lib/constants"
 
 /**
@@ -45,7 +45,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
         <AlertDialogFooter>
           <Button variant="default" className="font-meltow" asChild>
             <Link to={constants.resumeLink} target="_blank">
-              View on a New Tab
+              View Full Screen
             </Link>
           </Button>
         </AlertDialogFooter>

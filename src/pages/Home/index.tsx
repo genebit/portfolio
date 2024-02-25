@@ -1,14 +1,15 @@
 import ScrollSpy from "react-ui-scrollspy"
 
 import HomeLayout from "@/layouts/Home/HomeLayout"
-import AboutSection from "@/pages/Home/components/AboutSection/AboutSection"
-import ToolsSection from "@/pages/Home/components/ToolsSection/ToolsSection"
 import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
-import ProjectsSection from "@/pages/Home/components/ProjectsSection/ProjectsSection"
 import RightSidebarHeading from "@/layouts/Home/RightSidebar/RightSidebarHeading"
 import RightSidebarWrapper from "@/layouts/Home/RightSidebar/RightSidebarWrapper"
 
 import "@/pages/Home/index.css"
+import AboutSection from "./AboutSection/AboutSection"
+import ProjectsSection from "./ProjectsSection/ProjectsSection"
+import ToolsSection from "./ToolsSection/ToolsSection"
+import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
 /**
  * Renders the home page.
  *
@@ -20,15 +21,17 @@ const HomePage = () => {
       <article className="article-container">
         <ScrollSpy scrollThrottle={10}>
           <AboutSection className="mb-20" id="about" />
+          <VideoResumeSection className="mb-20" id="video-resume" />
           <ToolsSection className="mb-20" id="tools" />
           <ProjectsSection className="mb-20" id="projects" />
         </ScrollSpy>
       </article>
       <RightSidebarWrapper>
         <RightSidebarHeading>ON THIS PAGE</RightSidebarHeading>
-        <RightSidebarLink jumpTo="about" label="ABOUT" />
-        <RightSidebarLink jumpTo="tools" label="TOOLS I USE" />
-        <RightSidebarLink jumpTo="projects" label="PROJECTS" />
+        <RightSidebarLink jumpTo="about" label="About" />
+        <RightSidebarLink jumpTo="video-resume" label="Video Resume" />
+        <RightSidebarLink jumpTo="tools" label="Tools I Use" />
+        <RightSidebarLink jumpTo="projects" label="Projects" />
       </RightSidebarWrapper>
     </HomeLayout>
   )

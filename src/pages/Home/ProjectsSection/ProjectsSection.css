@@ -1,0 +1,6 @@
+button[role="tab"][data-state="active"] {
+  @apply transition-all text-primary font-meltow-bold;
+}
+button[role="tab"][data-state="active"] .tab-indicator {
+  @apply block duration-500 animate-in fade-in;
+}
