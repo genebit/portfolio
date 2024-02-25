@@ -20,6 +20,7 @@ const HomePage = () => {
       <article className="article-container">
         <ScrollSpy scrollThrottle={10}>
           <AboutSection className="mb-20" id="about" />
+          <AboutSection className="mb-20" id="video-resume" />
           <ToolsSection className="mb-20" id="tools" />
           <ProjectsSection className="mb-20" id="projects" />
         </ScrollSpy>
@@ -27,6 +28,7 @@ const HomePage = () => {
       <RightSidebarWrapper>
         <RightSidebarHeading>ON THIS PAGE</RightSidebarHeading>
         <RightSidebarLink jumpTo="about" label="ABOUT" />
+        <RightSidebarLink jumpTo="video-resume" label="VIDEO RESUME" />
         <RightSidebarLink jumpTo="tools" label="TOOLS I USE" />
         <RightSidebarLink jumpTo="projects" label="PROJECTS" />
       </RightSidebarWrapper>
