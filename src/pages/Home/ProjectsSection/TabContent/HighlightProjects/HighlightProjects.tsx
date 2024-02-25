@@ -2,8 +2,6 @@ import { HTMLAttributes } from "react"
 
 import { Book } from "lucide-react"
 
-import * as constants from "@/lib/constants"
-
 import ProjectFooterButtons from "./components/ProjectFooterButtons"
 import {
   ProjectDateSpan,
@@ -13,6 +11,7 @@ import {
   ProjectWrapper,
   TagWrapper,
 } from "../../components/ProjectCard"
+import { DAAMIA1, STUBUAI1, STUBUAI2, STUBUAI3, eBayan1, eBayan2, eBayan3 } from "@/assets/imgs/project-thumbnails"
 
 const HighlightProjects = () => {
   const ProjectTimelineCard = ({ children }: HTMLAttributes<HTMLElement>) => {
@@ -29,10 +28,7 @@ const HighlightProjects = () => {
   return (
     <ol className="relative border-primary border-s-2">
       <ProjectTimelineCard>
-        <ProjectWrapper
-          id="highlightProject1"
-          thumbnails={[constants.projectThumbnail1_1, constants.projectThumbnail1_2, constants.projectThumbnail1_3]}
-        >
+        <ProjectWrapper id="highlightProject1" thumbnails={[STUBUAI1, STUBUAI2, STUBUAI3]}>
           <ProjectDateSpan>2023 - Present</ProjectDateSpan>
           <header>
             <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
@@ -51,10 +47,7 @@ const HighlightProjects = () => {
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper
-          id="highlightProject2"
-          thumbnails={[constants.projectThumbnail2_1, constants.projectThumbnail2_2, constants.projectThumbnail2_3]}
-        >
+        <ProjectWrapper id="highlightProject2" thumbnails={[eBayan1, eBayan2, eBayan3]}>
           <ProjectDateSpan>2023 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>eBayan</ProjectTitle>
@@ -76,7 +69,7 @@ const HighlightProjects = () => {
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject3" thumbnails={[constants.projectThumbnail3_1]}>
+        <ProjectWrapper id="highlightProject3" thumbnails={[DAAMIA1]}>
           <ProjectDateSpan>2022 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
