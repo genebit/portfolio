@@ -9,7 +9,7 @@ import "@/pages/Home/index.css"
 import AboutSection from "./AboutSection/AboutSection"
 import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import ToolsSection from "./ToolsSection/ToolsSection"
-import VideoResumeSection from "./VideoResume/VideoResumeSection"
+import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
 /**
  * Renders the home page.
  *
@@ -28,10 +28,10 @@ const HomePage = () => {
       </article>
       <RightSidebarWrapper>
         <RightSidebarHeading>ON THIS PAGE</RightSidebarHeading>
-        <RightSidebarLink jumpTo="about" label="ABOUT" />
-        <RightSidebarLink jumpTo="video-resume" label="VIDEO RESUME" />
-        <RightSidebarLink jumpTo="tools" label="TOOLS I USE" />
-        <RightSidebarLink jumpTo="projects" label="PROJECTS" />
+        <RightSidebarLink jumpTo="about" label="About" />
+        <RightSidebarLink jumpTo="video-resume" label="Video Resume" />
+        <RightSidebarLink jumpTo="tools" label="Tools I Use" />
+        <RightSidebarLink jumpTo="projects" label="Projects" />
       </RightSidebarWrapper>
     </HomeLayout>
   )

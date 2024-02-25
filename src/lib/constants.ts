@@ -9,6 +9,17 @@ const githubProfileLink: string = "https://github.com/genebit"
 const linkedInProfileLink: string = "www.linkedin.com/in/johcel-gene-bitara-a413b9283"
 const resumeLink: string = "/docs/Resume.pdf"
 
+const videoResumeYTLink: string = "https://www.youtube.com/embed/tgbNymZ7vqY"
+
+// Project Thumbnails
+const projectThumbnail1_1: string = "/src/assets/imgs/project-thumbnails/STUBU.AI-t-01.png"
+const projectThumbnail1_2: string = "/src/assets/imgs/project-thumbnails/STUBU.AI-t-02.png"
+const projectThumbnail1_3: string = "/src/assets/imgs/project-thumbnails/STUBU.AI-t-03.png"
+const projectThumbnail2_1: string = "/src/assets/imgs/project-thumbnails/eBayan-t-01.png"
+const projectThumbnail2_2: string = "/src/assets/imgs/project-thumbnails/eBayan-t-02.png"
+const projectThumbnail2_3: string = "/src/assets/imgs/project-thumbnails/eBayan-t-03.png"
+const projectThumbnail3_1: string = "/src/assets/imgs/project-thumbnails/DAAMIA-t-01.png"
+
 // Footer links
 const figmaLink: string = "https://www.figma.com/"
 const splineLink: string = "https://spline.design/"
@@ -23,6 +34,14 @@ export {
   githubProfileLink,
   linkedInProfileLink,
   resumeLink,
+  videoResumeYTLink,
+  projectThumbnail1_1,
+  projectThumbnail1_2,
+  projectThumbnail1_3,
+  projectThumbnail2_1,
+  projectThumbnail2_2,
+  projectThumbnail2_3,
+  projectThumbnail3_1,
   figmaLink,
   splineLink,
   skillsIconsLink,

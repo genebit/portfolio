@@ -10,7 +10,11 @@ import CardIndicator from "./Card/CardIndicator"
 import CardCloseButton from "./Card/CardCloseButton"
 import { ProjectDateSpan, ProjectTag, ProjectTitle, TagWrapper, ProjectDescription } from "."
 
-const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
+interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
+  thumbnail: string
+}
+
+const ProjectWrapper = ({ thumbnail, children, className, ...props }: ProjectWrapperProps) => {
   const compCn = cn("flex flex-col relative gap-5 md:flex-row", className)
 
   const ToggleProjectDetails = () => {
@@ -202,7 +206,7 @@ const ProjectWrapper = ({ children, className, ...props }: HTMLAttributes<HTMLEl
 
   return (
     <div className={compCn} {...props}>
-      <img src="https://dummyimage.com/1920x1080" alt="" className="h-full transition-all md:max-w-[20rem]" />
+      <img src={thumbnail} alt="" className="h-full transition-all md:max-w-[20rem] rounded-lg" />
       <div className="flex flex-col gap-3">{children}</div>
       <ToggleProjectDetails />
     </div>

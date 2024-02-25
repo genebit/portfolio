@@ -23,14 +23,10 @@ const ProjectFooterButtons = ({
   return (
     <div className={compCn} {...props}>
       <Button variant="outline" className="text-primary dark:text-white font-meltow-bold" disabled={disableSrcCodeBtn}>
-        <Link to={srcCodeUrl} target="_blank">
-          View Source Code
-        </Link>
+        <Link to={srcCodeUrl}>View Source Code</Link>
       </Button>
       <Button variant="default" className="font-meltow-bold" disabled={disableDemoBtn}>
-        <Link to={demoUrl} target="_blank">
-          View Demo
-        </Link>
+        <Link to={demoUrl}>View Demo</Link>
       </Button>
     </div>
   )

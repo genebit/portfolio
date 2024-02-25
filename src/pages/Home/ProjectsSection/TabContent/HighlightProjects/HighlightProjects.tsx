@@ -1,15 +1,18 @@
-import { Book } from "lucide-react"
 import { HTMLAttributes } from "react"
-import { Button } from "@/components/ui/button"
+
+import { Book } from "lucide-react"
+
+import * as constants from "@/lib/constants"
+
+import ProjectFooterButtons from "./components/ProjectFooterButtons"
 import {
-  ProjectWrapper,
   ProjectDateSpan,
-  ProjectTitle,
-  TagWrapper,
   ProjectDescription,
   ProjectTag,
+  ProjectTitle,
+  ProjectWrapper,
+  TagWrapper,
 } from "../../components/ProjectCard"
-import ProjectFooterButtons from "./components/ProjectFooterButtons"
 
 const HighlightProjects = () => {
   const ProjectTimelineCard = ({ children }: HTMLAttributes<HTMLElement>) => {
@@ -26,7 +29,7 @@ const HighlightProjects = () => {
   return (
     <ol className="relative border-primary border-s-2">
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject1">
+        <ProjectWrapper id="highlightProject1" thumbnail={constants.projectThumbnail1_1}>
           <ProjectDateSpan>2023 - Present</ProjectDateSpan>
           <header>
             <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
@@ -41,11 +44,11 @@ const HighlightProjects = () => {
             An AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning
             education into a personalized and interactive experience. Reinventing the traditional education system.
           </ProjectDescription>
-          <ProjectFooterButtons disableSrcCodeBtn={false} srcCodeUrl={""} demoUrl={""} disableDemoBtn={false} />
+          <ProjectFooterButtons srcCodeUrl={"#"} demoUrl={"#"} disableSrcCodeBtn={true} disableDemoBtn={true} />
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject2">
+        <ProjectWrapper id="highlightProject2" thumbnail={constants.projectThumbnail2_1}>
           <ProjectDateSpan>2023 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>eBayan</ProjectTitle>
@@ -58,18 +61,16 @@ const HighlightProjects = () => {
           <ProjectDescription>
             An intuitive barangay-to-community mobile application for announcement creation management system.
           </ProjectDescription>
-          <div className="flex gap-2 ms-auto">
-            <Button variant="outline" className="text-primary dark:text-white font-meltow-bold">
-              View Source Code
-            </Button>
-            <Button variant="default" className="font-meltow-bold">
-              View Demo
-            </Button>
-          </div>
+          <ProjectFooterButtons
+            srcCodeUrl={"https://github.com/NexusphereCo/ebayan"}
+            demoUrl={"https://drive.google.com/file/d/16k1WxBIgYTN-EqmP1p498GIA05nDlMTa/view?usp=drive_link"}
+            disableSrcCodeBtn={false}
+            disableDemoBtn={false}
+          />
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject3">
+        <ProjectWrapper id="highlightProject3" thumbnail={constants.projectThumbnail3_1}>
           <ProjectDateSpan>2022 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
@@ -82,14 +83,7 @@ const HighlightProjects = () => {
           <ProjectDescription>
             A weather informative website for data analytics to Department of Agriculture stakeholders.
           </ProjectDescription>
-          <div className="flex gap-2 ms-auto">
-            <Button variant="outline" className="text-primary dark:text-white font-meltow-bold">
-              View Source Code
-            </Button>
-            <Button variant="default" className="font-meltow-bold">
-              View Demo
-            </Button>
-          </div>
+          <ProjectFooterButtons srcCodeUrl={"#"} demoUrl={"#"} disableSrcCodeBtn={true} disableDemoBtn={true} />
         </ProjectWrapper>
       </ProjectTimelineCard>
     </ol>
