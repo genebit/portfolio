@@ -11,7 +11,7 @@ const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
   return (
     <Fragment>
       <TopNavbar />
-      <main className="max-w-[100rem] mx-auto relative z-20 flex flex-row h-full justify-evenly animate-in fade-in">
+      <main className="max-w-[100rem] mx-auto relative z-20 flex flex-row h-full justify-evenly animate-in fade-in duration-1000">
         <ContactSidebarWrapper />
         {children}
       </main>

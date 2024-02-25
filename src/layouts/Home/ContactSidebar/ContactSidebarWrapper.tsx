@@ -8,6 +8,7 @@ import pfp from "@/assets/imgs/PfpWFrame.png"
 import ContactSidebarLink from "@/layouts/Home/ContactSidebar/ContactSidebarLink"
 import { githubProfileLink, linkedInProfileLink } from "@/lib/constants"
 import ViewResumeButton from "../ViewResumeButton/ViewResumeButton"
+import { TypeAnimation } from "react-type-animation"
 
 /**
  * Wrapper component for the contact sidebar.
@@ -23,9 +24,15 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
 
   return (
     <aside className={compCn} {...props}>
-      <img src={pfp} alt="Profile Picture" width={250} />
+      <img src={pfp} alt="Profile Picture" width={250} className="mx-auto" />
       <section className="flex flex-col my-5">
-        <h2 className="text-xl font-meltow-bold">Johcel Gene T. Bitara</h2>
+        <TypeAnimation
+          sequence={[1000, "Johcel Gene T. Bitara", 1000]}
+          wrapper="h2"
+          speed={50}
+          repeat={Infinity}
+          className="inline-block text-xl font-meltow-bold min-w-[19ch]"
+        />
         <p>Software Engineer</p>
       </section>
       <ViewResumeButton />
