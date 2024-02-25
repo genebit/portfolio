@@ -9,6 +9,7 @@ import {
   ProjectDescription,
   ProjectTag,
 } from "../../components/ProjectCard"
+import ProjectFooterButtons from "./components/ProjectFooterButtons"
 
 const HighlightProjects = () => {
   const ProjectTimelineCard = ({ children }: HTMLAttributes<HTMLElement>) => {
@@ -40,14 +41,7 @@ const HighlightProjects = () => {
             An AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning
             education into a personalized and interactive experience. Reinventing the traditional education system.
           </ProjectDescription>
-          <div className="flex gap-2 ms-auto">
-            <Button variant="outline" className="text-primary dark:text-white font-meltow-bold">
-              View Source Code
-            </Button>
-            <Button variant="default" className="font-meltow-bold">
-              View Demo
-            </Button>
-          </div>
+          <ProjectFooterButtons disableSrcCodeBtn={false} srcCodeUrl={""} demoUrl={""} disableDemoBtn={false} />
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>

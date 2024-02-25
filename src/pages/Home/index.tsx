@@ -9,6 +9,7 @@ import "@/pages/Home/index.css"
 import AboutSection from "./AboutSection/AboutSection"
 import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import ToolsSection from "./ToolsSection/ToolsSection"
+import VideoResumeSection from "./VideoResume/VideoResumeSection"
 /**
  * Renders the home page.
  *
@@ -20,7 +21,7 @@ const HomePage = () => {
       <article className="article-container">
         <ScrollSpy scrollThrottle={10}>
           <AboutSection className="mb-20" id="about" />
-          <AboutSection className="mb-20" id="video-resume" />
+          <VideoResumeSection className="mb-20" id="video-resume" />
           <ToolsSection className="mb-20" id="tools" />
           <ProjectsSection className="mb-20" id="projects" />
         </ScrollSpy>
