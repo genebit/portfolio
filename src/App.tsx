@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 
 import { Navigate } from "react-router-dom"
 import { Outlet, Route, Routes } from "react-router-dom"
@@ -17,15 +17,26 @@ import { ThemeProvider } from "@/components/ThemeProvider"
  * @returns The rendered component.
  */
 const App = () => {
+  if (import.meta.env.DEV) document.title = "Portfolio • Development"
+
+  const DevTag = () => {
+    return import.meta.env.DEV ? (
+      <span className="fixed px-5 text-white rounded-full bottom-5 left-5 font-meltow bg-primary">DEVELOPMENT</span>
+    ) : null
+  }
+
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Routes>
-        <Route path={routes.home} element={<PrivateRoute />}>
-          <Route index element={<HomePage />} />
-        </Route>
-        <Route path={routes.auth.signin} element={<SignInPage />} />
-      </Routes>
-    </ThemeProvider>
+    <Fragment>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <Routes>
+          <Route path={routes.home} element={<PrivateRoute />}>
+            <Route index element={<HomePage />} />
+          </Route>
+          <Route path={routes.auth.signin} element={<SignInPage />} />
+        </Routes>
+      </ThemeProvider>
+      <DevTag />
+    </Fragment>
   )
 }
 
