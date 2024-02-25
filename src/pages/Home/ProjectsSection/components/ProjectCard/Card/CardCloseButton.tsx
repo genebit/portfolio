@@ -1,6 +1,7 @@
-import { AlertDialogCancel } from "@/components/ui/alert-dialog"
-import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { AlertDialogCancel } from "@/components/ui/alert-dialog"
 
 const CardCloseButton = () => {
   return (

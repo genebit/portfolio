@@ -29,7 +29,10 @@ const HighlightProjects = () => {
   return (
     <ol className="relative border-primary border-s-2">
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject1" thumbnail={constants.projectThumbnail1_1}>
+        <ProjectWrapper
+          id="highlightProject1"
+          thumbnails={[constants.projectThumbnail1_1, constants.projectThumbnail1_2, constants.projectThumbnail1_3]}
+        >
           <ProjectDateSpan>2023 - Present</ProjectDateSpan>
           <header>
             <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
@@ -48,7 +51,10 @@ const HighlightProjects = () => {
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject2" thumbnail={constants.projectThumbnail2_1}>
+        <ProjectWrapper
+          id="highlightProject2"
+          thumbnails={[constants.projectThumbnail2_1, constants.projectThumbnail2_2, constants.projectThumbnail2_3]}
+        >
           <ProjectDateSpan>2023 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>eBayan</ProjectTitle>
@@ -70,7 +76,7 @@ const HighlightProjects = () => {
         </ProjectWrapper>
       </ProjectTimelineCard>
       <ProjectTimelineCard>
-        <ProjectWrapper id="highlightProject3" thumbnail={constants.projectThumbnail3_1}>
+        <ProjectWrapper id="highlightProject3" thumbnails={[constants.projectThumbnail3_1]}>
           <ProjectDateSpan>2022 - 2023</ProjectDateSpan>
           <header>
             <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>

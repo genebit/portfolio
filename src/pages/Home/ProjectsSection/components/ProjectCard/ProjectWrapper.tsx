@@ -1,20 +1,22 @@
 import { Fragment, HTMLAttributes } from "react"
 
-import { MoreVertical } from "lucide-react"
+import { MoreVertical, ScanSearch } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { AlertDialog, AlertDialogContent, AlertDialogTrigger } from "@/components/ui/alert-dialog"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+
 import CardIndicator from "./Card/CardIndicator"
 import CardCloseButton from "./Card/CardCloseButton"
-import { ProjectDateSpan, ProjectTag, ProjectTitle, TagWrapper, ProjectDescription } from "."
+import { ProjectDateSpan, ProjectDescription, ProjectTag, ProjectTitle, TagWrapper } from "."
 
 interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
-  thumbnail: string
+  thumbnails: string[]
 }
 
-const ProjectWrapper = ({ thumbnail, children, className, ...props }: ProjectWrapperProps) => {
+const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWrapperProps) => {
   const compCn = cn("flex flex-col relative gap-5 md:flex-row", className)
 
   const ToggleProjectDetails = () => {
@@ -206,7 +208,42 @@ const ProjectWrapper = ({ thumbnail, children, className, ...props }: ProjectWra
 
   return (
     <div className={compCn} {...props}>
-      <img src={thumbnail} alt="" className="h-full transition-all md:max-w-[20rem] rounded-lg" />
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant="ghost" className="hover:bg-background" asChild>
+            <div className="flex items-center justify-center h-max">
+              <img
+                src={thumbnails[0]}
+                alt="thumbnail"
+                className="h-max transition-all md:max-w-[20rem] rounded-lg peer hover:cursor-pointer"
+              />
+              <span className="absolute hidden peer-hover:block animate-in fade-in dark:mix-blend-difference dark:grayscale">
+                <ScanSearch />
+              </span>
+            </div>
+          </Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent className="max-w-4xl h-max">
+          <CardCloseButton />
+          <CardIndicator />
+          <Carousel orientation="horizontal" className="max-w-4xl p-0 mx-auto">
+            <CarouselContent>
+              {thumbnails.map((thumbnail, index) => (
+                <CarouselItem key={index}>
+                  <img
+                    src={thumbnail}
+                    alt="thumbnail"
+                    className="w-full transition-all rounded-lg h-max peer hover:cursor-pointer"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious variant="ghost" className="mix-blend-difference grayscale" />
+            <CarouselNext variant="ghost" className="mix-blend-difference grayscale" />
+          </Carousel>
+        </AlertDialogContent>
+      </AlertDialog>
+
       <div className="flex flex-col gap-3">{children}</div>
       <ToggleProjectDetails />
     </div>

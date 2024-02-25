@@ -45,7 +45,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
         <AlertDialogFooter>
           <Button variant="default" className="font-meltow" asChild>
             <Link to={constants.resumeLink} target="_blank">
-              View on a New Tab
+              View Full Screen
             </Link>
           </Button>
         </AlertDialogFooter>
