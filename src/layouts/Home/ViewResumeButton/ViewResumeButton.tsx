@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/alert-dialog"
 import { HTMLAttributes } from "react"
 import { Link } from "react-router-dom"
-import CardCloseButton from "@/pages/Home/components/ProjectsSection/components/ProjectCard/Card/CardCloseButton"
-import CardIndicator from "@/pages/Home/components/ProjectsSection/components/ProjectCard/Card/CardIndicator"
+import CardCloseButton from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardCloseButton"
+import CardIndicator from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardIndicator"
 import * as constants from "@/lib/constants"
 
 /**

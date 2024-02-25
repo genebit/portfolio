@@ -1,14 +1,14 @@
 import ScrollSpy from "react-ui-scrollspy"
 
 import HomeLayout from "@/layouts/Home/HomeLayout"
-import AboutSection from "@/pages/Home/components/AboutSection/AboutSection"
-import ToolsSection from "@/pages/Home/components/ToolsSection/ToolsSection"
 import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
-import ProjectsSection from "@/pages/Home/components/ProjectsSection/ProjectsSection"
 import RightSidebarHeading from "@/layouts/Home/RightSidebar/RightSidebarHeading"
 import RightSidebarWrapper from "@/layouts/Home/RightSidebar/RightSidebarWrapper"
 
 import "@/pages/Home/index.css"
+import AboutSection from "./AboutSection/AboutSection"
+import ProjectsSection from "./ProjectsSection/ProjectsSection"
+import ToolsSection from "./ToolsSection/ToolsSection"
 /**
  * Renders the home page.
  *
