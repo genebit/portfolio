@@ -7,6 +7,7 @@ const figmaEmbedLink: string =
 // Contacts
 const githubProfileLink: string = "https://github.com/genebit"
 const linkedInProfileLink: string = "www.linkedin.com/in/johcel-gene-bitara-a413b9283"
+const resumeLink: string = "/docs/Resume.pdf"
 
 // Footer links
 const figmaLink: string = "https://www.figma.com/"
@@ -21,6 +22,7 @@ export {
   figmaEmbedLink,
   githubProfileLink,
   linkedInProfileLink,
+  resumeLink,
   figmaLink,
   splineLink,
   skillsIconsLink,

@@ -4,10 +4,10 @@ import { Github, Inbox, Linkedin, LocateFixed, Voicemail } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import pfp from "@/assets/imgs/PfpWFrame.png"
-import { Button } from "@/components/ui/button"
 
 import ContactSidebarLink from "@/layouts/Home/ContactSidebar/ContactSidebarLink"
 import { githubProfileLink, linkedInProfileLink } from "@/lib/constants"
+import ViewResumeButton from "../ViewResumeButton/ViewResumeButton"
 
 /**
  * Wrapper component for the contact sidebar.
@@ -26,9 +26,9 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
       <img src={pfp} alt="Profile Picture" width={250} />
       <section className="flex flex-col my-5">
         <h2 className="text-xl font-meltow-bold">Johcel Gene T. Bitara</h2>
-        <p>Software Developer</p>
+        <p>Software Engineer</p>
       </section>
-      <Button className="w-full font-meltow-bold">View Resume</Button>
+      <ViewResumeButton />
       <section className="flex flex-col my-5">
         <h3 className="text-lg font-meltow-bold">Contacts</h3>
         <div className="flex flex-col gap-2 mt-3">

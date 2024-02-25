@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import ViewResumeButton from "@/layouts/Home/ViewResumeButton/ViewResumeButton"
 import { HTMLAttributes } from "react"
 
 /**
@@ -13,7 +13,7 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
         <CardContent className="p-10 pb-5 text-white">
           <h3 className="text-xl font-meltow-bold">About Me 💭</h3>
           <p>
-            Hi! I am a Filipino-based Software Developer passionate about learning software technologies in general;
+            Hi! I am a Filipino-based Software Engineer passionate about learning software technologies in general;
             immersed in the world of coding, designing, and software development. <br />
             <br /> Currently finishing my degree as a 3rd Year Bachelors of Science in Information Technology in Ateneo
             De Naga University. Seeking opportunities, equipped with 3+ years of experience on various software
@@ -21,9 +21,7 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
           </p>
         </CardContent>
         <CardFooter className="px-10">
-          <Button variant="default" className="px-6 font-meltow-bold ms-auto">
-            View Resume
-          </Button>
+          <ViewResumeButton className="px-6 w-max ms-auto" />
         </CardFooter>
       </Card>
     </section>
