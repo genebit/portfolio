@@ -21,14 +21,15 @@ const RenderFigma = () => {
   return (
     <section className="mt-5 border rounded-md">
       {isLoading && <LoadingPage className="h-[20rem]" />}
-
-      <iframe
-        id="iframeElement"
-        className={`w-full ${isLoading ? "hidden" : ""}`}
-        height={700}
-        src={figmaEmbedLink}
-        allowFullScreen
-      ></iframe>
+      <div className="overflow-hidden rounded-lg">
+        <iframe
+          id="iframeElement"
+          className={`w-full ${isLoading ? "hidden" : ""}`}
+          height={700}
+          src={figmaEmbedLink}
+          allowFullScreen
+        ></iframe>
+      </div>
     </section>
   )
 }
