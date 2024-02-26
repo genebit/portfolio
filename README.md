@@ -2,7 +2,7 @@
 
 ## Professional Portfolio
 
-[View Live Demo](https://planttasker.web.app) • [Report a Bug](https://github.com/genebit/plantasker/issues)
+[View Live Demo](https://jbitaraportfolio.web.app) • [Report a Bug](https://github.com/genebit/portfolio/issues)
 
 <img src="./public/imgs/thumbnail.png" />
 
