@@ -23,7 +23,11 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
         <TabsContent value="highlighted" className="duration-1000 animate-in fade-in">
           <HighlightProjects />
         </TabsContent>
-        <TabsContent value="misc" className="duration-1000 animate-in fade-in"></TabsContent>
+        <TabsContent value="misc" className="duration-1000 animate-in fade-in">
+          <div>
+            <p className="my-5 font-meltow text-slate-500">Under development.</p>
+          </div>
+        </TabsContent>
         <TabsContent value="designFile" className="duration-1000 animate-in fade-in">
           <RenderFigma />
         </TabsContent>

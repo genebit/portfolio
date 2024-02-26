@@ -6,10 +6,12 @@ const figmaEmbedLink: string =
 
 // Contacts
 const githubProfileLink: string = "https://github.com/genebit"
-const linkedInProfileLink: string = "www.linkedin.com/in/johcel-gene-bitara-a413b9283"
+const linkedInProfileLink: string = "https://linkedin.com/in/johcel-gene-bitara-a413b9283"
 const resumeLink: string = "/docs/Resume.pdf"
 
-const videoResumeYTLink: string = "https://www.youtube.com/embed/tgbNymZ7vqY"
+const videoResumeYTLink: string = "https://www.youtube.com/embed/Ka6TW4kkGvU?si=asAw1SIvS-yaNQQi"
+
+const productionLink: string = "https://jbitaraportfolio.web.app"
 
 // Footer links
 const figmaLink: string = "https://www.figma.com/"
@@ -26,6 +28,7 @@ export {
   linkedInProfileLink,
   resumeLink,
   videoResumeYTLink,
+  productionLink,
   figmaLink,
   splineLink,
   skillsIconsLink,

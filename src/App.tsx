@@ -8,7 +8,10 @@ import { auth } from "@/lib/config"
 import SignInPage from "@/pages/Auth"
 import * as routes from "@/lib/routes"
 import LoadingPage from "@/pages/Loading"
+import * as constants from "@/lib/constants"
 import { ThemeProvider } from "@/components/ThemeProvider"
+
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./components/ui/tooltip"
 
 /**
  * The main component of the application.
@@ -21,7 +24,20 @@ const App = () => {
 
   const DevTag = () => {
     return import.meta.env.DEV ? (
-      <span className="fixed px-5 text-white rounded-full bottom-5 left-5 font-meltow bg-primary">DEVELOPMENT</span>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <span className="fixed px-5 text-white rounded-full bottom-5 left-5 font-meltow bg-primary">
+              DEVELOPMENT
+            </span>
+          </TooltipTrigger>
+          <TooltipContent>
+            <a href={constants.productionLink} target="_blank">
+              View Live Production 🟢
+            </a>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     ) : null
   }
 

@@ -9,8 +9,16 @@ const VideoResumeSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
       <header>
         <h3 className="text-xl font-meltow-bold">VIDEO RESUME 🎥</h3>
         <hr />
-        <div className="mt-5">
-          <iframe width="100%" height="500" src={constants.videoResumeYTLink}></iframe>
+        <div className="mt-5 overflow-hidden rounded-lg">
+          <iframe
+            width="100%"
+            height="500"
+            className="h-[350px] md:h-[500px]"
+            src={constants.videoResumeYTLink}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </header>
     </section>

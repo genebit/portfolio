@@ -5,11 +5,13 @@ import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
 import RightSidebarHeading from "@/layouts/Home/RightSidebar/RightSidebarHeading"
 import RightSidebarWrapper from "@/layouts/Home/RightSidebar/RightSidebarWrapper"
 
-import "@/pages/Home/index.css"
 import AboutSection from "./AboutSection/AboutSection"
-import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import ToolsSection from "./ToolsSection/ToolsSection"
+import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
+
+import "@/pages/Home/index.css"
+
 /**
  * Renders the home page.
  *

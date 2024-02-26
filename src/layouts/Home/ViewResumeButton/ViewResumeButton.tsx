@@ -37,7 +37,10 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
             <object data={constants.resumeLink} type="application/pdf" width="100%" height="600px">
               <p>
                 It appears you don't have a PDF plugin for this browser.
-                <a href={constants.resumeLink}>click here to download the PDF file.</a>
+                <br />
+                <a href={constants.resumeLink} className="underline">
+                  Download the PDF file.
+                </a>
               </p>
             </object>
           </AlertDialogDescription>

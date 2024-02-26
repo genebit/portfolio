@@ -1,6 +1,6 @@
 import { Fragment, HTMLAttributes } from "react"
 
-import { MoreVertical, ScanSearch } from "lucide-react"
+import { ArrowBigRightDash, MoreHorizontal, ScanSearch } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import CardIndicator from "./Card/CardIndicator"
 import CardCloseButton from "./Card/CardCloseButton"
 import { ProjectDateSpan, ProjectDescription, ProjectTag, ProjectTitle, TagWrapper } from "."
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
   thumbnails: string[]
@@ -70,14 +71,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   </tr>
                 </table>
               </ProjectDescription>
-              <div className="flex gap-2 ms-auto">
-                <Button variant="outline" className="text-primary dark:text-white font-meltow-bold">
-                  View Source Code
-                </Button>
-                <Button variant="default" className="font-meltow-bold">
-                  View Demo
-                </Button>
-              </div>
             </Fragment>
           )
 
@@ -132,14 +125,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   </tr>
                 </table>
               </ProjectDescription>
-              <div className="flex gap-2 ms-auto">
-                <Button variant="outline" className="text-primary dark:text-white font-meltow-bold-bold">
-                  View Source Code
-                </Button>
-                <Button variant="default" className="font-meltow-bold">
-                  View Demo
-                </Button>
-              </div>
             </Fragment>
           )
 
@@ -168,14 +153,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   <li>Windows Desktop Background Services</li>
                 </ul>
               </ProjectDescription>
-              <div className="flex gap-2 ms-auto">
-                <Button variant="outline" className="text-primary dark:text-white font-meltow-bold-bold">
-                  View Source Code
-                </Button>
-                <Button variant="default" className="font-meltow-bold">
-                  View Demo
-                </Button>
-              </div>
             </Fragment>
           )
       }
@@ -185,8 +162,17 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
       <AlertDialog>
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="absolute top-0 right-0 z-20">
-            <Button variant="ghost" size="icon">
-              <MoreVertical className="dark:text-white" size={20} />
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <MoreHorizontal className="dark:text-white" size={20} />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>View</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -226,6 +212,10 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
         <AlertDialogContent className="max-w-4xl h-max">
           <CardCloseButton />
           <CardIndicator />
+          <header className="flex items-center gap-2">
+            <h4 className="font-meltow text-slate-500">Swipe to view</h4>
+            <ArrowBigRightDash size={16} className="text-slate-500" />
+          </header>
           <Carousel orientation="horizontal" className="max-w-4xl p-0 mx-auto">
             <CarouselContent>
               {thumbnails.map((thumbnail, index) => (
@@ -238,8 +228,8 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious variant="ghost" className="mix-blend-difference grayscale" />
-            <CarouselNext variant="ghost" className="mix-blend-difference grayscale" />
+            <CarouselPrevious variant="secondary" className="dark:mix-blend-difference dark:grayscale" />
+            <CarouselNext variant="secondary" className="dark:mix-blend-difference dark:grayscale" />
           </Carousel>
         </AlertDialogContent>
       </AlertDialog>
