@@ -24,7 +24,7 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
 
   return (
     <aside className={compCn} {...props}>
-      <img src={constants.PFP} alt="Profile Picture" width={250} className="mx-auto" />
+      <img src={constants.PFPWFRAME} alt="Profile Picture" width={250} className="mx-auto" />
       <section className="flex flex-col my-5">
         <TypeAnimation
           sequence={[1000, "Johcel Gene T. Bitara", 1000]}
