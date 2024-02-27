@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Github, Linkedin } from "lucide-react"
-import dotPattern from "@/assets/svgs/illustrations/dot-pattern.svg"
+import * as constants from "@/assets/svgs/"
 import { Link } from "react-router-dom"
 import {
   figmaLink,
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </section>
       </div>
-      <img className="absolute bottom-0 left-0" src={dotPattern} alt="" />
+      <img className="absolute bottom-0 left-0" src={constants.DOTPATTERN} alt="" />
     </footer>
   )
 }

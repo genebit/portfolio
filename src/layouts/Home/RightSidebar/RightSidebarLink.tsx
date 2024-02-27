@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 interface RightSidebarLinkProps {
   jumpTo: string
   label: string
-  icon: ReactNode
+  icon?: ReactNode
 }
 
 /**

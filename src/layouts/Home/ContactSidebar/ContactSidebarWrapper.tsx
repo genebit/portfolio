@@ -3,12 +3,12 @@ import { HTMLAttributes } from "react"
 import { Github, Inbox, Linkedin, LocateFixed, Voicemail } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import pfp from "@/assets/imgs/PfpWFrame.png"
 
 import ContactSidebarLink from "@/layouts/Home/ContactSidebar/ContactSidebarLink"
 import { githubProfileLink, linkedInProfileLink } from "@/lib/constants"
 import ViewResumeButton from "../ViewResumeButton/ViewResumeButton"
 import { TypeAnimation } from "react-type-animation"
+import * as constants from "@/assets/imgs"
 
 /**
  * Wrapper component for the contact sidebar.
@@ -24,7 +24,7 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
 
   return (
     <aside className={compCn} {...props}>
-      <img src={pfp} alt="Profile Picture" width={250} className="mx-auto" />
+      <img src={constants.PFP} alt="Profile Picture" width={250} className="mx-auto" />
       <section className="flex flex-col my-5">
         <TypeAnimation
           sequence={[1000, "Johcel Gene T. Bitara", 1000]}

@@ -11,7 +11,7 @@ import {
   ProjectWrapper,
   TagWrapper,
 } from "../../components/ProjectCard"
-import { DAAMIA1, STUBUAI1, STUBUAI2, STUBUAI3, eBayan1, eBayan2, eBayan3 } from "@/assets/imgs/project-thumbnails"
+import { DAAMIA1, STUBUAI1, STUBUAI2, STUBUAI3, eBayan1, eBayan2, eBayan3 } from "@/assets/imgs"
 
 const HighlightProjects = () => {
   const ProjectTimelineCard = ({ children }: HTMLAttributes<HTMLElement>) => {

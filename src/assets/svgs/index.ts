@@ -1,3 +1,8 @@
+// illustrations/
+import DOTPATTERN from "@/assets/svgs/illustrations/dot-pattern.svg"
+import SPLINECANVASSNAPSHOT from "@/assets/svgs/illustrations/spline-canvas-snapshot.svg"
+
+// skills/
 import BASH from "@/assets/svgs/skills/BASH.svg"
 import C from "@/assets/svgs/skills/C.svg"
 import CS from "@/assets/svgs/skills/CS.svg"
@@ -51,6 +56,8 @@ const skills = [
 ]
 
 export {
+  DOTPATTERN,
+  SPLINECANVASSNAPSHOT,
   BASH,
   C,
   CS,

@@ -2,7 +2,7 @@ import { HTMLAttributes, useRef } from "react"
 
 import Autoplay from "embla-carousel-autoplay"
 
-import { skills } from "@/assets/svgs/skills"
+import { skills } from "@/assets/svgs"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
 /**
