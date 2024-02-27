@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react"
 
-import { MoonStar, Sun, UserRoundSearch } from "lucide-react"
+import { Clapperboard, FileQuestion, FolderArchive, LibraryBig, MoonStar, Sun, UserRoundSearch } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -68,10 +68,10 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <ToggleThemeMode />
       </div>
       <div className="flex flex-row ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
-        <RightSidebarLink jumpTo="about" label="About" />
-        <RightSidebarLink jumpTo="video-resume" label="Video Resume" />
-        <RightSidebarLink jumpTo="tools" label="Tools I Use" />
-        <RightSidebarLink jumpTo="projects" label="Projects" />
+        <RightSidebarLink icon={<FileQuestion size={20} />} jumpTo="about" label="About" />
+        <RightSidebarLink icon={<Clapperboard size={20} />} jumpTo="video-resume" label="Video Resume" />
+        <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools I Use" />
+        <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
       </div>
       {children}
     </nav>
