@@ -1,6 +1,9 @@
+import { ReactNode } from "react"
+
 interface RightSidebarLinkProps {
   jumpTo: string
   label: string
+  icon: ReactNode
 }
 
 /**
@@ -9,7 +12,7 @@ interface RightSidebarLinkProps {
  * @param label - The label for the link.
  * @returns The rendered link component.
  */
-const RightSidebarLink = ({ jumpTo, label }: RightSidebarLinkProps) => {
+const RightSidebarLink = ({ jumpTo, label, icon }: RightSidebarLinkProps) => {
   const onScrollSpyNavigate = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault()
 
@@ -32,7 +35,8 @@ const RightSidebarLink = ({ jumpTo, label }: RightSidebarLinkProps) => {
         data-to-scrollspy-id={jumpTo}
         className="px-5 py-2 text-sm no-underline transition-all ps-5 font-meltow sm:text-base"
       >
-        {label}
+        <span className="sm:hidden">{icon}</span>
+        <span className="hidden sm:inline-block">{label}</span>
       </div>
     </a>
   )
