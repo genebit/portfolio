@@ -60,7 +60,7 @@ Before running the application, make sure to install the following:
 1. Clone this repository
 
    ```bash
-   git clone https://github.com/genebit/plantasker.git
+   git clone https://github.com/genebit/portfolio.git
    ```
 
    Upon cloning, bavigate to the repo.
