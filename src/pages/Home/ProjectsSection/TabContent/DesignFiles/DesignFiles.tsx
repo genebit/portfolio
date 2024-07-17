@@ -19,9 +19,9 @@ const RenderFigma = () => {
   }, [])
 
   return (
-    <section className="mt-5 border rounded-md">
+    <section className="mt-5 border">
       {isLoading && <LoadingPage className="h-[20rem]" />}
-      <div className="overflow-hidden rounded-lg">
+      <div className="overflow-hidden">
         <iframe
           id="iframeElement"
           className={`w-full ${isLoading ? "hidden" : ""}`}

@@ -15,8 +15,8 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
           <p>
             Hi! I am a Filipino-based Software Engineer passionate about learning software technologies in general;
             immersed in the world of coding, designing, and software development. <br />
-            <br /> Currently finishing my degree as a 3rd Year Bachelors of Science in Information Technology in Ateneo
-            De Naga University. Seeking opportunities, equipped with 3+ years of experience on various software
+            <br /> Currently finishing my degree as a 4th Year Bachelors of Science in Information Technology in Ateneo
+            De Naga University. Seeking opportunities, equipped with 3+ years of work experience on various software
             technology tools to create a beautiful system design.
           </p>
         </CardContent>

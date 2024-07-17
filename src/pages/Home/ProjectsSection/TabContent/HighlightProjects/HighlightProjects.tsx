@@ -17,7 +17,7 @@ const HighlightProjects = () => {
   const ProjectTimelineCard = ({ children }: HTMLAttributes<HTMLElement>) => {
     return (
       <li className="mt-5 mb-10 ms-4">
-        <div className="absolute p-2 border-4 rounded-full bg-primary -start-[1.3rem] text-white border-white dark:border-slate-950">
+        <div className="absolute p-2 border-4 rounded-full bg-slate-950 dark:bg-primary -start-[1.3rem] text-white border-white dark:border-slate-950">
           <Book size={16} />
         </div>
         <div className="ms-5">{children}</div>
@@ -26,7 +26,7 @@ const HighlightProjects = () => {
   }
 
   return (
-    <ol className="relative border-primary border-s-2">
+    <ol className="relative border-slate-950 dark:border-primary border-s-2">
       <ProjectTimelineCard>
         <ProjectWrapper id="highlightProject1" thumbnails={[STUBUAI1, STUBUAI2, STUBUAI3]}>
           <ProjectDateSpan>2023 - Present</ProjectDateSpan>

@@ -1,6 +1,6 @@
 import { Fragment, HTMLAttributes } from "react"
 
-import { ArrowBigRightDash, MoreHorizontal, ScanSearch } from "lucide-react"
+import { MoreHorizontal, ScanSearch } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -47,7 +47,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                 <p>Team STUBU</p>
                 <br />
                 <h5 className="dark:text-white font-meltow-bold">Features:</h5>
-                <table>
+                {/* <table>
                   <tr>
                     <td valign="top">
                       <ul className="list-disc ms-10">
@@ -69,7 +69,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                       </ul>
                     </td>
                   </tr>
-                </table>
+                </table> */}
               </ProjectDescription>
             </Fragment>
           )
@@ -201,7 +201,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
               <img
                 src={thumbnails[0]}
                 alt="thumbnail"
-                className="h-max transition-all md:max-w-[20rem] rounded-lg peer hover:cursor-pointer"
+                className="h-max transition-all md:max-w-[20rem] peer hover:cursor-pointer"
               />
               <span className="absolute hidden peer-hover:block animate-in fade-in dark:mix-blend-difference dark:grayscale">
                 <ScanSearch />
@@ -212,10 +212,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
         <AlertDialogContent className="max-w-4xl h-max">
           <CardCloseButton />
           <CardIndicator />
-          <header className="flex items-center gap-2">
-            <h4 className="font-meltow text-slate-500">Swipe to view</h4>
-            <ArrowBigRightDash size={16} className="text-slate-500" />
-          </header>
           <Carousel orientation="horizontal" className="max-w-4xl p-0 mx-auto">
             <CarouselContent>
               {thumbnails.map((thumbnail, index) => (
@@ -223,7 +219,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   <img
                     src={thumbnail}
                     alt="thumbnail"
-                    className="w-full transition-all rounded-lg h-max peer hover:cursor-pointer"
+                    className="w-full transition-all h-max peer hover:cursor-pointer"
                   />
                 </CarouselItem>
               ))}

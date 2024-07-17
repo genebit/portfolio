@@ -27,9 +27,7 @@ const App = () => {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <span className="fixed px-5 text-white rounded-full bottom-5 left-5 font-meltow bg-primary">
-              DEVELOPMENT
-            </span>
+            <span className="fixed px-5 text-white bottom-5 left-5 font-meltow bg-primary">DEVELOPMENT</span>
           </TooltipTrigger>
           <TooltipContent>
             <a href={constants.productionLink} target="_blank">

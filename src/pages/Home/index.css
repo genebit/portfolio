@@ -1,5 +1,5 @@
 .active-scroll-spy {
-  @apply text-white rounded px-5 bg-primary !font-meltow-bold;
+  @apply text-white px-5 bg-primary !font-meltow-bold;
 }
 
 .article-container {

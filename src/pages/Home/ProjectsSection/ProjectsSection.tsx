@@ -15,7 +15,7 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
         <h3 className="text-xl font-meltow-bold">PROJECTS 💼</h3>
       </header>
       <Tabs defaultValue="highlighted" className="w-full">
-        <TabsList className="justify-start w-full bg-transparent border-b-2 rounded-none">
+        <TabsList className="justify-start w-full bg-transparent border-b-2">
           <TabTrigger value="highlighted" label="Highlighted" />
           <TabTrigger value="misc" label="Miscellaneous" />
           <TabTrigger value="designFile" label="Design File" />
