@@ -12,11 +12,6 @@ import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
 
 import "@/pages/Home/index.css"
 
-/**
- * Renders the home page.
- *
- * @returns The rendered home page component.
- */
 const HomePage = () => {
   return (
     <HomeLayout>
@@ -29,11 +24,12 @@ const HomePage = () => {
         </ScrollSpy>
       </article>
       <RightSidebarWrapper>
-        <RightSidebarHeading>ON THIS PAGE</RightSidebarHeading>
+        <RightSidebarHeading>On This Page</RightSidebarHeading>
         <RightSidebarLink jumpTo="about" label="About" />
         <RightSidebarLink jumpTo="video-resume" label="Video Resume" />
         <RightSidebarLink jumpTo="tools" label="Tools I Use" />
         <RightSidebarLink jumpTo="projects" label="Projects" />
+        <RightSidebarHeading>Blog Post</RightSidebarHeading>
       </RightSidebarWrapper>
     </HomeLayout>
   )

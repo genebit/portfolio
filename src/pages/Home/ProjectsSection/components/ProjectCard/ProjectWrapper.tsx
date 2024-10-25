@@ -1,4 +1,4 @@
-import { Fragment, HTMLAttributes } from "react"
+import { HTMLAttributes } from "react"
 
 import { MoreHorizontal, ScanSearch } from "lucide-react"
 
@@ -25,7 +25,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
       switch (props.id) {
         case "highlightProject1":
           return (
-            <Fragment>
+            <>
               <ProjectDateSpan>2023 - Present</ProjectDateSpan>
               <header>
                 <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
@@ -71,12 +71,12 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   </tr>
                 </table> */}
               </ProjectDescription>
-            </Fragment>
+            </>
           )
 
         case "highlightProject2":
           return (
-            <Fragment>
+            <>
               <ProjectDateSpan>2023 - 2023</ProjectDateSpan>
               <header>
                 <ProjectTitle>eBayan</ProjectTitle>
@@ -125,12 +125,12 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   </tr>
                 </table>
               </ProjectDescription>
-            </Fragment>
+            </>
           )
 
         case "highlightProject3":
           return (
-            <Fragment>
+            <>
               <ProjectDateSpan>2022 - 2023</ProjectDateSpan>
               <header>
                 <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
@@ -153,7 +153,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   <li>Windows Desktop Background Services</li>
                 </ul>
               </ProjectDescription>
-            </Fragment>
+            </>
           )
       }
     }

@@ -1,11 +1,11 @@
-import { Fragment } from "react"
+import { GraduationCap } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+
+import * as constants from "@/lib/constants"
 import { auth, provider } from "@/lib/config"
+import { Button } from "@/components/ui/button"
 import { signInWithPopup, UserCredential } from "firebase/auth"
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { GraduationCap } from "lucide-react"
-import * as constants from "@/lib/constants"
 
 /**
  * Renders the sign-in page component.
@@ -30,7 +30,7 @@ const SignInPage = () => {
   }
 
   return (
-    <Fragment>
+    <>
       <main className="relative z-20 flex items-center justify-center h-screen animate-in fade-in">
         <Card className="px-10 py-5 ">
           <CardHeader className="p-4">
@@ -50,7 +50,7 @@ const SignInPage = () => {
         className="absolute bottom-0 z-0 w-full h-screen dark:hidden animate-in fade-in"
         src={constants.splineURLBottom}
       ></iframe>
-    </Fragment>
+    </>
   )
 }
 

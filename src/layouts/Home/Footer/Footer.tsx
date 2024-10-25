@@ -31,7 +31,7 @@ const Footer = () => {
         </section>
         <section className="flex flex-col gap-3">
           <p className="text-center text-white">@GeneBit © {currentYear}. Portfolio</p>
-          <div className="flex gap-3 mx-auto text-slate-500">
+          <div className="flex gap-3 mx-auto text-slate-400">
             <Link target="_blank" to={githubProfileLink}>
               <Github size={18} />
             </Link>
@@ -42,20 +42,20 @@ const Footer = () => {
         </section>
         <section className="flex flex-col gap-3">
           <p className="text-center text-white">Project Resources</p>
-          <div className="flex gap-3 mx-auto text-slate-500">
-            <Link target="_blank" className="hover:underline" to={figmaLink}>
+          <div className="flex gap-3 mx-auto text-slate-400 hover:*:underline">
+            <Link target="_blank" to={figmaLink}>
               Figma
             </Link>
-            <Link target="_blank" className="hover:underline" to={splineLink}>
+            <Link target="_blank" to={splineLink}>
               Spline
             </Link>
-            <Link target="_blank" className="hover:underline" to={skillsIconsLink}>
+            <Link target="_blank" to={skillsIconsLink}>
               Skill Icons
             </Link>
-            <Link target="_blank" className="hover:underline" to={reactLink}>
+            <Link target="_blank" to={reactLink}>
               React
             </Link>
-            <Link target="_blank" className="hover:underline" to={firebaseLink}>
+            <Link target="_blank" to={firebaseLink}>
               Firebase
             </Link>
           </div>

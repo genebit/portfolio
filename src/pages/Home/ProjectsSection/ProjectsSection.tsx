@@ -2,7 +2,6 @@ import { HTMLAttributes } from "react"
 
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 import TabTrigger from "@/pages/Home/ProjectsSection/components/TabTrigger"
-import HighlightProjects from "@/pages/Home/ProjectsSection/TabContent/HighlightProjects/HighlightProjects"
 
 import RenderFigma from "./TabContent/DesignFiles/DesignFiles"
 
@@ -17,17 +16,11 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
       <Tabs defaultValue="highlighted" className="w-full">
         <TabsList className="justify-start w-full bg-transparent border-b-2">
           <TabTrigger value="highlighted" label="Highlighted" />
-          <TabTrigger value="misc" label="Miscellaneous" />
+          <TabTrigger value="projects" label="Other Projects" />
           <TabTrigger value="designFile" label="Design File" />
         </TabsList>
-        <TabsContent value="highlighted" className="duration-1000 animate-in fade-in">
-          <HighlightProjects />
-        </TabsContent>
-        <TabsContent value="misc" className="duration-1000 animate-in fade-in">
-          <div>
-            <p className="my-5 font-meltow text-slate-500">Under development.</p>
-          </div>
-        </TabsContent>
+        <TabsContent value="highlighted" className="duration-1000 animate-in fade-in"></TabsContent>
+        <TabsContent value="projects" className="duration-1000 animate-in fade-in"></TabsContent>
         <TabsContent value="designFile" className="duration-1000 animate-in fade-in">
           <RenderFigma />
         </TabsContent>

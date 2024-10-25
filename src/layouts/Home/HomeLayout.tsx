@@ -1,4 +1,4 @@
-import { Fragment, HTMLAttributes } from "react"
+import { HTMLAttributes } from "react"
 
 import * as constants from "@/assets/svgs/"
 import TopNavbar from "@/layouts/Home/TopNavbar/TopNavbar"
@@ -9,7 +9,7 @@ import Footer from "@/layouts/Home/Footer/Footer"
 
 const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
   return (
-    <Fragment>
+    <>
       <TopNavbar />
       <main className="max-w-[100rem] mx-auto relative z-20 flex flex-row h-full justify-evenly animate-in fade-in duration-1000">
         <ContactSidebarWrapper />
@@ -23,7 +23,7 @@ const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
         />
       </div>
       <Footer />
-    </Fragment>
+    </>
   )
 }
 

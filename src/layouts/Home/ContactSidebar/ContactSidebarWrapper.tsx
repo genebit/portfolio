@@ -27,13 +27,13 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
       <img src={constants.PFPWFRAME} alt="Profile Picture" width={250} className="mx-auto" />
       <section className="flex flex-col my-5">
         <TypeAnimation
-          sequence={[1000, "Johcel Gene T. Bitara", 1000]}
+          sequence={[1000, "Johcel Gene Bitara", 1000]}
           wrapper="h2"
           speed={50}
           repeat={Infinity}
           className="inline-block text-xl font-meltow-bold min-w-[19ch]"
         />
-        <p>Software Engineer</p>
+        <div className="flex flex-wrap">Software Engineer • Developer</div>
       </section>
       <ViewResumeButton />
       <section className="flex flex-col my-5">

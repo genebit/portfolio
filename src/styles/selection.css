@@ -1,5 +1,0 @@
-@layer base {
-  ::selection {
-    @apply text-white bg-opacity-50 bg-primary;
-  }
-}
