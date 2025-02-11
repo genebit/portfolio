@@ -20,7 +20,7 @@ import * as constants from "@/lib/constants"
  * @returns The rendered ViewResumeButton component.
  */
 const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
-  const compCn = cn("w-full font-meltow-bold", className)
+  const compCn = cn("w-full uppercase font-artegra tracking-widest font-bold", className)
 
   return (
     <AlertDialog>
@@ -46,7 +46,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <Button variant="default" className="font-meltow" asChild>
+          <Button variant="default" className="font-artegra" asChild>
             <Link to={constants.resumeLink} target="_blank">
               View Full Screen
             </Link>

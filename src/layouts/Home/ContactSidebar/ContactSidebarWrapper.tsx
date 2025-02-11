@@ -31,13 +31,13 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
           wrapper="h2"
           speed={50}
           repeat={Infinity}
-          className="inline-block text-xl font-meltow-bold min-w-[19ch]"
+          className="inline-block uppercase font-artegra tracking-widest font-bold min-w-[19ch]"
         />
         <div className="flex flex-wrap">Software Engineer • Developer</div>
       </section>
       <ViewResumeButton />
       <section className="flex flex-col my-5">
-        <h3 className="text-lg font-meltow-bold">Contacts</h3>
+        <h3 className="font-bold tracking-widest uppercase font-artegra">Contacts</h3>
         <div className="flex flex-col gap-2 mt-3">
           <ContactSidebarLink icon={<Voicemail size={18} />} label="0970 322 4661" />
           <ContactSidebarLink icon={<LocateFixed size={18} />} label="Philippines" />

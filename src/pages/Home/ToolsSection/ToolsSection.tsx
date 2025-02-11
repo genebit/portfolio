@@ -31,7 +31,7 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
     <section className={className} {...props}>
       <div className="flex flex-col gap-5">
         <header>
-          <h3 className="text-xl font-meltow-bold">LANGUAGES • TOOLS • FRAMEWORKS 🧰</h3>
+          <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">LANGUAGES • TOOLS • FRAMEWORKS</h3>
           <p>
             Throughout years of experience learning software application technologies, I have used various software
             tools to create applications such as:

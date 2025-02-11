@@ -8,7 +8,7 @@ interface TabTriggerProps extends HTMLAttributes<HTMLElement> {
 }
 
 const TabTrigger = ({ value, label, className, ...props }: TabTriggerProps) => {
-  const compCn = cn("relative text-base font-meltow", className)
+  const compCn = cn("relative text-base uppercase font-artegra tracking-widest font-bold", className)
 
   return (
     <TabsTrigger value={value} className={compCn} {...props}>

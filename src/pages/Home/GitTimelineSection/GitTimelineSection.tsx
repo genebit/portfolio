@@ -7,7 +7,7 @@ const GitTimelineSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
   return (
     <section className={className} {...props}>
       <header>
-        <h3 className="text-xl font-meltow-bold">GIT CONTRIBUTION TIMELINE</h3>
+        <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">GIT CONTRIBUTION TIMELINE</h3>
       </header>
       <GitHubCalendar username="genebit" />
     </section>

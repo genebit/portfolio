@@ -43,10 +43,10 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   system.
                 </p>
                 <br />
-                <span className="font-meltow-bold dark:text-white">Developed By</span>
+                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">Developed By</span>
                 <p>Team STUBU</p>
                 <br />
-                <h5 className="dark:text-white font-meltow-bold">Features:</h5>
+                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
                 {/* <table>
                   <tr>
                     <td valign="top">
@@ -92,17 +92,21 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
                   Built using Flutter and Firebase.
                 </p>
                 <br />
-                <span className="font-meltow-bold dark:text-white">Commercial Advertistment</span>
+                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">
+                  Commercial Advertistment
+                </span>
                 <p>
                   <a className="underline" target="_blank" href="https://www.youtube.com/watch?v=Oesh_VkuEy0">
                     View on YouTube
                   </a>
                 </p>
                 <br />
-                <span className="font-meltow-bold dark:text-white">Project Contributor</span>
+                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">
+                  Project Contributor
+                </span>
                 <p>Miguel Damien Garcera</p>
                 <br />
-                <h5 className="dark:text-white font-meltow-bold">Features:</h5>
+                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
                 <table>
                   <tr>
                     <td valign="top">
@@ -143,7 +147,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
               <ProjectDescription>
                 <p>A weather informative website for data analytics to Department of Agriculture stakeholders.</p>
                 <br />
-                <h5 className="dark:text-white font-meltow-bold">Features:</h5>
+                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
                 <ul className="list-disc ms-10">
                   <li>5-day Weather outlook</li>
                   <li>Real Time data fetching</li>

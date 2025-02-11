@@ -7,7 +7,7 @@ const VideoResumeSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
   return (
     <section className={compCn} {...props}>
       <header>
-        <h3 className="text-xl font-meltow-bold">VIDEO RESUME 🎥</h3>
+        <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">VIDEO RESUME</h3>
         <hr />
         <div className="mt-5 overflow-hidden">
           <iframe

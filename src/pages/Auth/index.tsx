@@ -34,7 +34,7 @@ const SignInPage = () => {
       <main className="relative z-20 flex items-center justify-center h-screen animate-in fade-in">
         <Card className="px-10 py-5 ">
           <CardHeader className="p-4">
-            <h1 className="text-xl text-center font-meltow-bold">WELCOME!</h1>
+            <h1 className="text-xl font-bold text-center uppercase font-artegra tracking-widest">WELCOME!</h1>
             <hr />
             <CardDescription>Please verify yourself to view portfolio.</CardDescription>
           </CardHeader>
