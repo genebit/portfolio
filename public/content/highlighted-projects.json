@@ -5,10 +5,18 @@
     "title": "Ateneo de Naga University – Project HRIS",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind"],
     "description": "University's Human Resource Information System (HRIS). Designed to manage employee records, HR processes, and centralize HR data to improve efficiency and reduce manual workloads.",
@@ -38,10 +46,18 @@
     "title": "Ateneo de Naga University – Project RETSU",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["Oracle", "Laravel 9", "Livewire", "Tailwind"],
     "description": "A generic real-time queue management system solution for the University, enhancing user experience by reducing queue delays and eliminating the inconveniences associated with traditional queuing systems.",
@@ -68,10 +84,18 @@
     "title": "Department of Agriculture – Project DAAMIA",
     "subtitle": "Subcontract • Lead Full-Stack Web Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["DOTNET Framework", "C#", "MSSQL"],
     "description": "A real-time weather monitoring system for data analytics to Department of Agriculture stakeholders.",

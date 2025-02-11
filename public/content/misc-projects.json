@@ -5,10 +5,18 @@
     "title": "STUBU.AI",
     "subtitle": "Lead Frontend Web Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["React", "Tailwind", "Typescript", "MongoDB", "ExpressJS"],
     "description": "an AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning education into a personalized and interactive experience; reinventing the traditional education system.",
@@ -49,10 +57,18 @@
     "title": "Dadsbol",
     "subtitle": "Lead Game Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["Unity", "C#"],
     "description": "Plays exaggerated power dodgeball and dodges through incoming balls with their ragdoll bodies. Evade balls, use players as shields, and win the (KoTS) King of the Streets! title by eliminating all kid gangs from across the streets of Naga!",
@@ -71,10 +87,18 @@
     "title": "Dadsbol",
     "subtitle": "Lead Game Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["Unity", "C#"],
     "description": "Feline Purrsuit is a cute, stressful cat chasing game about the town of Townsville being overrun by cats. That’s where you come in! Save the town of Townsville from this CATastrophe! Fish for baits, catch cats, then pet!",
@@ -93,10 +117,18 @@
     "title": "eBayan",
     "subtitle": "Mobile Developer",
     "screenshots": [
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400",
-      "https://placehold.co/600x400"
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      },
+      {
+        "original": "https://placehold.co/600x400",
+        "thumbnail": "https://placehold.co/250x150"
+      }
     ],
     "tags": ["Firebase", "Flutter"],
     "description": "An intuitive barangay-to-community mobile application for announcement creation management system.",
