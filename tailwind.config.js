@@ -12,10 +12,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      meltow: ["MeltowSan100", "sans-serif"],
-      "meltow-bold": ["MeltowSan300", "sans-serif"],
       segoeui: ["SegoeUI", "sans-serif"],
-      "segoeui-bold": ["SegoeUI-Bold", "sans-serif"],
+      artegra: ["Artegra", "sans-serif"],
     },
     fontSize: {
       xs: ["12px", { lineHeight: "24px", letterSpacing: "-0.01rem" }],
