@@ -11,7 +11,7 @@ const LoadingPage = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
         <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-rose-500 animate-ping"></div>
         <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-rose-500 animate-pulse"></div>
       </div>
-      <small className="mt-3 font-bold tracking-wide uppercase font-artegra tracking text-slate-400">Loading...</small>
+      <small className="mt-3 font-bold tracking-wide uppercase font-artegra text-slate-400">Loading...</small>
     </div>
   )
 }

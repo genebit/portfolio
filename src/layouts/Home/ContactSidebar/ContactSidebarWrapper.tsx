@@ -28,9 +28,10 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
       <section className="flex flex-col my-5">
         <TypeAnimation
           sequence={[1000, "Johcel Gene Bitara", 1000]}
-          wrapper="h2"
+          wrapper="h3"
           speed={50}
           repeat={Infinity}
+          cursor={false}
           className="inline-block uppercase font-artegra tracking-widest font-bold min-w-[19ch]"
         />
         <div className="flex flex-wrap">Software Engineer • Developer</div>

@@ -10,7 +10,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 import CardIndicator from "./Card/CardIndicator"
 import CardCloseButton from "./Card/CardCloseButton"
-import { ProjectDateSpan, ProjectDescription, ProjectTag, ProjectTitle, TagWrapper } from "."
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
@@ -21,147 +20,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
   const compCn = cn("flex flex-col relative gap-5 md:flex-row", className)
 
   const ToggleProjectDetails = () => {
-    const RenderProjectInfoBasedOnId = () => {
-      switch (props.id) {
-        case "highlightProject1":
-          return (
-            <>
-              <ProjectDateSpan>2023 - Present</ProjectDateSpan>
-              <header>
-                <ProjectTitle>STUBU.AI: Your Personalized Study Buddy</ProjectTitle>
-                <TagWrapper>
-                  <ProjectTag>Cross Platform</ProjectTag>
-                  <ProjectTag>Artificial Intelligence</ProjectTag>
-                  <ProjectTag>UI/UX Design</ProjectTag>
-                  <ProjectTag>Lead Frontend Developer</ProjectTag>
-                </TagWrapper>
-              </header>
-              <ProjectDescription>
-                <p>
-                  An AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning
-                  education into a personalized and interactive experience. Reinventing the traditional education
-                  system.
-                </p>
-                <br />
-                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">Developed By</span>
-                <p>Team STUBU</p>
-                <br />
-                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
-                {/* <table>
-                  <tr>
-                    <td valign="top">
-                      <ul className="list-disc ms-10">
-                        <li>Account creation</li>
-                        <li>Authentication module</li>
-                        <li>Notification system</li>
-                        <li>Lesson Creation</li>
-                        <li>Gamification</li>
-                        <li>Progress Tracking</li>
-                      </ul>
-                    </td>
-                    <td valign="top">
-                      <ul className="list-disc ms-10">
-                        <li>AI Study Buddy</li>
-                        <li>Video Lecture Materials</li>
-                        <li>Personalization</li>
-                        <li>Accessibility Features</li>
-                        <li>Skin Cosmetics</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table> */}
-              </ProjectDescription>
-            </>
-          )
-
-        case "highlightProject2":
-          return (
-            <>
-              <ProjectDateSpan>2023 - 2023</ProjectDateSpan>
-              <header>
-                <ProjectTitle>eBayan</ProjectTitle>
-                <TagWrapper>
-                  <ProjectTag>Mobile Development</ProjectTag>
-                  <ProjectTag>Project Management</ProjectTag>
-                  <ProjectTag>UI/UX Design</ProjectTag>
-                </TagWrapper>
-              </header>
-              <ProjectDescription>
-                <p>
-                  An intuitive barangay-to-community mobile application for announcement creation management system.
-                  Built using Flutter and Firebase.
-                </p>
-                <br />
-                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">
-                  Commercial Advertistment
-                </span>
-                <p>
-                  <a className="underline" target="_blank" href="https://www.youtube.com/watch?v=Oesh_VkuEy0">
-                    View on YouTube
-                  </a>
-                </p>
-                <br />
-                <span className="font-bold tracking-widest uppercase font-artegra dark:text-white">
-                  Project Contributor
-                </span>
-                <p>Miguel Damien Garcera</p>
-                <br />
-                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
-                <table>
-                  <tr>
-                    <td valign="top">
-                      <ul className="list-disc ms-10">
-                        <li>Admin module</li>
-                        <li>Account creation</li>
-                        <li>Authentication module</li>
-                        <li>User module</li>
-                        <li>Notification system</li>
-                      </ul>
-                    </td>
-                    <td valign="top">
-                      <ul className="list-disc ms-10">
-                        <li>Announcement creation (Create, Edit, Delete)</li>
-                        <li>Account management</li>
-                        <li>Onboarding</li>
-                        <li>Cloud database</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
-              </ProjectDescription>
-            </>
-          )
-
-        case "highlightProject3":
-          return (
-            <>
-              <ProjectDateSpan>2022 - 2023</ProjectDateSpan>
-              <header>
-                <ProjectTitle>Department of Agriculture - AMIA</ProjectTitle>
-                <TagWrapper>
-                  <ProjectTag>Government Project</ProjectTag>
-                  <ProjectTag>Full Stack .NET Web Development</ProjectTag>
-                  <ProjectTag>Data Processing</ProjectTag>
-                </TagWrapper>
-              </header>
-              <ProjectDescription>
-                <p>A weather informative website for data analytics to Department of Agriculture stakeholders.</p>
-                <br />
-                <h5 className="font-bold tracking-widest uppercase dark:text-white font-artegra">Features:</h5>
-                <ul className="list-disc ms-10">
-                  <li>5-day Weather outlook</li>
-                  <li>Real Time data fetching</li>
-                  <li>Data filtering/processing</li>
-                  <li>Data File Exporting</li>
-                  <li>Real-time Database</li>
-                  <li>Windows Desktop Background Services</li>
-                </ul>
-              </ProjectDescription>
-            </>
-          )
-      }
-    }
-
     return (
       <AlertDialog>
         <DropdownMenu>
@@ -181,16 +39,14 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <AlertDialogTrigger asChild>
-              <DropdownMenuItem>View Projet Details</DropdownMenuItem>
+              <DropdownMenuItem>View Project Details</DropdownMenuItem>
             </AlertDialogTrigger>
           </DropdownMenuContent>
         </DropdownMenu>
         <AlertDialogContent className="max-w-2xl gap-0">
           <CardCloseButton />
           <CardIndicator />
-          <article className="flex flex-col gap-3">
-            <RenderProjectInfoBasedOnId />
-          </article>
+          <article className="flex flex-col gap-3">...</article>
         </AlertDialogContent>
       </AlertDialog>
     )

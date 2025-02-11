@@ -10,7 +10,6 @@ import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 import { useTheme } from "@/context/ThemeProvider"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
-import { getAuth, signOut } from "firebase/auth"
 
 const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("fixed z-30 flex w-full px-5 py-2 bg-transparent backdrop-filter backdrop-blur", className)
@@ -60,7 +59,6 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
       <div className="flex">
         <ToggleContactSidebar />
         <ToggleThemeMode />
-        <button onClick={() => signOut(getAuth()).then()}>Logout</button>
       </div>
       <div className="flex flex-row ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
         <RightSidebarLink icon={<FileQuestion size={20} />} jumpTo="about" label="About" />
