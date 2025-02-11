@@ -11,6 +11,7 @@ import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
 
 import "@/pages/Home/index.css"
+import GitTimelineSection from "./GitTimelineSection/GitTimelineSection"
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
         <ScrollSpy scrollThrottle={10}>
           <AboutSection className="mb-20" id="about" />
           <VideoResumeSection className="mb-20" id="video-resume" />
+          <GitTimelineSection className="mb-20" id="git-timeline" />
           <ToolsSection className="mb-20" id="tools" />
           <ProjectsSection className="mb-20" id="projects" />
         </ScrollSpy>
@@ -28,6 +30,7 @@ const HomePage = () => {
         <RightSidebarLink jumpTo="about" label="About" />
         <RightSidebarLink jumpTo="video-resume" label="Video Resume" />
         <RightSidebarLink jumpTo="tools" label="Tools I Use" />
+        <RightSidebarLink jumpTo="git-timeline" label="Git Contribution" />
         <RightSidebarLink jumpTo="projects" label="Projects" />
         <RightSidebarHeading>Blog Post</RightSidebarHeading>
       </RightSidebarWrapper>
