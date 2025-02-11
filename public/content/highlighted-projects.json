@@ -1,0 +1,87 @@
+[
+  {
+    "date_from": "June 2024",
+    "date_to": "Present",
+    "title": "Ateneo de Naga University – Project HRIS",
+    "subtitle": "Contract • Lead Full-Stack Web Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind"],
+    "description": "University's Human Resource Information System (HRIS). Designed to manage employee records, HR processes, and centralize HR data to improve efficiency and reduce manual workloads.",
+    "description_full": null,
+    "video_links": [],
+    "proponents": ["Johcel Gene T. Bitara", "Miguel Damien L. Garcera"],
+    "features": [
+      "Employee Management",
+      "Authentication",
+      "Attendance Management",
+      "Faculty Management",
+      "Automated Computation",
+      "Leave Management",
+      "Work Schedule Management",
+      "Contracts and Report Generation",
+      "Data Migration",
+      "Internal"
+    ],
+    "source_code_link": "https://mis-git.adnu.edu.ph/misadnu/hris.git",
+    "source_code_locked": true,
+    "live_demo_link": "https://services.adnu.edu.ph/hris",
+    "live_demo_locked": true
+  },
+  {
+    "date_from": "Jan 2024",
+    "date_to": "Mar 2024",
+    "title": "Ateneo de Naga University – Project RETSU",
+    "subtitle": "Contract • Lead Full-Stack Web Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["Oracle", "Laravel 9", "Livewire", "Tailwind"],
+    "description": "A generic real-time queue management system solution for the University, enhancing user experience by reducing queue delays and eliminating the inconveniences associated with traditional queuing systems.",
+    "description_full": null,
+    "video_links": [],
+    "proponents": ["Johcel Gene T. Bitara", "Ryan Jay D. Rosano"],
+    "features": [
+      "Real-time",
+      "Queue Management",
+      "Authentication",
+      "User Privileges",
+      "Internal and Public",
+      "Generic",
+      "Reports per user type e.g., Company, Branch, Counters"
+    ],
+    "source_code_link": "https://mis-git.adnu.edu.ph/jbitara/retsu.git",
+    "source_code_locked": true,
+    "live_demo_link": "https://services.adnu.edu.ph/queue",
+    "live_demo_locked": false
+  },
+  {
+    "date_from": "Sep 2022",
+    "date_to": "Oct 2023",
+    "title": "Department of Agriculture – Project DAAMIA",
+    "subtitle": "Subcontract • Lead Full-Stack Web Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["DOTNET Framework", "C#", "MSSQL"],
+    "description": "A real-time weather monitoring system for data analytics to Department of Agriculture stakeholders.",
+    "description_full": null,
+    "video_links": [],
+    "proponents": ["Johcel Gene T. Bitara", "Andrew Coros", "Samson Galicia Nollora Jr."],
+    "features": ["Real-time", "Weather Monitoring", "Data Extraction", "Map Visualization", "Data Export"],
+    "source_code_link": "https://github.com/Government-Projects/amia.git",
+    "source_code_locked": true,
+    "live_demo_link": null,
+    "live_demo_locked": true
+  }
+]

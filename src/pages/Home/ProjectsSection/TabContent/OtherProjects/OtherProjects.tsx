@@ -29,7 +29,7 @@ interface Project {
   live_demo_locked: boolean
 }
 
-const HighlightProjects = () => {
+const OtherProjects = () => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -37,7 +37,7 @@ const HighlightProjects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/content/highlighted-projects.json")
+        const response = await fetch("/content/misc-projects.json")
         const data = await response.json()
         setProjects(data)
       } catch (error) {
@@ -87,4 +87,4 @@ const HighlightProjects = () => {
   }
 }
 
-export default HighlightProjects
+export default OtherProjects

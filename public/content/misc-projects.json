@@ -1,0 +1,118 @@
+[
+  {
+    "date_from": "Oct 2023",
+    "date_to": "Apr 2024",
+    "title": "STUBU.AI",
+    "subtitle": "Lead Frontend Web Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["React", "Tailwind", "Typescript", "MongoDB", "ExpressJS"],
+    "description": "an AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning education into a personalized and interactive experience; reinventing the traditional education system.",
+    "description_full": null,
+    "video_links": ["https://www.youtube.com/embed/VmmuIew8EKM?si=KnEXQVGRMTbxedqT"],
+    "proponents": [
+      "Martin Atole",
+      "Johcel Gene Bitara",
+      "Miguel Damien Garcera",
+      "Noel Emaas",
+      "Angeline Basbas",
+      "Jiankarlo Belarmino",
+      "Albert Perez"
+    ],
+    "features": [
+      "Adaptive Learning",
+      "AI-powered",
+      "Interactive",
+      "Personalized",
+      "Study Buddy",
+      "Learning Management System",
+      "Authentication",
+      "Image Generation",
+      "Content Course Generation",
+      "Upvote Course",
+      "Quiz Generation",
+      "Course Assessment",
+      "Material Submission"
+    ],
+    "source_code_link": "https://github.com/STUBU-AI",
+    "source_cdoe_locked": false,
+    "live_demo_link": null,
+    "live_demo_locked": false
+  },
+  {
+    "date_from": "Apr 2024",
+    "date_to": "May 2024",
+    "title": "Dadsbol",
+    "subtitle": "Lead Game Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["Unity", "C#"],
+    "description": "Plays exaggerated power dodgeball and dodges through incoming balls with their ragdoll bodies. Evade balls, use players as shields, and win the (KoTS) King of the Streets! title by eliminating all kid gangs from across the streets of Naga!",
+    "description_full": null,
+    "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=jH6gCYKNhs2ogVt8"],
+    "proponents": ["Emmanuel Dominic A. Esperida", "Johcel Gene T. Bitara", "Paolo A. Alegre"],
+    "features": ["Ragdoll Physics", "Single Player", "Team Sport", "AI Players", "Powerups"],
+    "source_code_link": "https://github.com/ABE-Games/Dadsbol.git",
+    "source_code_locked": false,
+    "live_demo_link": "https://coffeeyu.itch.io/dadsbol",
+    "live_demo_locked": false
+  },
+  {
+    "date_from": "Feb 2024",
+    "date_to": "Mar 2024",
+    "title": "Dadsbol",
+    "subtitle": "Lead Game Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["Unity", "C#"],
+    "description": "Feline Purrsuit is a cute, stressful cat chasing game about the town of Townsville being overrun by cats. That’s where you come in! Save the town of Townsville from this CATastrophe! Fish for baits, catch cats, then pet!",
+    "description_full": null,
+    "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=ZyyNXTeGYVoV8EhP"],
+    "proponents": ["Johcel Gene T. Bitara"],
+    "features": ["Isometric View", "Single Player", "Fishing Minigame", "Story", "Time-based", "Catch Pursuit"],
+    "source_code_link": "https://github.com/genebit/feline-purrsuit.git",
+    "source_code_locked": false,
+    "live_demo_link": "https://coffeeyu.itch.io/feline-purrsuit",
+    "live_demo_locked": false
+  },
+  {
+    "date_from": "Sep 2023",
+    "date_to": "Dec 2023",
+    "title": "eBayan",
+    "subtitle": "Mobile Developer",
+    "screenshots": [
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400",
+      "https://placehold.co/600x400"
+    ],
+    "tags": ["Firebase", "Flutter"],
+    "description": "An intuitive barangay-to-community mobile application for announcement creation management system.",
+    "description_full": null,
+    "video_links": ["https://www.youtube.com/embed/Oesh_VkuEy0?si=F-m4734naTQdtIss"],
+    "proponents": ["Johcel Gene T. Bitara", "Miguel Damien L. Garcera"],
+    "features": [
+      "Announcement Creation",
+      "Announcement Management",
+      "User Management",
+      "User Authentication",
+      "User Privileges"
+    ],
+    "source_code_link": "https://github.com/NexusphereCo/ebayan.git",
+    "source_code_locked": false,
+    "live_demo_link": "https://github.com/NexusphereCo/ebayan/releases/tag/v1.0.0",
+    "live_demo_locked": false
+  }
+]

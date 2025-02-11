@@ -89,7 +89,6 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
           </Carousel>
         </AlertDialogContent>
       </AlertDialog>
-
       <div className="flex flex-col gap-3">{children}</div>
       <ToggleProjectDetails />
     </div>

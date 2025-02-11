@@ -7,6 +7,7 @@ import RenderFigma from "./TabContent/DesignFiles/DesignFiles"
 import HighlightProjects from "./TabContent/HighlightProjects/HighlightProjects"
 
 import "@/pages/Home/ProjectsSection/ProjectsSection.css"
+import OtherProjects from "./TabContent/OtherProjects/OtherProjects"
 
 const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
@@ -23,7 +24,9 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
         <TabsContent value="highlighted" className="duration-1000 animate-in fade-in">
           <HighlightProjects />
         </TabsContent>
-        <TabsContent value="projects" className="duration-1000 animate-in fade-in"></TabsContent>
+        <TabsContent value="projects" className="duration-1000 animate-in fade-in">
+          <OtherProjects />
+        </TabsContent>
         <TabsContent value="designFile" className="duration-1000 animate-in fade-in">
           <RenderFigma />
         </TabsContent>
