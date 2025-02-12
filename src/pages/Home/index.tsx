@@ -11,6 +11,7 @@ import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import VideoResumeSection from "./VideoResumeSection/VideoResumeSection"
 
 import "@/pages/Home/index.css"
+import "animate.css"
 import GitTimelineSection from "./GitTimelineSection/GitTimelineSection"
 
 const HomePage = () => {
