@@ -26,7 +26,7 @@ const ProjectWrapper = ({ thumbnails, children, className, ...props }: ProjectWr
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="absolute top-0 right-0 z-20">
             <Button variant="ghost" size="icon" className="rounded-full">
-              <TooltipProvider>
+              <TooltipProvider key="tp-view-project">
                 <Tooltip>
                   <TooltipTrigger>
                     <MoreHorizontal className="dark:text-white" size={20} />

@@ -43,7 +43,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                 <TabTrigger value="resume" label="Resume" />
                 <TabTrigger value="cv" label="Curriculum Vitae" />
               </TabsList>
-              <TabsContent value="resume" className="duration-1000 animate-in fade-in">
+              <TabsContent value="resume" className="duration-1000 select-none animate-in fade-in">
                 <object data={constants.resumeLink} type="application/pdf" width="100%" height="600px">
                   <p>
                     It appears you don't have a PDF plugin for this browser.
@@ -54,7 +54,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                   </p>
                 </object>
               </TabsContent>
-              <TabsContent value="cv" className="duration-1000 animate-in fade-in">
+              <TabsContent value="cv" className="duration-1000 select-none animate-in fade-in">
                 <object data={constants.cvLink} type="application/pdf" width="100%" height="600px">
                   <p>
                     It appears you don't have a PDF plugin for this browser.

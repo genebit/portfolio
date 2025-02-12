@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip"
 import { LockKeyhole } from "lucide-react"
 import { HTMLAttributes } from "react"
 import { Link } from "react-router-dom"
@@ -23,18 +24,34 @@ const ProjectFooterButtons = ({
 
   return (
     <div className={compCn} {...props}>
-      <Button
-        variant="outline"
-        className="tracking-widest uppercase text-primary font-artegra"
-        disabled={disableSrcCodeBtn}
-      >
-        <LockKeyhole className="w-4 h-4 me-1" />
-        <Link to={srcCodeUrl}>View Source Code</Link>
-      </Button>
-      <Button variant="default" className="tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
-        <LockKeyhole className="w-4 h-4 me-1" />
-        <Link to={demoUrl}>View Demo</Link>
-      </Button>
+      <TooltipProvider key="tp-source-code">
+        <Tooltip>
+          <TooltipTrigger>
+            <Button
+              variant="outline"
+              className="tracking-widest uppercase text-primary font-artegra"
+              disabled={disableSrcCodeBtn}
+            >
+              {disableSrcCodeBtn && <LockKeyhole className="w-4 h-4 me-1" />}
+              <Link to={srcCodeUrl}>View Source Code</Link>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{disableSrcCodeBtn ? <span>No privilege to view</span> : <span>View</span>}</p>
+          </TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger>
+            <Button variant="default" className="tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
+              {disableDemoBtn && <LockKeyhole className="w-4 h-4 me-1" />}
+              <Link to={demoUrl}>View Demo</Link>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{disableDemoBtn ? <span>No privilege to view</span> : <span>View</span>}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   )
 }

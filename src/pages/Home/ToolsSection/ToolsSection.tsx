@@ -18,7 +18,7 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
       <Carousel plugins={[plugin.current]} className="w-full hover:cursor-grab active:cursor-grabbing">
         <CarouselContent>
           {skills.map((skill, index) => (
-            <CarouselItem key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem]">
+            <CarouselItem key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none">
               <img src={skill} alt="" />
             </CarouselItem>
           ))}

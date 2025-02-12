@@ -9,7 +9,7 @@ const VideoResumeSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
       <header>
         <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">VIDEO RESUME</h3>
         <hr />
-        <div className="mt-5 overflow-hidden">
+        <div className="mt-5 overflow-hidden select-none">
           <iframe
             width="100%"
             height="500"
