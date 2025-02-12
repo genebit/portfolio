@@ -61,4 +61,11 @@
   body {
     @apply font-segoeui bg-background text-foreground;
   }
+
+  ul,
+  ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
 }

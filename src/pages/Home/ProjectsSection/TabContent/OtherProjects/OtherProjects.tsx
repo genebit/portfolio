@@ -29,12 +29,14 @@ interface Project {
   live_demo_locked: boolean
 }
 
-const OtherProjects = () => {
+const OtherProjects = ({ isActive }: { isActive: boolean }) => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    if (!isActive) return
+
     const fetchProjects = async () => {
       try {
         const response = await fetch("/content/misc-projects.json")
@@ -49,7 +51,7 @@ const OtherProjects = () => {
     }
 
     fetchProjects()
-  }, [])
+  }, [isActive])
 
   if (isLoading) return <div className="py-8 text-center">Loading projects...</div>
   if (error) return <div className="py-8 text-center text-red-500">{error}</div>
@@ -61,7 +63,7 @@ const OtherProjects = () => {
       <ol className="relative border-slate-950 dark:border-primary border-s-2">
         {projects.map((project, index) => (
           <ProjectCard key={`${project.title}-${index}`}>
-            <ProjectWrapper id={`highlightProject${index + 1}`} thumbnails={project.screenshots}>
+            <ProjectWrapper id={`otherProject${index + 1}`} thumbnails={project.screenshots} data={project}>
               <ProjectDateSpan>{`${project.date_from} - ${project.date_to}`}</ProjectDateSpan>
               <header>
                 <ProjectTitle>{project.title}</ProjectTitle>

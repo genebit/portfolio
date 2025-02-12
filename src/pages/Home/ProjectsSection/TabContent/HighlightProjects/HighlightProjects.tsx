@@ -10,31 +10,16 @@ import {
   ProjectFooterButtons,
 } from "../../components/ProjectCard"
 import { useEffect, useState } from "react"
+import { Project } from "./types/Project"
 
-interface Project {
-  date_from: string
-  date_to: string
-  title: string
-  subtitle: string
-  screenshots: string[]
-  tags: string[]
-  description: string
-  description_full: string
-  video_link: []
-  proponents: string[]
-  features: string[]
-  source_code_link: string
-  source_code_locked: boolean
-  live_demo_link: string
-  live_demo_locked: boolean
-}
-
-const HighlightProjects = () => {
+const HighlightProjects = ({ isActive }: { isActive: boolean }) => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    if (!isActive) return
+
     const fetchProjects = async () => {
       try {
         const response = await fetch("/content/highlighted-projects.json")
@@ -49,7 +34,7 @@ const HighlightProjects = () => {
     }
 
     fetchProjects()
-  }, [])
+  }, [isActive])
 
   if (isLoading) return <div className="py-8 text-center">Loading projects...</div>
   if (error) return <div className="py-8 text-center text-red-500">{error}</div>
@@ -61,7 +46,7 @@ const HighlightProjects = () => {
       <ol className="relative border-slate-950 dark:border-primary border-s-2">
         {projects.map((project, index) => (
           <ProjectCard key={`${project.title}-${index}`}>
-            <ProjectWrapper id={`highlightProject${index + 1}`} thumbnails={project.screenshots}>
+            <ProjectWrapper id={`highlightedProject${index + 1}`} thumbnails={project.screenshots} data={project}>
               <ProjectDateSpan>{`${project.date_from} - ${project.date_to}`}</ProjectDateSpan>
               <header>
                 <ProjectTitle>{project.title}</ProjectTitle>

@@ -2,6 +2,7 @@ import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import { cn } from "@/lib/utils"
+import { HTMLAttributes } from "react"
 
 const Tabs = TabsPrimitive.Root
 
@@ -47,4 +48,20 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+interface TabTriggerProps extends HTMLAttributes<HTMLElement> {
+  value: string
+  label: string
+}
+
+const TabTrigger = ({ value, label, className, ...props }: TabTriggerProps) => {
+  const compCn = cn("relative uppercase font-artegra tracking-wider", className)
+
+  return (
+    <TabsTrigger value={value} className={compCn} {...props}>
+      {label}
+      <span className="tab-indicator hidden absolute w-full h-[4px] rounded-full -bottom-[3px] bg-primary"></span>
+    </TabsTrigger>
+  )
+}
+
+export { Tabs, TabsList, TabsTrigger, TabTrigger, TabsContent }

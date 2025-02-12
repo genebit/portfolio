@@ -1,7 +1,6 @@
 import { HTMLAttributes, useEffect, useState } from "react"
 
-import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
-import TabTrigger from "@/pages/Home/ProjectsSection/components/TabTrigger"
+import { Tabs, TabsContent, TabsList, TabTrigger } from "@/components/ui/tabs"
 
 import RenderFigma from "./TabContent/DesignFiles/DesignFiles"
 import HighlightProjects from "./TabContent/HighlightProjects/HighlightProjects"
@@ -40,10 +39,10 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
             <TabTrigger value="designFile" label="Design File" />
           </TabsList>
           <TabsContent value="highlighted" className="duration-1000 animate-in fade-in">
-            <HighlightProjects />
+            <HighlightProjects isActive={activeTab === "highlighted"} />
           </TabsContent>
           <TabsContent value="projects" className="duration-1000 animate-in fade-in">
-            <OtherProjects />
+            <OtherProjects isActive={activeTab === "projects"} />
           </TabsContent>
           <TabsContent value="designFile" className="duration-1000 animate-in fade-in">
             <RenderFigma />

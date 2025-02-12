@@ -1,21 +1,11 @@
-import ProjectCard from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectCard"
-import ProjectWrapper from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectWrapper"
-import ProjectDateSpan from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectDateSpan"
-import ProjectTitle from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectTitle"
-import ProjectSubtitle from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectSubtitle"
-import TagWrapper from "@/pages/Home/ProjectsSection/components/ProjectCard/TagWrapper"
-import ProjectTag from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectTag"
-import ProjectDescription from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectDescription"
-import ProjectFooterButtons from "@/pages/Home/ProjectsSection/components/ProjectCard/ProjectFooterButtons"
-
-export {
-  ProjectCard,
-  ProjectWrapper,
-  ProjectDateSpan,
-  ProjectTitle,
-  ProjectSubtitle,
-  TagWrapper,
-  ProjectTag,
-  ProjectDescription,
-  ProjectFooterButtons,
-}
+export { default as ProjectCardCloseButton } from "./ProjectCardCloseButton"
+export { default as ProjectCardIndicator } from "./ProjectCardIndicator"
+export { default as ProjectCard } from "./ProjectCard"
+export { default as ProjectWrapper } from "./ProjectWrapper"
+export { default as ProjectDateSpan } from "./ProjectDateSpan"
+export { default as ProjectTitle } from "./ProjectTitle"
+export { default as ProjectSubtitle } from "./ProjectSubtitle"
+export { default as TagWrapper } from "./TagWrapper"
+export { default as ProjectTag } from "./ProjectTag"
+export { default as ProjectDescription } from "./ProjectDescription"
+export { default as ProjectFooterButtons } from "./ProjectFooterButtons"

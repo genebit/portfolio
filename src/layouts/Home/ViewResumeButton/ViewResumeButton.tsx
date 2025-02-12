@@ -5,17 +5,16 @@ import { Link } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import * as constants from "@/lib/constants"
 import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList } from "@radix-ui/react-tabs"
 import { AlertDialogFooter, AlertDialogHeader } from "@/components/ui/alert-dialog"
-import CardIndicator from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardIndicator"
-import CardCloseButton from "@/pages/Home/ProjectsSection/components/ProjectCard/Card/CardCloseButton"
+import { ProjectCardCloseButton, ProjectCardIndicator } from "@/pages/Home/ProjectsSection/components/ProjectCard"
 import {
   AlertDialog,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import TabTrigger from "@/pages/Home/ProjectsSection/components/TabTrigger"
-import { Tabs, TabsList, TabsContent } from "@radix-ui/react-tabs"
+import { TabTrigger } from "@/components/ui/tabs"
 
 /**
  * Renders a button component that triggers an alert dialog to view a resume.
@@ -34,8 +33,8 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="max-w-3xl gap-0 h-[50rem]">
-        <CardCloseButton />
-        <CardIndicator />
+        <ProjectCardCloseButton />
+        <ProjectCardIndicator />
         <AlertDialogHeader>
           <AlertDialogDescription>
             <Tabs defaultValue="resume" className="w-full">
