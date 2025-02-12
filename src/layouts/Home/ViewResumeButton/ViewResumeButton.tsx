@@ -30,7 +30,7 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button className={compCn} {...props}>
-          View Resume <span className="font-segoeui">/</span> CV
+          View Resume / CV
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="max-w-3xl gap-0 h-[50rem]">
