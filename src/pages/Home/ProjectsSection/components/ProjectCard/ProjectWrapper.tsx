@@ -57,12 +57,11 @@ const ProjectWrapper = ({ data, thumbnails, children, className, ...props }: Pro
                 <AccordionItem value="item-1">
                   <AccordionTrigger>My Roles and Responsibilities in the Project</AccordionTrigger>
                   <AccordionContent>
-                    {/* TODO: change this... */}
                     <ul className="*:list-disc *:list-item">
-                      {data?.features.length ? (
-                        data.features.map((feature, index) => <li key={`feature-${index}`}>{feature}</li>)
+                      {data?.contributions.length ? (
+                        data.contributions.map((feature, index) => <li key={`feature-${index}`}>{feature}</li>)
                       ) : (
-                        <li className="text-slate-400">No features loaded...</li>
+                        <li className="text-slate-400">No contributions loaded...</li>
                       )}
                     </ul>
                   </AccordionContent>

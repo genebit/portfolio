@@ -73,7 +73,14 @@ Before running the application, make sure to install the following:
 
    That's it! You can now start by running the application.
 
-3. Start the application
+3. Update the submodule for repo. `cv`. This is found under `public\docs\cv`
+
+   ```bash
+   git submodule init
+   git submodule update --recursive --remote
+   ```
+
+4. Start the application
    ```bash
    npm run dev
    ```

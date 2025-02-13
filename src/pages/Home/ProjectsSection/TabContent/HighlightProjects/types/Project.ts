@@ -9,6 +9,7 @@ interface Project {
   description_full: string
   video_link: []
   proponents: string[]
+  contributions: string[]
   features: string[]
   source_code_link: string
   source_code_locked: boolean

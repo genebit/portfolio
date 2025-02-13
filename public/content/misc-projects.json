@@ -22,6 +22,12 @@
     "description": "an AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning education into a personalized and interactive experience; reinventing the traditional education system.",
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/VmmuIew8EKM?si=KnEXQVGRMTbxedqT"],
+    "contributions": [
+      "Assisted on UI/UX Design and made improvements to user experience (UX).",
+      "Lead the project management for the front-end team consisting of four (4) developers and conducted SCRUM meetings for the group.",
+      "Utilized version control and project management tools such as ClickUp and Github for efficient collaboration and tracking of project progress.",
+      "Conducted code reviews to the team developers and provided technical documentations upon submission for Appcon 2023."
+    ],
     "proponents": [
       "Martin Atole",
       "Johcel Gene Bitara",
@@ -75,6 +81,12 @@
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=jH6gCYKNhs2ogVt8"],
     "proponents": ["Emmanuel Dominic A. Esperida", "Johcel Gene T. Bitara", "Paolo A. Alegre"],
+    "contributions": [
+      "Lead the development of the game; a physics-based 3D ragdoll power dodgeball game. that allowed the team to stay on track of the short deadline. Developed the game’s core mechanics and gameplay; Designed the game’s UI/UX.",
+      "Developed the game’s AI and enforced project architecture through simulation tick-based event system that allowed for clean modularized code.",
+      "Utilized version control and project management tools such as Trello and Github for efficient collaboration and tracking of project progress.",
+      "Collaborated with cross-functional teams to gather requirements, work on strengths, and ensure smooth integration and development for the game."
+    ],
     "features": ["Ragdoll Physics", "Single Player", "Team Sport", "AI Players", "Powerups"],
     "source_code_link": "https://github.com/ABE-Games/Dadsbol.git",
     "source_code_locked": false,
@@ -105,6 +117,12 @@
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=ZyyNXTeGYVoV8EhP"],
     "proponents": ["Johcel Gene T. Bitara"],
+    "contributions": [
+      "Founded the game concept and developed the game’s core mechanics and gameplay.",
+      "Designed the game’s UI/UX and implemented the game’s art assets.",
+      "Utilized version control and project management tools such as Trello and Github for efficient collaboration and tracking of project progress.",
+      "Hosted the game’s live demo on Itch.io and managed the game’s documentation."
+    ],
     "features": ["Isometric View", "Single Player", "Fishing Minigame", "Story", "Time-based", "Catch Pursuit"],
     "source_code_link": "https://github.com/genebit/feline-purrsuit.git",
     "source_code_locked": false,
@@ -135,6 +153,11 @@
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/Oesh_VkuEy0?si=F-m4734naTQdtIss"],
     "proponents": ["Johcel Gene T. Bitara", "Miguel Damien L. Garcera"],
+    "contributions": [
+      "Lead project manager of the project. Conducted KANBAN and SCRUM meetings for the group.",
+      "Developed core features of the application e.g., management system, authentication, and back-end configuration to google services – firebase, firestore, and firebase authentication.",
+      "UI/UX engineer responsible for developing responsive and custom made design for an overall user experience."
+    ],
     "features": [
       "Announcement Creation",
       "Announcement Management",
