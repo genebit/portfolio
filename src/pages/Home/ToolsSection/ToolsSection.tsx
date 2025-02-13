@@ -4,7 +4,6 @@ import Autoplay from "embla-carousel-autoplay"
 
 import { skills } from "@/assets/svgs"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
-import ScrollAnimation from "react-animate-on-scroll"
 
 /**
  * Renders the ToolsSection component.
@@ -30,23 +29,16 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
 
   return (
     <section className={className} {...props}>
-      <ScrollAnimation
-        animatePreScroll={true}
-        animateIn="animate__fadeIn"
-        animateOut="animate__fadeOut"
-        animateOnce={true}
-      >
-        <div className="flex flex-col gap-5">
-          <header>
-            <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">LANGUAGES • TOOLS • FRAMEWORKS</h3>
-            <p>
-              Throughout years of experience learning software application technologies, I have used various software
-              tools to create applications such as:
-            </p>
-          </header>
-          <SkillsCarousel />
-        </div>
-      </ScrollAnimation>
+      <div className="flex flex-col gap-5">
+        <header>
+          <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">LANGUAGES • TOOLS • FRAMEWORKS</h3>
+          <p>
+            Throughout years of experience learning software application technologies, I have used various software
+            tools to create applications such as:
+          </p>
+        </header>
+        <SkillsCarousel />
+      </div>
     </section>
   )
 }
