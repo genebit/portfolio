@@ -1,0 +1,3 @@
+[submodule "public/docs/cv"]
+	path = public/docs/cv
+	url = https://github.com/genebit/cv
