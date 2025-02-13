@@ -5,12 +5,19 @@ import HomePage from "@/pages/Home"
 import { routes } from "@/routes/routes"
 
 import { ThemeProvider } from "@/context/ThemeProvider"
+import { Button } from "./components/ui/button"
+import { ArrowUpToLine } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { scrollToTop, shouldShowScrollButton } from "./lib/utils"
 
 function App() {
+  const [showScrollTopButton, setShowScrollTopButton] = useState(false)
+  const scrollTopButtonRef = useRef<HTMLButtonElement>(null)
+
   if (import.meta.env.DEV) document.title = "Portfolio • Development"
 
   window.onload = function () {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    scrollToTop()
 
     // Temporary: Add font-segoeui class to text nodes that contain #, (), /, or \
     // This is due to the font artegra not supporting these characters
@@ -29,6 +36,20 @@ function App() {
     })
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTopButton(shouldShowScrollButton())
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    handleScroll()
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -38,6 +59,16 @@ function App() {
           </Route>
         </Routes>
       </ThemeProvider>
+      <Button
+        ref={scrollTopButtonRef}
+        className={`fixed z-20 p-2 rounded-full bottom-8 right-8 fill-mode-forwards ${
+          shouldShowScrollButton() ? "animate__fadeInDown" : "animate__fadeOutDown"
+        }`}
+        size={"icon"}
+        onClick={() => scrollToTop()}
+      >
+        <ArrowUpToLine size={20} />
+      </Button>
     </>
   )
 }

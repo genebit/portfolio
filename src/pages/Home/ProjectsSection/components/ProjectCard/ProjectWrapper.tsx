@@ -1,9 +1,9 @@
-import { HTMLAttributes, useEffect } from "react"
-import { BookOpen } from "lucide-react"
+import { HTMLAttributes, useEffect, useRef } from "react"
+import { ArrowUpToLine, BookOpen } from "lucide-react"
 import ImageGallery from "react-image-gallery"
 import "react-image-gallery/styles/css/image-gallery.css"
 
-import { cn } from "@/lib/utils"
+import { cn, scrollToTop, shouldShowScrollButton } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { useProjectCard } from "./hooks/useProjectCard"
@@ -17,6 +17,8 @@ interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
 
 const ProjectWrapper = ({ data, thumbnails, children, className, ...props }: ProjectWrapperProps) => {
   const { openProjectDetail, setOpenProjectDetail } = useProjectCard()
+  const scrollableDivRef = useRef<HTMLDivElement>(null)
+
   const compCn = cn("flex flex-col relative gap-5 md:flex-row", className)
 
   return (
@@ -28,7 +30,7 @@ const ProjectWrapper = ({ data, thumbnails, children, className, ...props }: Pro
               <BookOpen className="dark:text-white" size={20} />
             </Button>
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent ref={scrollableDivRef}>
             <SheetHeader>
               <SheetTitle className="mb-3">
                 <div className="flex items-center gap-3 my-3">
@@ -92,6 +94,15 @@ const ProjectWrapper = ({ data, thumbnails, children, className, ...props }: Pro
                 </AccordionItem>
               </Accordion>
             </div>
+            {/* <Button
+              className={`fixed z-20 p-2 rounded-full bottom-8 right-8 fill-mode-forwards ${
+                shouldShowScrollButton() ? "animate__fadeInDown" : "animate__fadeOutDown"
+              }`}
+              size={"icon"}
+              onClick={() => scrollToTop(scrollableDivRef.current)}
+            >
+              <ArrowUpToLine size={20} />
+            </Button> */}
           </SheetContent>
         </Sheet>
       </div>
