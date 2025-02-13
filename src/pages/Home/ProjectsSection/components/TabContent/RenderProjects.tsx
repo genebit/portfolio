@@ -11,6 +11,8 @@ import {
 } from "../ProjectCard"
 import { useEffect, useState } from "react"
 import { Project } from "../../types/Project"
+import { Gallery } from "../../types/Gallery"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 interface RenderProjectsProps {
   isActive: boolean
@@ -30,7 +32,27 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
       try {
         const response = await fetch(dataFilePath)
         const data = await response.json()
-        setProjects(data)
+
+        // Define the base path for images
+        const basePath = "/imgs/project-thumbnails/"
+
+        // Update image paths in the data
+        const updated = data.map((project: Project) => ({
+          ...project,
+          screenshots:
+            project.screenshots.length > 0
+              ? project.screenshots.map((screenshot: Gallery) => ({
+                  original: `${basePath}${screenshot.original}`,
+                  thumbnail: `${basePath}${screenshot.thumbnail}`,
+                }))
+              : [
+                  { original: "https://placehold.co/1920x1080", thumbnail: "https://placehold.co/1920x1080" },
+                  { original: "https://placehold.co/1920x1080", thumbnail: "https://placehold.co/1920x1080" },
+                  { original: "https://placehold.co/1920x1080", thumbnail: "https://placehold.co/1920x1080" },
+                ],
+        }))
+
+        setProjects(updated)
       } catch (error) {
         setError(`Error fetching the ${type} projects`)
         console.error(`Error fetching the ${type} projects:`, error)
@@ -64,6 +86,25 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
                 </TagWrapper>
               </header>
               <ProjectDescription>{project.description}</ProjectDescription>
+              <section>
+                <h3 className="text-sm font-bold tracking-widest uppercase font-artegra">Project Contributors</h3>
+                <div className="flex -space-x-2 rtl:space-x-reverse">
+                  <TooltipProvider>
+                    {project.proponents.map((contributor, contributorIndex) => (
+                      <Tooltip key={`${contributor}-${contributorIndex}`} delayDuration={100}>
+                        <TooltipTrigger>
+                          <img
+                            className="transition-transform bg-white rounded-full ring-2 ring-stone-950 w-7 h-7 hover:scale-125"
+                            src={`https://ui-avatars.com/api/?name=${contributor}&background=FFF&color=0C0A09&bold=true`}
+                            alt={contributor}
+                          />
+                        </TooltipTrigger>
+                        <TooltipContent>{contributor}</TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </TooltipProvider>
+                </div>
+              </section>
               <ProjectFooterButtons
                 srcCodeUrl={project.source_code_link}
                 demoUrl={project.live_demo_link}

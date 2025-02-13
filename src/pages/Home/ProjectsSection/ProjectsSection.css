@@ -4,3 +4,21 @@ button[role="tab"][data-state="active"] {
 button[role="tab"][data-state="active"] .tab-indicator {
   @apply block duration-500 rounded-none animate-in fade-in;
 }
+.image-gallery-thumbnail.active {
+  @apply border-2 rounded-md border-primary;
+}
+.image-gallery-thumbnail:hover {
+  @apply border-2 border-primary;
+}
+
+.image-gallery-image {
+  @apply rounded-md;
+}
+
+.image-gallery-thumbnail-image {
+  @apply rounded-sm;
+}
+
+.image-gallery-fullscreen-button:hover {
+  @apply text-primary;
+}

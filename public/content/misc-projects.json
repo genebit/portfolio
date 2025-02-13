@@ -6,22 +6,42 @@
     "subtitle": "Lead Frontend Web Developer",
     "screenshots": [
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "stubu-ai/stubu-ai-1.png",
+        "thumbnail": "stubu-ai/stubu-ai-1.png"
       },
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "stubu-ai/stubu-ai-2.png",
+        "thumbnail": "stubu-ai/stubu-ai-2.png"
       },
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "stubu-ai/stubu-ai-3.png",
+        "thumbnail": "stubu-ai/stubu-ai-3.png"
+      },
+      {
+        "original": "stubu-ai/stubu-ai-4.png",
+        "thumbnail": "stubu-ai/stubu-ai-4.png"
+      },
+      {
+        "original": "stubu-ai/stubu-ai-5.png",
+        "thumbnail": "stubu-ai/stubu-ai-5.png"
+      },
+      {
+        "original": "stubu-ai/stubu-ai-6.png",
+        "thumbnail": "stubu-ai/stubu-ai-6.png"
+      },
+      {
+        "original": "stubu-ai/stubu-ai-7.png",
+        "thumbnail": "stubu-ai/stubu-ai-7.png"
+      },
+      {
+        "original": "stubu-ai/stubu-ai-8.png",
+        "thumbnail": "stubu-ai/stubu-ai-8.png"
       }
     ],
     "tags": ["React", "Tailwind", "Typescript", "MongoDB", "ExpressJS"],
     "description": "an AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning education into a personalized and interactive experience; reinventing the traditional education system.",
     "description_full": null,
-    "video_links": ["https://www.youtube.com/embed/VmmuIew8EKM?si=KnEXQVGRMTbxedqT"],
+    "video_links": ["https://www.youtube.com/embed/VmmuIew8EKM?si=-B6x7xxE66CRlcOH"],
     "contributions": [
       "Assisted on UI/UX Design and made improvements to user experience (UX).",
       "Lead the project management for the front-end team consisting of four (4) developers and conducted SCRUM meetings for the group.",
@@ -63,18 +83,13 @@
     "title": "Dadsbol",
     "subtitle": "Lead Game Developer",
     "screenshots": [
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      },
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      },
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      }
+      { "original": "dadsbol/dadsbol-1.png", "thumbnail": "dadsbol/dadsbol-1.png" },
+      { "original": "dadsbol/dadsbol-2.png", "thumbnail": "dadsbol/dadsbol-2.png" },
+      { "original": "dadsbol/dadsbol-3.png", "thumbnail": "dadsbol/dadsbol-3.png" },
+      { "original": "dadsbol/dadsbol-4.png", "thumbnail": "dadsbol/dadsbol-4.png" },
+      { "original": "dadsbol/dadsbol-5.png", "thumbnail": "dadsbol/dadsbol-5.png" },
+      { "original": "dadsbol/dadsbol-6.png", "thumbnail": "dadsbol/dadsbol-6.png" },
+      { "original": "dadsbol/dadsbol-7.png", "thumbnail": "dadsbol/dadsbol-7.png" }
     ],
     "tags": ["Unity", "C#"],
     "description": "Plays exaggerated power dodgeball and dodges through incoming balls with their ragdoll bodies. Evade balls, use players as shields, and win the (KoTS) King of the Streets! title by eliminating all kid gangs from across the streets of Naga!",
@@ -100,16 +115,48 @@
     "subtitle": "Lead Game Developer",
     "screenshots": [
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "feline-purrsuit/feline-purrsuit-1.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-1.png"
       },
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "feline-purrsuit/feline-purrsuit-2.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-2.png"
       },
       {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
+        "original": "feline-purrsuit/feline-purrsuit-3.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-3.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-4.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-4.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-5.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-5.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-6.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-6.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-7.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-7.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-8.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-8.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-9.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-9.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-10.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-10.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-11.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-11.png"
       }
     ],
     "tags": ["Unity", "C#"],
@@ -134,20 +181,7 @@
     "date_to": "Dec 2023",
     "title": "eBayan",
     "subtitle": "Mobile Developer",
-    "screenshots": [
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      },
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      },
-      {
-        "original": "https://placehold.co/600x400",
-        "thumbnail": "https://placehold.co/250x150"
-      }
-    ],
+    "screenshots": [],
     "tags": ["Firebase", "Flutter"],
     "description": "An intuitive barangay-to-community mobile application for announcement creation management system.",
     "description_full": null,

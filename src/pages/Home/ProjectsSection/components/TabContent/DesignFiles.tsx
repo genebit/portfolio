@@ -19,9 +19,9 @@ const DesignFiles = () => {
   }, [])
 
   return (
-    <section className="mt-5 border">
+    <section className="mt-5 border rounded-md">
       {isLoading && <LoadingPage className="h-[20rem]" />}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden rounded-md">
         <iframe
           id="iframeElement"
           className={`w-full ${isLoading ? "hidden" : ""}`}
