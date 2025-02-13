@@ -1,8 +1,28 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-function cn(...inputs: ClassValue[]) {
+const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs))
+}
+
+const replaceSymbols = () => {
+  // Temporary: Add font-segoeui class to text nodes that contain #, (), /, or \
+  // This is due to the font artegra not supporting these characters
+  document.querySelectorAll("body *:not(script):not(style):not(noscript)").forEach((node) => {
+    node.childNodes.forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE && child.textContent?.trim() !== "") {
+        // Check if the text contains #, (), /, or \
+        if (/[#()/\\]/.test(child.textContent ?? "")) {
+          const newHTML = child.textContent?.replace(/([#()/\\])/g, '<span class="font-segoeui">$1</span>')
+          const wrapper = document.createElement("span")
+          if (newHTML) {
+            wrapper.innerHTML = newHTML
+          }
+          child.replaceWith(wrapper)
+        }
+      }
+    })
+  })
 }
 
 const scrollToTop = (scrollableEl?: HTMLElement | null) => {
@@ -20,4 +40,4 @@ const shouldShowScrollButton = (scrollableEl?: HTMLElement | null): boolean => {
     return window.scrollY > 50
   }
 }
-export { cn, scrollToTop, shouldShowScrollButton }
+export { cn, replaceSymbols, scrollToTop, shouldShowScrollButton }

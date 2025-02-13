@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import { HTMLAttributes } from "react"
-import { useProjectCard } from "./hooks/useProjectCard"
+import { useProjectCard } from "../../hooks/useProjectCard"
 
 const ProjectDescription = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const { openProjectDetail, setOpenProjectDetail } = useProjectCard()

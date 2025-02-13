@@ -8,28 +8,17 @@ import {
   ProjectSubtitle,
   TagWrapper,
   ProjectFooterButtons,
-} from "../../components/ProjectCard"
+} from "../ProjectCard"
 import { useEffect, useState } from "react"
+import { Project } from "../../types/Project"
 
-interface Project {
-  date_from: string
-  date_to: string
-  title: string
-  subtitle: string
-  screenshots: string[]
-  tags: string[]
-  description: string
-  description_full: string
-  video_link: []
-  proponents: string[]
-  features: string[]
-  source_code_link: string
-  source_code_locked: boolean
-  live_demo_link: string
-  live_demo_locked: boolean
+interface RenderProjectsProps {
+  isActive: boolean
+  type: string
+  dataFilePath: string
 }
 
-const OtherProjects = ({ isActive }: { isActive: boolean }) => {
+const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -39,19 +28,19 @@ const OtherProjects = ({ isActive }: { isActive: boolean }) => {
 
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/content/misc-projects.json")
+        const response = await fetch(dataFilePath)
         const data = await response.json()
         setProjects(data)
       } catch (error) {
-        setError("Error fetching the highlighted projects")
-        console.error("Error fetching the highlighted projects:", error)
+        setError(`Error fetching the ${type} projects`)
+        console.error(`Error fetching the ${type} projects:`, error)
       } finally {
         setIsLoading(false)
       }
     }
 
     fetchProjects()
-  }, [isActive])
+  }, [dataFilePath, isActive, type])
 
   if (isLoading) return <div className="py-8 text-center">Loading projects...</div>
   if (error) return <div className="py-8 text-center text-red-500">{error}</div>
@@ -62,8 +51,8 @@ const OtherProjects = ({ isActive }: { isActive: boolean }) => {
     return (
       <ol className="relative border-slate-950 dark:border-primary border-s-2">
         {projects.map((project, index) => (
-          <ProjectCard key={`${project.title}-${index}`}>
-            <ProjectWrapper id={`otherProject${index + 1}`} thumbnails={project.screenshots} data={project}>
+          <ProjectCard key={`${type}-${project.title}-${index}`}>
+            <ProjectWrapper id={`${type}-project-${index + 1}`} thumbnails={project.screenshots} data={project}>
               <ProjectDateSpan>{`${project.date_from} - ${project.date_to}`}</ProjectDateSpan>
               <header>
                 <ProjectTitle>{project.title}</ProjectTitle>
@@ -89,4 +78,4 @@ const OtherProjects = ({ isActive }: { isActive: boolean }) => {
   }
 }
 
-export default OtherProjects
+export default RenderProjects

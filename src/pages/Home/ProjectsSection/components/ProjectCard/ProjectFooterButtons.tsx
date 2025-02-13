@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 import { ArrowUpRightFromSquare, LockKeyhole } from "lucide-react"
 import { HTMLAttributes } from "react"
 import { Link } from "react-router-dom"
-import { useProjectCard } from "./hooks/useProjectCard"
+import { useProjectCard } from "../../hooks/useProjectCard"
 
 interface ProjectFooterButtonsProps extends HTMLAttributes<HTMLElement> {
   srcCodeUrl: string

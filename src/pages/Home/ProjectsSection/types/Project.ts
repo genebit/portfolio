@@ -1,9 +1,11 @@
+import { Gallery } from "./Gallery"
+
 interface Project {
   date_from: string
   date_to: string
   title: string
   subtitle: string
-  screenshots: string[]
+  screenshots: Gallery[]
   tags: string[]
   description: string
   description_full: string

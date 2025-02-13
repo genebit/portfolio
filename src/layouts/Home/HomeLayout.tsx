@@ -4,7 +4,7 @@ import * as constants from "@/assets/svgs/"
 import TopNavbar from "@/layouts/Home/TopNavbar/TopNavbar"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 
-import "@/pages/Home/index.css"
+import "@/pages/Home/HomePage.css"
 import Footer from "@/layouts/Home/Footer/Footer"
 
 const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {

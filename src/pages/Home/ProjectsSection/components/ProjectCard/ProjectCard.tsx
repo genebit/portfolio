@@ -4,7 +4,7 @@ import { Book } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-import { ProjectCardProvider } from "./context/ProjectCardContext"
+import { ProjectCardProvider } from "../../context/ProjectCardContext"
 
 const ProjectCard = ({ className, children, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("mt-5 mb-10 ms-4 list-none", className)

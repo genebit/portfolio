@@ -1,8 +1,8 @@
 import { figmaEmbedLink } from "@/lib/constants"
-import LoadingPage from "@/pages/Loading"
+import LoadingPage from "@/pages/Loading/LoadingPage"
 import { useState, useEffect } from "react"
 
-const RenderFigma = () => {
+const DesignFiles = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const RenderFigma = () => {
   )
 }
 
-export default RenderFigma
+export default DesignFiles

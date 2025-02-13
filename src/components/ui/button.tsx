@@ -3,6 +3,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+import { ArrowUpToLine } from "lucide-react"
 
 const buttonVariants = cva(
   "transition-all duration-100 active:scale-95 inline-flex items-center justify-center whitespace-nowrap text-xs font-semibold ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-md",
@@ -44,4 +45,67 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-export { Button, buttonVariants }
+interface AutoScrollButtonProps extends ButtonProps {
+  scrollableElement?: HTMLElement | null
+  icon?: React.ReactNode
+  threshold?: number
+}
+
+/**
+ * A button component that appears when the user scrolls down a certain threshold and scrolls the page or a specified element back to the top when clicked.
+ *
+ * @param {Object} props - The properties object.
+ * @param {HTMLElement | Window} props.scrollableElement - The element to attach the scroll event listener to. Defaults to the window object.
+ * @param {React.ReactNode} props.icon - The icon to display inside the button. Defaults to an upward arrow icon.
+ * @param {number} [props.threshold=100] - The scroll threshold in pixels to show the button. Defaults to 100 pixels. higher value means the button will appear later.
+ * @param {React.ReactNode} props.children - The children elements to display inside the button.
+ * @param {Object} props.props - Additional properties to pass to the button component.
+ *
+ * @returns {JSX.Element} The AutoScrollButton component.
+ */
+const AutoScrollButton = ({
+  scrollableElement,
+  icon,
+  threshold = 100,
+  children,
+  className,
+  ...props
+}: AutoScrollButtonProps): JSX.Element => {
+  const [show, setShow] = React.useState(false)
+  const compCn = cn(
+    `${
+      scrollableElement instanceof HTMLElement ? "absolute" : "fixed"
+    } z-20 p-2 rounded-full bottom-8 right-8 fill-mode-forwards overscroll-contain ${
+      show ? "animate__fadeIn" : "animate__fadeOut pointer-events-none"
+    }`,
+    className
+  )
+
+  React.useEffect(() => {
+    const target = scrollableElement || window
+
+    const handleScroll = () => {
+      setShow(target instanceof HTMLElement ? target.scrollTop > threshold : window.scrollY > threshold)
+    }
+
+    target.addEventListener("scroll", handleScroll)
+    return () => target.removeEventListener("scroll", handleScroll)
+  }, [scrollableElement, threshold])
+
+  const scrollToTop = () => {
+    if (scrollableElement) {
+      scrollableElement.scrollTo({ top: 0, behavior: "smooth" })
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }
+
+  return (
+    <Button className={compCn} size={"icon"} onClick={scrollToTop} {...props}>
+      {icon ?? <ArrowUpToLine size={20} />}
+      {children}
+    </Button>
+  )
+}
+
+export { Button, buttonVariants, AutoScrollButton }

@@ -1,6 +1,7 @@
 export { default as ProjectCardCloseButton } from "./ProjectCardCloseButton"
 export { default as ProjectCardIndicator } from "./ProjectCardIndicator"
 export { default as ProjectCard } from "./ProjectCard"
+export { default as ProjectViewDetail } from "./ProjectViewDetail"
 export { default as ProjectWrapper } from "./ProjectWrapper"
 export { default as ProjectDateSpan } from "./ProjectDateSpan"
 export { default as ProjectTitle } from "./ProjectTitle"

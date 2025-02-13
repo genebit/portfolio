@@ -1,5 +1,5 @@
 import { createContext, useState, HTMLAttributes } from "react"
-import { Project } from "../../../TabContent/HighlightProjects/types/Project"
+import { Project } from "../../../types/Project"
 
 interface ProjectCardContextProps extends HTMLAttributes<HTMLElement> {
   openProjectDetail: boolean
