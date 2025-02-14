@@ -10,6 +10,11 @@
         "thumbnail": "stubu-ai/stubu-ai-1.png"
       },
       {
+        "original": "stubu-ai/stubu-ai-1-video.png",
+        "thumbnail": "stubu-ai/stubu-ai-1-video.png",
+        "embedUrl": "https://www.youtube.com/embed/VmmuIew8EKM?si=t7cJapiuSXYX7zCG"
+      },
+      {
         "original": "stubu-ai/stubu-ai-2.png",
         "thumbnail": "stubu-ai/stubu-ai-2.png"
       },
@@ -84,6 +89,11 @@
     "subtitle": "Lead Game Developer",
     "screenshots": [
       { "original": "dadsbol/dadsbol-1.png", "thumbnail": "dadsbol/dadsbol-1.png" },
+      {
+        "original": "dadsbol/dadsbol-1-video.png",
+        "thumbnail": "dadsbol/dadsbol-1-video.png",
+        "embedUrl": "https://www.youtube.com/embed/IDMhTwF-YDs?si=FkXIWOgF1QIDNkOg"
+      },
       { "original": "dadsbol/dadsbol-2.png", "thumbnail": "dadsbol/dadsbol-2.png" },
       { "original": "dadsbol/dadsbol-3.png", "thumbnail": "dadsbol/dadsbol-3.png" },
       { "original": "dadsbol/dadsbol-4.png", "thumbnail": "dadsbol/dadsbol-4.png" },
@@ -117,6 +127,11 @@
       {
         "original": "feline-purrsuit/feline-purrsuit-1.png",
         "thumbnail": "feline-purrsuit/feline-purrsuit-1.png"
+      },
+      {
+        "original": "feline-purrsuit/feline-purrsuit-1-video.png",
+        "thumbnail": "feline-purrsuit/feline-purrsuit-1-video.png",
+        "embedUrl": "https://www.youtube.com/embed/jGcnhP2mlio?si=ZyUg9jAN5xmJ5wHN"
       },
       {
         "original": "feline-purrsuit/feline-purrsuit-2.png",
@@ -185,6 +200,11 @@
       {
         "original": "ebayan/ebayan-1.png",
         "thumbnail": "ebayan/ebayan-1.png"
+      },
+      {
+        "original": "ebayan/ebayan-1-video.png",
+        "thumbnail": "ebayan/ebayan-1-video.png",
+        "embedUrl": "https://www.youtube.com/embed/Oesh_VkuEy0?si=au5LRTptQtqnPTRX"
       },
       {
         "original": "ebayan/ebayan-2.png",

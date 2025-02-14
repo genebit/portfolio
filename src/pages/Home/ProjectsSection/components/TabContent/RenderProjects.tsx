@@ -44,6 +44,21 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
               ? project.screenshots.map((screenshot: Gallery) => ({
                   original: `${basePath}${screenshot.original}`,
                   thumbnail: `${basePath}${screenshot.thumbnail}`,
+                  embedUrl: screenshot.embedUrl,
+                  renderItem: screenshot.embedUrl
+                    ? () => (
+                        <div className="rounded-md video-wrapper overflow-clip">
+                          <iframe
+                            width="100%"
+                            height="162"
+                            src={screenshot.embedUrl}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                      )
+                    : undefined,
                 }))
               : [
                   { original: "https://placehold.co/1920x1080", thumbnail: "https://placehold.co/1920x1080" },
