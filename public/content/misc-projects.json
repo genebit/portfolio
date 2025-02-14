@@ -181,7 +181,36 @@
     "date_to": "Dec 2023",
     "title": "eBayan",
     "subtitle": "Mobile Developer",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "original": "ebayan/ebayan-1.png",
+        "thumbnail": "ebayan/ebayan-1.png"
+      },
+      {
+        "original": "ebayan/ebayan-2.png",
+        "thumbnail": "ebayan/ebayan-2.png"
+      },
+      {
+        "original": "ebayan/ebayan-3.png",
+        "thumbnail": "ebayan/ebayan-3.png"
+      },
+      {
+        "original": "ebayan/ebayan-4.png",
+        "thumbnail": "ebayan/ebayan-4.png"
+      },
+      {
+        "original": "ebayan/ebayan-5.png",
+        "thumbnail": "ebayan/ebayan-5.png"
+      },
+      {
+        "original": "ebayan/ebayan-6.png",
+        "thumbnail": "ebayan/ebayan-6.png"
+      },
+      {
+        "original": "ebayan/ebayan-7.png",
+        "thumbnail": "ebayan/ebayan-7.png"
+      }
+    ],
     "tags": ["Firebase", "Flutter"],
     "description": "An intuitive barangay-to-community mobile application for announcement creation management system.",
     "description_full": null,
