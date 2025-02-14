@@ -43,6 +43,7 @@
         "thumbnail": "stubu-ai/stubu-ai-8.png"
       }
     ],
+    "screenshot_note": null,
     "tags": ["React", "Tailwind", "Typescript", "MongoDB", "ExpressJS"],
     "description": "an AI-powered Learning Management System that adapts to learners as an all-in-one study buddy turning education into a personalized and interactive experience; reinventing the traditional education system.",
     "description_full": null,
@@ -101,7 +102,8 @@
       { "original": "dadsbol/dadsbol-6.png", "thumbnail": "dadsbol/dadsbol-6.png" },
       { "original": "dadsbol/dadsbol-7.png", "thumbnail": "dadsbol/dadsbol-7.png" }
     ],
-    "tags": ["Unity", "C#"],
+    "screenshot_note": null,
+    "tags": ["Unity", "C–SHARP"],
     "description": "Plays exaggerated power dodgeball and dodges through incoming balls with their ragdoll bodies. Evade balls, use players as shields, and win the (KoTS) King of the Streets! title by eliminating all kid gangs from across the streets of Naga!",
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=jH6gCYKNhs2ogVt8"],
@@ -174,7 +176,8 @@
         "thumbnail": "feline-purrsuit/feline-purrsuit-11.png"
       }
     ],
-    "tags": ["Unity", "C#"],
+    "screenshot_note": null,
+    "tags": ["Unity", "C–SHARP"],
     "description": "Feline Purrsuit is a cute, stressful cat chasing game about the town of Townsville being overrun by cats. That’s where you come in! Save the town of Townsville from this CATastrophe! Fish for baits, catch cats, then pet!",
     "description_full": null,
     "video_links": ["https://www.youtube.com/embed/jGcnhP2mlio?si=ZyyNXTeGYVoV8EhP"],
@@ -231,6 +234,7 @@
         "thumbnail": "ebayan/ebayan-7.png"
       }
     ],
+    "screenshot_note": null,
     "tags": ["Firebase", "Flutter"],
     "description": "An intuitive barangay-to-community mobile application for announcement creation management system.",
     "description_full": null,

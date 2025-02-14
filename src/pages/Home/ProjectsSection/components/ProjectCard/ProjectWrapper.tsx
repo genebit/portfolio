@@ -26,7 +26,8 @@ const ProjectWrapper = ({ data, thumbnails, children, className, ...props }: Pro
         </ProjectViewDetail>
       </div>
       <div className="w-full md:max-w-72">
-        <ImageGallery slideDuration={1} showPlayButton={false} showNav={false} items={thumbnails} autoPlay={true} />
+        <ImageGallery slideDuration={1} showPlayButton={false} showNav={false} items={thumbnails} lazyLoad={true} />
+        {data.screenshot_note && <small className="italic text-slate-400">Note: {data.screenshot_note}</small>}
       </div>
       <div className="flex flex-col gap-3">{children}</div>
     </div>

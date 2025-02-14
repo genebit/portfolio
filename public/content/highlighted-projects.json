@@ -2,10 +2,11 @@
   {
     "date_from": "June 2024",
     "date_to": "Present",
-    "title": "Ateneo de Naga University – Project HRIS",
+    "title": "Ateneo de Naga University – Project HRIS（Phase 1 and 2）",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
     "screenshots": [],
-    "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind"],
+    "screenshot_note": "These screenshots are publicly available views and do not include the internal system.",
+    "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind", "Internal and Public"],
     "description": "University's Human Resource Information System (HRIS). Designed to manage employee records, HR processes, and centralize HR data to improve efficiency and reduce manual workloads.",
     "description_full": null,
     "video_links": [],
@@ -40,8 +41,38 @@
     "date_to": "Mar 2024",
     "title": "Ateneo de Naga University – Project RETSU",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
-    "screenshots": [],
-    "tags": ["Oracle", "Laravel 9", "Livewire", "Tailwind"],
+    "screenshots": [
+      {
+        "original": "retsu/retsu-1.png",
+        "thumbnail": "retsu/retsu-1.png"
+      },
+      {
+        "original": "retsu/retsu-1-video.png",
+        "thumbnail": "retsu/retsu-1-video.png"
+      },
+      {
+        "original": "retsu/retsu-2.png",
+        "thumbnail": "retsu/retsu-2.png"
+      },
+      {
+        "original": "retsu/retsu-3.png",
+        "thumbnail": "retsu/retsu-3.png"
+      },
+      {
+        "original": "retsu/retsu-4.png",
+        "thumbnail": "retsu/retsu-4.png"
+      },
+      {
+        "original": "retsu/retsu-5.png",
+        "thumbnail": "retsu/retsu-5.png"
+      },
+      {
+        "original": "retsu/retsu-6.png",
+        "thumbnail": "retsu/retsu-6.png"
+      }
+    ],
+    "screenshot_note": "These screenshots are publicly available views and do not include the internal system.",
+    "tags": ["Oracle", "Laravel 9", "Livewire", "Tailwind", "Internal and Public"],
     "description": "A generic real-time queue management system solution for the University, enhancing user experience by reducing queue delays and eliminating the inconveniences associated with traditional queuing systems.",
     "description_full": null,
     "video_links": [],
@@ -54,13 +85,18 @@
       "Conducted a comprehensive testing phase, prototyping, and feedback, and facilitated onboarding for clients to ensure smooth adoption and operational efficiency."
     ],
     "features": [
-      "Real-time",
+      "Real-time Monitor View",
       "Queue Management",
+      "Kiosk Device",
+      "Online Queueing System",
       "Authentication",
       "User Privileges",
       "Internal and Public",
       "Generic",
-      "Reports per user type e.g., Company, Branch, Counters"
+      "Company Management",
+      "Queue Branch Management",
+      "Staff/Counter Management",
+      "Company Overall Reports, Branch Overall Reports, Staff Performance Report"
     ],
     "source_code_link": "https://mis-git.adnu.edu.ph/jbitara/retsu.git",
     "source_code_locked": true,
@@ -73,7 +109,8 @@
     "title": "Department of Agriculture – Project DAAMIA",
     "subtitle": "Subcontract • Lead Full-Stack Web Developer",
     "screenshots": [],
-    "tags": ["DOTNET Framework", "C#", "MSSQL"],
+    "screenshot_note": "These screenshots are publicly available views and do not include the internal system.",
+    "tags": ["DOTNET Framework", "C–SHARP", "MSSQL", "Internal"],
     "description": "A real-time weather monitoring system for data analytics to Department of Agriculture stakeholders.",
     "description_full": null,
     "video_links": [],

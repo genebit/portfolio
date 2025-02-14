@@ -6,6 +6,7 @@ interface Project {
   title: string
   subtitle: string
   screenshots: Gallery[]
+  screenshot_note: string
   tags: string[]
   description: string
   description_full: string

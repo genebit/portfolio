@@ -13,6 +13,8 @@ import { Gallery } from "../../types/Gallery"
 import { useProjectCard } from "../../hooks/useProjectCard"
 
 import "react-image-gallery/styles/css/image-gallery.css"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { TooltipProvider } from "@radix-ui/react-tooltip"
 
 interface ProjectViewDetailProps extends HTMLAttributes<HTMLElement> {
   thumbnails: Gallery[]
@@ -43,9 +45,20 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
   return (
     <Sheet open={openProjectDetail} onOpenChange={setOpenProjectDetail}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="rounded-full bg-secondary">
-          <BookOpen className="dark:text-white" size={20} />
-        </Button>
+        <div>
+          <TooltipProvider delayDuration={100}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full bg-secondary">
+                  <BookOpen className="dark:text-white" size={20} />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>View Project Details</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
       </SheetTrigger>
       <SheetContent className={compCn} {...props}>
         <div className="relative">
@@ -67,6 +80,7 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
                   showPlayButton={false}
                   showNav={false}
                   items={thumbnails}
+                  lazyLoad={true}
                 />
               </div>
             </section>

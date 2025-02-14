@@ -4,6 +4,7 @@ import { ArrowUpRightFromSquare, LockKeyhole } from "lucide-react"
 import { HTMLAttributes } from "react"
 import { Link } from "react-router-dom"
 import { useProjectCard } from "../../hooks/useProjectCard"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 interface ProjectFooterButtonsProps extends HTMLAttributes<HTMLElement> {
   srcCodeUrl: string
@@ -23,25 +24,63 @@ const ProjectFooterButtons = ({
   const { openProjectDetail } = useProjectCard()
   const compCn = cn("flex gap-2 ms-auto", className)
 
+  const SourceCodeButton = () => {
+    return (
+      <Button
+        variant="outline"
+        className="tracking-widest uppercase text-primary font-artegra"
+        disabled={disableSrcCodeBtn}
+      >
+        {disableSrcCodeBtn && <LockKeyhole size={20} className="me-1" />}
+        <Link to={srcCodeUrl}>View Source Code</Link>
+        {!disableSrcCodeBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
+      </Button>
+    )
+  }
+
+  const DemoButton = () => {
+    return (
+      <Button variant="default" className="tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
+        {disableDemoBtn && <LockKeyhole size={20} className="me-1" />}
+        <Link to={demoUrl}>View Demo</Link>
+        {!disableDemoBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
+      </Button>
+    )
+  }
+
   return (
     <div className={compCn} {...props}>
       {!openProjectDetail && (
-        <>
-          <Button
-            variant="outline"
-            className="tracking-widest uppercase text-primary font-artegra"
-            disabled={disableSrcCodeBtn}
-          >
-            {disableSrcCodeBtn && <LockKeyhole size={20} className="me-1" />}
-            <Link to={srcCodeUrl}>View Source Code</Link>
-            {!disableSrcCodeBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
-          </Button>
-          <Button variant="default" className="tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
-            {disableDemoBtn && <LockKeyhole size={20} className="me-1" />}
-            <Link to={demoUrl}>View Demo</Link>
-            {!disableDemoBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
-          </Button>
-        </>
+        <TooltipProvider delayDuration={100}>
+          {disableSrcCodeBtn ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span>
+                  <SourceCodeButton />
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>The project source code is not publicly available</p>
+              </TooltipContent>
+            </Tooltip>
+          ) : (
+            <SourceCodeButton />
+          )}
+          {disableDemoBtn ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span>
+                  <DemoButton />
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>The live demo. is not publicly available</p>
+              </TooltipContent>
+            </Tooltip>
+          ) : (
+            <DemoButton />
+          )}
+        </TooltipProvider>
       )}
     </div>
   )
