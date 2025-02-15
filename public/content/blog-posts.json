@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Laravel Application Setup via Virtual Hosting（XAMPP and PuTTY）",
+    "date_added": "Sep 24, 2024",
+    "short_description": "Outlines the steps to set up a Laravel application using a XAMPP Apache server with one server and multiple clients on the same network.",
+    "link": ""
+  },
+  {
+    "title": "Guide for Using XDebug on Laravel 9 Visual Studio Code",
+    "date_added": "Mar 21, 2024",
+    "short_description": "Enables debugging in Visual Studio Code for Laravel 9.",
+    "link": ""
+  },
+  {
+    "title": "Guide for Connecting Laravel 9 with Oracle Database 12c",
+    "date_added": "Mar 16, 2024",
+    "short_description": "Configure OCI8 for Laravel to connect to Oracle.",
+    "link": ""
+  },
+  {
+    "title": "A solution for horizontal scrolling in OneNote for Windows 10",
+    "date_added": "Mar 21, 2022",
+    "short_description": "Enables sidescrolling in OneNote for Windows 10.",
+    "link": ""
+  }
+]

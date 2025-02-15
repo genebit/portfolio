@@ -2,7 +2,7 @@ import ScrollSpy from "react-ui-scrollspy"
 
 import HomeLayout from "@/layouts/Home/HomeLayout"
 import { RightSidebarHeading, RightSidebarLink, RightSidebarWrapper } from "@/layouts/Home/RightSidebar"
-import { AboutSection, GitTimelineSection, ProjectsSection, ToolsSection } from "@/pages/Home"
+import { AboutSection, GitTimelineSection, ProjectsSection, ToolsSection, BlogPostsSection } from "@/pages/Home"
 
 import "animate.css"
 
@@ -26,6 +26,7 @@ const HomePage = () => {
         <RightSidebarLink jumpTo="tools" label="Tools I Use" />
         <RightSidebarLink jumpTo="projects" label="Projects" />
         <RightSidebarHeading>Blog Post</RightSidebarHeading>
+        <BlogPostsSection />
       </RightSidebarWrapper>
     </HomeLayout>
   )
