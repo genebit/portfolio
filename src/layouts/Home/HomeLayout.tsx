@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react"
 
-import * as constants from "@/assets/svgs/"
 import TopNavbar from "@/layouts/Home/TopNavbar/TopNavbar"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 
@@ -15,13 +14,6 @@ const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
         <ContactSidebarWrapper />
         {children}
       </main>
-      <div className="flex justify-center">
-        <img
-          className="absolute top-0 z-0 duration-1000 animate-in fade-in dark:hidden"
-          src={constants.SPLINECANVASSNAPSHOT}
-          alt="Spline canvas"
-        />
-      </div>
       <Footer />
     </>
   )

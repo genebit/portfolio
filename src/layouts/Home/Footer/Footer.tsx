@@ -17,7 +17,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative flex justify-center p-20 bg-slate-950 md:mt-40 dark:bg-stone-900">
+    <footer className="relative flex justify-center p-20 bg-stone-950 md:mt-40 dark:bg-stone-900">
       <div className="flex flex-col gap-20">
         <section className="flex flex-col gap-3">
           <h3 className="font-bold tracking-widest text-center text-white uppercase font-artegra">

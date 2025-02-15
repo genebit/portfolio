@@ -8,10 +8,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
-import { useTheme } from "@/context/ThemeProvider"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { BlogPostsSection } from "@/pages/Home"
 import { RightSidebarHeading } from "../RightSidebar"
+import { useTheme } from "@/hooks/useTheme"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("fixed z-30 flex w-full px-5 py-2 bg-transparent backdrop-filter backdrop-blur", className)
@@ -69,9 +70,20 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant={"ghost"} className="mt-0.5">
-              <BookOpen size={20} />
-            </Button>
+            <div>
+              <TooltipProvider delayDuration={100}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant={"ghost"} className="mt-0.5">
+                      <BookOpen size={20} />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>View Markdown Blog Posts</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
           </SheetTrigger>
           <SheetContent>
             <RightSidebarHeading>Markdown Blog Posts</RightSidebarHeading>

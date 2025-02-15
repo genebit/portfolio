@@ -45,7 +45,7 @@ const BlogPostsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                   <Link to={blog.link} target="_blank">
                     <Tooltip key={`${blog.title}-${index}`} delayDuration={100}>
                       <TooltipTrigger className="text-left">
-                        <Card className="bg-transparent border-none hover:bg-stone-900 hover:cursor-pointer">
+                        <Card className="bg-transparent border-none hover:bg-stone-100 dark:hover:bg-stone-900 hover:cursor-pointer">
                           <CardContent className="p-2 px-3">
                             <time className="text-xs font-normal leading-none text-slate-600 dark:text-slate-400">
                               {blog.date_added}
@@ -53,7 +53,7 @@ const BlogPostsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                             <div className="absolute p-1 border-2 rounded-full bg-slate-950 dark:bg-stone-600 -start-[0.45rem] mt-1 text-white border-white dark:border-stone-950"></div>
                             <h6 className="text-xs tracking-widest uppercase font-artegra">{blog.title}</h6>
                             <details>
-                              <summary className="text-blue-500 cursor-pointer">View description</summary>
+                              <summary className="cursor-pointer dark:text-blue-500">View description</summary>
                               <p className="mt-2 text-sm">{blog.short_description}</p>
                             </details>
                           </CardContent>

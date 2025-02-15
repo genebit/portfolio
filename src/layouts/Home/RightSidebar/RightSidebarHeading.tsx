@@ -9,7 +9,10 @@ import { HTMLAttributes } from "react"
  * @returns {JSX.Element} The rendered component.
  */
 const RightSidebarHeading = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
-  const compCn = cn("my-3 tracking-widest text-slate-400 uppercase font-artegra font-normal text-sm", className)
+  const compCn = cn(
+    "my-3 tracking-widest text-slate-600 dark:text-slate-400 uppercase font-artegra font-normal text-sm",
+    className
+  )
 
   return (
     <small className={compCn} {...props}>

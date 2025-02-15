@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react"
 
 const ProjectTag = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn(
-    "px-5 py-[3px] rounded-full bg-slate-950 text-white dark:bg-stone-900 uppercase font-artegra tracking-widest text-xs",
+    "px-5 py-[3px] rounded-full bg-neutral-100 dark:text-white dark:bg-stone-900 uppercase font-artegra tracking-widest text-xs",
     className
   )
 

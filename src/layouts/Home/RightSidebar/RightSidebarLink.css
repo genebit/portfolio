@@ -1,0 +1,3 @@
+.active-scroll-spy {
+  @apply px-5 rounded-md dark:text-white 2xl:border-l-4 dark:border-rose-500 dark:bg-rose-400 bg-opacity-15 font-artegra 2xl:rounded-bl-none 2xl:rounded-tl-none 2xl:rounded-tr-md 2xl:rounded-br-md;
+}

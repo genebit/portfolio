@@ -72,7 +72,7 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
                 <hr />
               </SheetTitle>
             </SheetHeader>
-            <section className="w-full p-3 rounded-lg bg-stone-900">
+            <section className="w-full p-3 rounded-lg bg-stone-100 dark:bg-stone-900">
               <div className="mx-auto max-w-96">
                 <ProjectGallery thumbnails={thumbnails} />
               </div>

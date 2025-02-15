@@ -1,26 +1,25 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { HTMLAttributes } from "react"
+
+import { Clapperboard } from "lucide-react"
+import ScrollAnimation from "react-animate-on-scroll"
+
+import ILLUST from "/svgs/about-illust.svg"
+import * as constants from "@/lib/constants"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import ViewResumeButton from "@/layouts/Home/ViewResumeButton/ViewResumeButton"
-import * as constants from "@/lib/constants"
-import { Clapperboard } from "lucide-react"
-import { HTMLAttributes } from "react"
-import ScrollAnimation from "react-animate-on-scroll"
-import ILLUST from "/svgs/about-illust.svg"
-/**
- * Renders the About section of the home page.
- * @returns JSX.Element
- */
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
 const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
     <section className={className} {...props}>
-      <Card className="relative border-s-8 border-s-primary bg-slate-950 dark:bg-stone-900 overflow-clip">
-        <CardContent className="p-10 pb-5 text-white">
+      <Card className="relative bg-white border-s-8 border-s-primary dark:bg-stone-900 overflow-clip">
+        <CardContent className="p-10 pb-5 dark:text-white">
           <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">About Me</h3>
           <p>
             Hi! I am a Filipino-based Software Engineer passionate about learning software technologies in general;
             immersed in the world of coding, designing, and software development. <br />
             <br /> Currently finishing my degree as a 4th Year Bachelors of Science in Information Technology in Ateneo
-            De Naga University. Seeking opportunities, equipped with 3+ years of work experience on various software
+            De Naga University. Seeking opportunities, equipped with 4+ years of work experience on various software
             technology tools to create a beautiful system design.
           </p>
           <section>
@@ -32,7 +31,7 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
                     View my video resume
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="rounded-md bg-neutral-950">
+                <AccordionContent className="rounded-md dark:bg-neutral-950">
                   <div className="p-5 mt-5 overflow-hidden rounded-md select-none">
                     <hr />
                     <br />

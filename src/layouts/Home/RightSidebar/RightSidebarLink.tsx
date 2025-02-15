@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import "./RightSidebarLink.css"
 
 interface RightSidebarLinkProps {
   jumpTo: string
