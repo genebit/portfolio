@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import ViewResumeButton from "@/layouts/Home/ViewResumeButton/ViewResumeButton"
 import * as constants from "@/lib/constants"
+import { Clapperboard } from "lucide-react"
 import { HTMLAttributes } from "react"
 import ScrollAnimation from "react-animate-on-scroll"
 
@@ -25,7 +26,12 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
           <section>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="video-resume">
-                <AccordionTrigger className="font-semibold">View Video Resume</AccordionTrigger>
+                <AccordionTrigger className="font-semibold">
+                  <div className="flex items-center gap-3">
+                    <Clapperboard size={20} />
+                    View my video resume
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="rounded-md bg-neutral-950">
                   <div className="p-5 mt-5 overflow-hidden rounded-md select-none">
                     <hr />
