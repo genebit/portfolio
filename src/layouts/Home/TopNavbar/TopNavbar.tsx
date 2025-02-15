@@ -1,16 +1,6 @@
 import { HTMLAttributes } from "react"
 
-import {
-  BookOpen,
-  Clapperboard,
-  FileQuestion,
-  FolderArchive,
-  Github,
-  LibraryBig,
-  MoonStar,
-  Sun,
-  UserRoundSearch,
-} from "lucide-react"
+import { BookOpen, FileQuestion, FolderArchive, Github, LibraryBig, MoonStar, Sun, UserRoundSearch } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
