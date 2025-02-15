@@ -22,13 +22,13 @@ const ProjectFooterButtons = ({
   ...props
 }: ProjectFooterButtonsProps) => {
   const { openProjectDetail } = useProjectCard()
-  const compCn = cn("flex gap-2 ms-auto", className)
+  const compCn = cn("flex flex-col sm:flex-row gap-2 sm:ms-auto", className)
 
   const SourceCodeButton = () => {
     return (
       <Button
         variant="outline"
-        className="tracking-widest uppercase text-primary font-artegra"
+        className="w-full tracking-widest uppercase text-primary font-artegra"
         disabled={disableSrcCodeBtn}
       >
         {disableSrcCodeBtn && <LockKeyhole size={20} className="me-1" />}
@@ -40,7 +40,7 @@ const ProjectFooterButtons = ({
 
   const DemoButton = () => {
     return (
-      <Button variant="default" className="tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
+      <Button variant="default" className="w-full tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
         {disableDemoBtn && <LockKeyhole size={20} className="me-1" />}
         <Link to={demoUrl}>View Demo</Link>
         {!disableDemoBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
@@ -55,7 +55,7 @@ const ProjectFooterButtons = ({
           {disableSrcCodeBtn ? (
             <Tooltip>
               <TooltipTrigger asChild>
-                <span>
+                <span className="w-full">
                   <SourceCodeButton />
                 </span>
               </TooltipTrigger>
@@ -69,7 +69,7 @@ const ProjectFooterButtons = ({
           {disableDemoBtn ? (
             <Tooltip>
               <TooltipTrigger asChild>
-                <span>
+                <span className="w-full">
                   <DemoButton />
                 </span>
               </TooltipTrigger>

@@ -5,6 +5,9 @@ button[role="tab"][data-state="active"] .tab-indicator {
   @apply block duration-500 rounded-none animate-in fade-in;
 }
 /* ------------------------------------------------ */
+.image-gallery {
+  @apply z-20;
+}
 .image-gallery-thumbnail.active {
   @apply border-2 rounded-md border-primary;
 }

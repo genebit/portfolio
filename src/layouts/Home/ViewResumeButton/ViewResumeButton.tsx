@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import * as constants from "@/lib/constants"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList } from "@radix-ui/react-tabs"
-import { AlertDialogFooter, AlertDialogHeader } from "@/components/ui/alert-dialog"
+import { AlertDialogHeader } from "@/components/ui/alert-dialog"
 import { ProjectCardCloseButton, ProjectCardIndicator } from "@/pages/Home/ProjectsSection/components/ProjectCard"
 import {
   AlertDialog,
@@ -52,6 +52,13 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                     </a>
                   </p>
                 </object>
+                <div className="w-max ms-auto">
+                  <Button variant="default" className="mt-3 tracking-widest uppercase font-artegra" asChild>
+                    <Link to={constants.resumeLink} target="_blank">
+                      View Full Screen
+                    </Link>
+                  </Button>
+                </div>
               </TabsContent>
               <TabsContent value="cv" className="duration-1000 select-none animate-in fade-in">
                 <object data={constants.cvLink} type="application/pdf" width="100%" height="600px">
@@ -63,17 +70,17 @@ const ViewResumeButton = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
                     </a>
                   </p>
                 </object>
+                <div className="w-max ms-auto">
+                  <Button variant="default" className="mt-3 tracking-widest uppercase font-artegra" asChild>
+                    <Link to={constants.cvLink} target="_blank">
+                      View Full Screen
+                    </Link>
+                  </Button>
+                </div>
               </TabsContent>
             </Tabs>
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <Button variant="default" className="mt-3 tracking-widest uppercase font-artegra" asChild>
-            <Link to={constants.resumeLink} target="_blank">
-              View Full Screen
-            </Link>
-          </Button>
-        </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
   )

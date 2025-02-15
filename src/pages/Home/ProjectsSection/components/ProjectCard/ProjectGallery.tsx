@@ -82,15 +82,40 @@ const AutoPlayButton = ({ galleryRef }: GalleryButtonProps) => {
   )
 }
 
-const FullScreenButton = ({ galleryRef }: GalleryButtonProps) => {
-  const fullscreen = () => {
-    galleryRef.current?.fullScreen()
+const FullScreenButton = ({
+  galleryRef,
+  setFullScreen,
+}: {
+  galleryRef: RefObject<ImageGallery>
+  setFullScreen: (val: boolean) => void
+}) => {
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      galleryRef.current?.fullScreen()
+      setFullScreen(true)
+    } else {
+      document.exitFullscreen()
+      setFullScreen(false)
+    }
   }
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      const isFullscreen = !!document.fullscreenElement
+      setFullScreen(isFullscreen)
+    }
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange)
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange)
+    }
+  }, [])
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button variant={"ghost"} size={"icon"} onClick={fullscreen}>
+        <Button variant="ghost" size="icon" onClick={toggleFullscreen}>
           <Maximize size={20} />
         </Button>
       </TooltipTrigger>
@@ -128,6 +153,7 @@ const BulletIndicator = ({ totalItems, currentIndex, className, ...props }: Bull
 
 const ProjectGallery = ({ thumbnails }: ProjectGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const [totalItems, setTotalItems] = useState(0)
   const galleryRef = useRef<ImageGallery>(null)
 
@@ -147,7 +173,7 @@ const ProjectGallery = ({ thumbnails }: ProjectGalleryProps) => {
           showNav={false}
           items={thumbnails}
           lazyLoad={true}
-          showFullscreenButton={false}
+          showFullscreenButton={isFullscreen}
           onSlide={(currentIndex: number) => setCurrentIndex(currentIndex)}
         />
         <BulletIndicator totalItems={totalItems} currentIndex={currentIndex} className="absolute bottom-20 left-4" />
@@ -160,7 +186,7 @@ const ProjectGallery = ({ thumbnails }: ProjectGalleryProps) => {
           </div>
           <div className="flex items-center gap-1">
             <AutoPlayButton galleryRef={galleryRef} />
-            <FullScreenButton galleryRef={galleryRef} />
+            <FullScreenButton galleryRef={galleryRef} setFullScreen={setIsFullscreen} />
           </div>
         </div>
       </TooltipProvider>
