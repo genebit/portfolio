@@ -1,20 +1,20 @@
 import { HTMLAttributes, useEffect, useRef, useState } from "react"
 
 import { BookOpen } from "lucide-react"
-import ImageGallery from "react-image-gallery"
 
 import { cn } from "@/lib/utils"
+import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { AutoScrollButton, Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 import { Project } from "../../types/Project"
 import { Gallery } from "../../types/Gallery"
+import ProjectGallery from "./ProjectGallery"
 import { useProjectCard } from "../../hooks/useProjectCard"
 
 import "react-image-gallery/styles/css/image-gallery.css"
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { TooltipProvider } from "@radix-ui/react-tooltip"
 
 interface ProjectViewDetailProps extends HTMLAttributes<HTMLElement> {
   thumbnails: Gallery[]
@@ -74,14 +74,7 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
             </SheetHeader>
             <section className="w-full p-3 rounded-lg bg-stone-900">
               <div className="mx-auto max-w-96">
-                <ImageGallery
-                  slideDuration={1}
-                  autoPlay={true}
-                  showPlayButton={false}
-                  showNav={false}
-                  items={thumbnails}
-                  lazyLoad={true}
-                />
+                <ProjectGallery thumbnails={thumbnails} />
               </div>
             </section>
             <section className="flex flex-col gap-3 p-3">

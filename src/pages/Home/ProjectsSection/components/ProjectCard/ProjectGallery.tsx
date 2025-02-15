@@ -3,13 +3,13 @@ import { HTMLAttributes, RefObject, useEffect, useRef, useState } from "react"
 import ImageGallery from "react-image-gallery"
 import { ChevronLeft, ChevronRight, Maximize, Pause, Play } from "lucide-react"
 
+import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 import { Gallery } from "../../types/Gallery"
-import { cn } from "@/lib/utils"
 
-interface ProjectGalleryProps {
+interface ProjectGalleryProps extends HTMLAttributes<HTMLElement> {
   thumbnails: Gallery[]
 }
 
@@ -148,7 +148,7 @@ const ProjectGallery = ({ thumbnails }: ProjectGalleryProps) => {
           items={thumbnails}
           lazyLoad={true}
           showFullscreenButton={false}
-          onSlide={setCurrentIndex}
+          onSlide={(currentIndex: number) => setCurrentIndex(currentIndex)}
         />
         <BulletIndicator totalItems={totalItems} currentIndex={currentIndex} className="absolute bottom-20 left-4" />
       </div>
