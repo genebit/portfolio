@@ -86,7 +86,7 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
     return <p>No projects were loaded...</p>
   } else {
     return (
-      <ol className="relative border-slate-950 dark:border-primary border-s-2">
+      <ol className="relative ps-0 sm:ps-4 border-slate-950 dark:border-primary sm:border-s-2">
         {projects.map((project, index) => (
           <ProjectCard key={`${type}-${project.title}-${index}`}>
             <ProjectWrapper id={`${type}-project-${index + 1}`} thumbnails={project.screenshots} data={project}>

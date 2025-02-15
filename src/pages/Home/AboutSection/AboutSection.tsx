@@ -5,7 +5,7 @@ import * as constants from "@/lib/constants"
 import { Clapperboard } from "lucide-react"
 import { HTMLAttributes } from "react"
 import ScrollAnimation from "react-animate-on-scroll"
-
+import ILLUST from "/svgs/about-illust.svg"
 /**
  * Renders the About section of the home page.
  * @returns JSX.Element
@@ -13,7 +13,7 @@ import ScrollAnimation from "react-animate-on-scroll"
 const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
     <section className={className} {...props}>
-      <Card className="border-s-8 border-s-primary bg-slate-950 dark:bg-stone-900">
+      <Card className="relative border-s-8 border-s-primary bg-slate-950 dark:bg-stone-900 overflow-clip">
         <CardContent className="p-10 pb-5 text-white">
           <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">About Me</h3>
           <p>
@@ -50,9 +50,14 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
             </Accordion>
             <ScrollAnimation initiallyVisible={true} animateOnce={true}></ScrollAnimation>
           </section>
+          <img
+            src={ILLUST}
+            alt="Background Illustration"
+            className="absolute right-0 z-0 max-w-xs pointer-events-none select-none -bottom-12 -rotate-12 opacity-20"
+          />
         </CardContent>
-        <CardFooter className="px-10">
-          <ViewResumeButton className="px-6 w-max ms-auto" />
+        <CardFooter className="z-10 px-10">
+          <ViewResumeButton className="z-10 px-6 w-max ms-auto" />
         </CardFooter>
       </Card>
     </section>

@@ -1,6 +1,16 @@
 import { HTMLAttributes } from "react"
 
-import { Clapperboard, FileQuestion, FolderArchive, LibraryBig, MoonStar, Sun, UserRoundSearch } from "lucide-react"
+import {
+  BookOpen,
+  Clapperboard,
+  FileQuestion,
+  FolderArchive,
+  Github,
+  LibraryBig,
+  MoonStar,
+  Sun,
+  UserRoundSearch,
+} from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -10,6 +20,8 @@ import RightSidebarLink from "@/layouts/Home/RightSidebar/RightSidebarLink"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 import { useTheme } from "@/context/ThemeProvider"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
+import { BlogPostsSection } from "@/pages/Home"
+import { RightSidebarHeading } from "../RightSidebar"
 
 const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("fixed z-30 flex w-full px-5 py-2 bg-transparent backdrop-filter backdrop-blur", className)
@@ -60,11 +72,22 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <ToggleContactSidebar />
         <ToggleThemeMode />
       </div>
-      <div className="flex flex-row ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
+      <div className="flex flex-row items-center ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
         <RightSidebarLink icon={<FileQuestion size={20} />} jumpTo="about" label="About" />
-        <RightSidebarLink icon={<Clapperboard size={20} />} jumpTo="video-resume" label="Video Resume" />
-        <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools I Use" />
+        <RightSidebarLink icon={<Github size={20} />} jumpTo="git-timeline" label="Git Timeline" />
+        <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools" />
         <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant={"ghost"} className="mt-0.5">
+              <BookOpen size={20} />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <RightSidebarHeading>Markdown Blog Posts</RightSidebarHeading>
+            <BlogPostsSection />
+          </SheetContent>
+        </Sheet>
       </div>
       {children}
     </nav>

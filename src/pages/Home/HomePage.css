@@ -1,5 +1,5 @@
 .active-scroll-spy {
-  @apply px-5 text-white border-l-4 border-rose-500 bg-rose-400 bg-opacity-15 font-artegra rounded-tr-md rounded-br-md;
+  @apply px-5 text-white rounded-md 2xl:border-l-4 border-rose-500 bg-rose-400 bg-opacity-15 font-artegra 2xl:rounded-tr-md 2xl:rounded-br-md;
 }
 
 .article-container {
