@@ -4,7 +4,36 @@
     "date_to": "Present",
     "title": "Ateneo de Naga University – Project HRIS（Phase 1 and 2）",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "original": "hris/hris-1.png",
+        "thumbnail": "hris/hris-1.png"
+      },
+      {
+        "original": "hris/hris-2.png",
+        "thumbnail": "hris/hris-2.png"
+      },
+      {
+        "original": "hris/hris-3.png",
+        "thumbnail": "hris/hris-3.png"
+      },
+      {
+        "original": "hris/hris-4.png",
+        "thumbnail": "hris/hris-4.png"
+      },
+      {
+        "original": "hris/hris-5.png",
+        "thumbnail": "hris/hris-5.png"
+      },
+      {
+        "original": "hris/hris-6.png",
+        "thumbnail": "hris/hris-6.png"
+      },
+      {
+        "original": "hris/hris-7.png",
+        "thumbnail": "hris/hris-7.png"
+      }
+    ],
     "screenshot_note": "These screenshots are publicly available views and do not include the internal system.",
     "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind", "Internal and Public"],
     "description": "University's Human Resource Information System (HRIS). Designed to manage employee records, HR processes, and centralize HR data to improve efficiency and reduce manual workloads.",
@@ -45,10 +74,6 @@
       {
         "original": "retsu/retsu-1.png",
         "thumbnail": "retsu/retsu-1.png"
-      },
-      {
-        "original": "retsu/retsu-1-video.png",
-        "thumbnail": "retsu/retsu-1-video.png"
       },
       {
         "original": "retsu/retsu-2.png",
@@ -108,7 +133,28 @@
     "date_to": "Oct 2023",
     "title": "Department of Agriculture – Project DAAMIA",
     "subtitle": "Subcontract • Lead Full-Stack Web Developer",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "original": "daamia/daamia-1.png",
+        "thumbnail": "daamia/daamia-1.png"
+      },
+      {
+        "original": "daamia/daamia-2.png",
+        "thumbnail": "daamia/daamia-2.png"
+      },
+      {
+        "original": "daamia/daamia-3.png",
+        "thumbnail": "daamia/daamia-3.png"
+      },
+      {
+        "original": "daamia/daamia-4.png",
+        "thumbnail": "daamia/daamia-4.png"
+      },
+      {
+        "original": "daamia/daamia-5.png",
+        "thumbnail": "daamia/daamia-5.png"
+      }
+    ],
     "screenshot_note": "These screenshots are publicly available views and do not include the internal system.",
     "tags": ["DOTNET Framework", "C–SHARP", "MSSQL", "Internal"],
     "description": "A real-time weather monitoring system for data analytics to Department of Agriculture stakeholders.",
