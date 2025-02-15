@@ -25,7 +25,7 @@ const HomePage = () => {
         <RightSidebarLink jumpTo="git-timeline" label="Git Contribution" />
         <RightSidebarLink jumpTo="tools" label="Tools I Use" />
         <RightSidebarLink jumpTo="projects" label="Projects" />
-        <RightSidebarHeading>Blog Post</RightSidebarHeading>
+        <RightSidebarHeading>Markdown Blog Posts</RightSidebarHeading>
         <BlogPostsSection />
       </RightSidebarWrapper>
     </HomeLayout>
