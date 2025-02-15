@@ -103,7 +103,6 @@ const FullScreenButton = ({ galleryRef }: GalleryButtonProps) => {
 
 interface BulletIndicatorProps extends HTMLAttributes<HTMLElement> {
   totalItems: number
-  galleryRef: React.RefObject<ImageGallery>
   currentIndex: number
 }
 
