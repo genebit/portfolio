@@ -83,6 +83,19 @@ Before running the application, make sure to install the following:
    npm run dev
    ```
 
+### Running with Docker
+
+1. Clone the submodules first by running the command:
+
+   ```bash
+   git submodule init
+   git submodule update --recursive --remote
+   ```
+
+2. Once cloned, run `docker build . -t 3000:3000 "<project_name>:<tag>"`
+
+3. Launch the application under `localhost:3000`
+
 ### Firebase Deployment
 
 1. Initialize Firebase config. Answer the prompt and redirect it from `public` to `dist`. Because dist is the output build file for vite
