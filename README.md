@@ -18,6 +18,8 @@
 
    - [Prerequisites](/README.md#prerequisites)
    - [Installation](/README.md#installation)
+   - [Running with Docker](/README.md#running-with-docker)
+   - [Deploying to Firebase](/README.md#firebase-deployment)
 
 3. [License](/README.md#license-✍)
 </details>
