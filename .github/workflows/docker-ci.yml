@@ -11,4 +11,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t genebit/portfolio:latest
     - name: Push the Docker image to Docker Hub
-      run: docker push genebit/portfolio:latest
+      run: |
+      docker login -u genebit -p ${{ secrets.DOCKER_HUB_SECRET }}
+      docker push genebit/portfolio:latest
