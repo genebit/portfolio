@@ -29,7 +29,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
             <UserRoundSearch size={20} />
           </Button>
         </SheetTrigger>
-        <SheetContent className="w-max" side="left">
+        <SheetContent className="!w-max" side="left">
           <ContactSidebarWrapper className="static block" />
         </SheetContent>
       </Sheet>
