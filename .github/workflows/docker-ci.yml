@@ -1,0 +1,30 @@
+name: Build and Push image to Docker Hub
+
+on:
+  [workflow_dispatch]:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Read current version
+      run: echo "VERSION=$(cat VERSION)" >> $GITHUB_ENV
+    - name: Increment patch version
+      run: |
+        NEW_VERSION=$(echo $VERSION | awk -F. '{$NF++; print $0}' OFS=.)
+        echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+        echo $NEW_VERSION > VERSION
+    - name: Commit new version
+      run: |
+        git config --global user.name "genebitara"
+        git config --global user.email "genebitara@gmail.com"
+        git add VERSION
+        git commit -m "chore: bump version to $NEW_VERSION"
+        git push
+    - name: Build the Docker image
+      run: docker build . -t genebit/portfolio:${NEW_VERSION}
+    - name: Push the Docker image to Docker Hub
+      run: docker push genebit/portfolio:${NEW_VERSION}
