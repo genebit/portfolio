@@ -58,7 +58,7 @@ const ContactSidebarWrapper = ({ children, className, ...props }: HTMLAttributes
           />
           <ContactSidebarLink
             icon={<Linkedin size={18} />}
-            label="in/johcel-gene-bitara-a413b9283"
+            label="linkedin.com/in/gene-bitara"
             className="hover:underline underline-offset-4"
             link={linkedInProfileLink}
           />

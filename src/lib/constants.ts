@@ -4,7 +4,7 @@ const figmaEmbedLink: string =
 // Contacts
 const githubProfileLink: string = "https://github.com/genebit"
 const mailTo: string = "mailto:genebitara@gmail.com"
-const linkedInProfileLink: string = "https://linkedin.com/in/johcel-gene-bitara-a413b9283"
+const linkedInProfileLink: string = "https://linkedin.com/in/gene-bitara"
 const resumeLink: string = "/docs/cv/resume.pdf"
 const cvLink: string = "/docs/cv/cv.pdf"
 
