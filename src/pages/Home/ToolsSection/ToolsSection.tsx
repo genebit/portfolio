@@ -29,18 +29,23 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
     "dart",
     "html",
     "js",
+    "typescript",
     "react",
     "sass",
     "unity",
     // Tools
     "bash",
+    "powershell",
     "docker",
     "githubactions",
     "figma",
     "git",
+    "github",
     "gitlab",
     "vscode",
     "lucidchart",
+    "windows",
+    "linux",
   ]
 
   const SkillsCarousel = () => {
