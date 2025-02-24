@@ -1,5 +1,5 @@
 import { Github, Inbox, Linkedin } from "lucide-react"
-import * as constants from "@/assets/svgs/"
+import DOTPATTERN from "@/assets/svgs/illustrations/dot-pattern.svg"
 import { Link } from "react-router-dom"
 import {
   figmaLink,
@@ -72,7 +72,7 @@ const Footer = () => {
           <p className="text-center text-white">@GeneBit © {currentYear}. Portfolio</p>
         </section>
       </div>
-      <img className="absolute bottom-0 left-0" src={constants.DOTPATTERN} alt="" />
+      <img className="absolute bottom-0 left-0" src={DOTPATTERN} alt="" />
     </footer>
   )
 }

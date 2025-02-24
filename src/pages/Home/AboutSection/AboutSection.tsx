@@ -33,6 +33,9 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
                 </AccordionTrigger>
                 <AccordionContent className="rounded-md dark:bg-neutral-950">
                   <div className="p-5 mt-5 overflow-hidden rounded-md select-none">
+                    <p className="mb-3 italic text-slate-400">
+                      Created during my 3rd year at Ateneo de Naga University.
+                    </p>
                     <hr />
                     <br />
                     <iframe

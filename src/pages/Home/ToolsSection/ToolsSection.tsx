@@ -2,24 +2,57 @@ import { HTMLAttributes, useRef } from "react"
 
 import Autoplay from "embla-carousel-autoplay"
 
-import { skills } from "@/assets/svgs"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { useTheme } from "@/hooks/useTheme"
 
-/**
- * Renders the ToolsSection component.
- *
- * @returns The rendered ToolsSection component.
- */
 const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
+  const skills: Array<string> = [
+    // Database
+    "mongodb",
+    "plsql",
+    "oracle",
+    // Backend
+    "livewire",
+    "dotnet",
+    "express",
+    "firebase",
+    "gcp",
+    "java",
+    "laravel",
+    "nodejs",
+    "php",
+    "python",
+    // Frontend
+    "alpinejs",
+    "cs",
+    "css",
+    "dart",
+    "html",
+    "js",
+    "react",
+    "sass",
+    "unity",
+    // Tools
+    "bash",
+    "docker",
+    "githubactions",
+    "figma",
+    "git",
+    "gitlab",
+    "vscode",
+    "lucidchart",
+  ]
+
   const SkillsCarousel = () => {
+    const { theme } = useTheme()
     const plugin = useRef(Autoplay({ delay: 1500, stopOnInteraction: false }))
 
     return (
       <Carousel plugins={[plugin.current]} className="w-full hover:cursor-grab active:cursor-grabbing">
         <CarouselContent>
           {skills.map((skill, index) => (
-            <CarouselItem key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none">
-              <img src={skill} alt="" />
+            <CarouselItem key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none *:min-w-14">
+              <img src={`https://go-skill-icons.vercel.app/api/icons?i=${skill.toString()}&theme=${theme}`} alt="" />
             </CarouselItem>
           ))}
         </CarouselContent>
