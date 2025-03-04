@@ -2,7 +2,7 @@
 
 ## Professional Portfolio
 
-[View Live Demo](https://jbitaraportfolio.web.app) • [Report a Bug](https://github.com/genebit/portfolio/issues)
+[View Live Demo](https://genbit-portfolio.web.app/) • [Report a Bug](https://github.com/genebit/portfolio/issues)
 
 </div>
 
@@ -26,7 +26,7 @@
 
 #### **About**
 
-This repository is simple todo (learning React) application that utilizes the browser's local storage.
+This repository is my professional porfolio containing my highlighted projects and side proojects.
 
 #### **Technology Stack**
 
@@ -63,7 +63,7 @@ Before running the application, make sure to install the following:
    git clone https://github.com/genebit/portfolio.git
    ```
 
-   Upon cloning, bavigate to the repo.
+   Upon cloning, navigate to the repository.
 
 2. Install NPM packages
 
@@ -119,4 +119,4 @@ Before running the application, make sure to install the following:
 
 ## **License** ✍
 
-Distributed under the MIT License. See LICENSE.txt for more information.
+Distributed under the MIT License. See LICENSE for more information.
