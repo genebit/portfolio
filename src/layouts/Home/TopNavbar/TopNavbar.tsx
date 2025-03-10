@@ -68,14 +68,19 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <RightSidebarLink icon={<Github size={20} />} jumpTo="git-timeline" label="Git Timeline" />
         <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools" />
         <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
+        <span className="opacity-50">|</span>
         <Sheet>
           <SheetTrigger asChild>
             <div>
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant={"ghost"} className="mt-0.5">
-                      <BookOpen size={20} />
+                    <Button
+                      variant={"ghost"}
+                      className="mt-0.5 px-5 py-2 font-semibold no-underline uppercase transition-all ps-5 font-artegra"
+                    >
+                      <BookOpen className="sm:hidden" size={20} />
+                      <small className="hidden text-sm tracking-widest uppercase sm:inline-block">Blog</small>
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent>
