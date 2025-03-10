@@ -7,6 +7,9 @@ import { useTheme } from "@/hooks/useTheme"
 
 const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   const skills: Array<string> = [
+    // Cloud services
+    "gcp",
+    "digitalocean",
     // Database
     "mongodb",
     "plsql",
@@ -16,8 +19,6 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
     "dotnet",
     "express",
     "firebase",
-    "gcp",
-    "java",
     "laravel",
     "nodejs",
     "php",

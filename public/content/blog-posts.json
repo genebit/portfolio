@@ -1,5 +1,11 @@
 [
   {
+    "title": "OpenVPN Setup Guide for DigitalOcean Droplet",
+    "date_added": "Mar 10, 2025",
+    "short_description": "Guide for using assigned OpenVPN config in Ubuntu env. (e.g., Digital Ocean Droplets).",
+    "link": "https://gist.github.com/genebit/d89360148e3c8506b7a1073aa05c2e71"
+  },
+  {
     "title": "Laravel Application Setup via Virtual Hosting（XAMPP and PuTTY）",
     "date_added": "Sep 24, 2024",
     "short_description": "Outlines the steps to set up a Laravel application using a XAMPP Apache server with one server and multiple clients on the same network.",
