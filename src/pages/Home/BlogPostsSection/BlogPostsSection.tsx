@@ -37,7 +37,7 @@ const BlogPostsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
   } else {
     return (
       <>
-        <div className="overflow-y-scroll max-h-[40rem]">
+        <div data-lenis-prevent className="overflow-y-scroll max-h-[40rem]">
           <TooltipProvider>
             <ol className={compCn} {...props}>
               {blogs.map((blog, index) => (

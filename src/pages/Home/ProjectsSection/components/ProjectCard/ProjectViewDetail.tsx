@@ -61,7 +61,7 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
         </div>
       </SheetTrigger>
       <SheetContent className={compCn} {...props}>
-        <div className="relative">
+        <div data-lenis-prevent className="relative">
           <div className="max-h-screen p-5 overflow-y-scroll" ref={scrollableElementRef}>
             <SheetHeader>
               <SheetTitle className="mb-3">

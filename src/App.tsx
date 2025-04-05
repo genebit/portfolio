@@ -12,6 +12,11 @@ function App() {
   if (import.meta.env.DEV) document.title = "Portfolio • Development"
 
   window.onload = function () {
+    setTimeout(() => {
+      document.body.style.position = "relative"
+      document.body.style.width = "100%"
+    }, 300)
+
     scrollToTop()
     replaceSymbols()
   }
