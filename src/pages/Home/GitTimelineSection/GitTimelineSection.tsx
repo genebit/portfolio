@@ -14,7 +14,7 @@ const GitTimelineSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
       </header>
       <GitHubCalendar
         username="genebit"
-        colorScheme={theme === "system" || theme === "dark" ? "dark" : "light"}
+        colorScheme={theme}
         theme={{
           light: ["#fff", "black"],
           dark: ["#161B22", "#39D353"],

@@ -1,23 +1,23 @@
-import { HTMLAttributes, useEffect, useRef, useState } from "react"
+import { HTMLAttributes, ReactNode, useEffect, useRef, useState } from "react"
 
 import { BookOpen } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { Project } from "@/types/Project"
+import { Screenshot } from "@/types/Screenshot"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { AutoScrollButton, Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-import { Project } from "../../types/Project"
-import { Gallery } from "../../types/Gallery"
 import ProjectGallery from "./ProjectGallery"
 import { useProjectCard } from "../../hooks/useProjectCard"
 
 import "react-image-gallery/styles/css/image-gallery.css"
 
 interface ProjectViewDetailProps extends HTMLAttributes<HTMLElement> {
-  thumbnails: Gallery[]
+  thumbnails: Screenshot[]
   data: Project
 }
 
@@ -89,7 +89,9 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
                   <AccordionContent>
                     <ul className="*:list-disc *:list-item">
                       {data?.contributions.length ? (
-                        data.contributions.map((feature, index) => <li key={`feature-${index}`}>{feature}</li>)
+                        data.contributions.map((feature: ReactNode, index: number) => (
+                          <li key={`feature-${index}`}>{feature}</li>
+                        ))
                       ) : (
                         <li className="text-slate-400">No contributions loaded...</li>
                       )}
@@ -101,7 +103,9 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
                   <AccordionContent>
                     <ul className="*:list-disc *:list-item">
                       {data?.features.length ? (
-                        data.features.map((feature, index) => <li key={`feature-${index}`}>{feature}</li>)
+                        data.features.map((feature: ReactNode, index: number) => (
+                          <li key={`feature-${index}`}>{feature}</li>
+                        ))
                       ) : (
                         <li className="text-slate-400">No features loaded...</li>
                       )}
@@ -113,7 +117,9 @@ const ProjectViewDetail = ({ data, thumbnails, className, children, ...props }: 
                   <AccordionContent>
                     <ul className="*:list-disc *:list-item">
                       {data?.proponents.length ? (
-                        data.proponents.map((proponent, index) => <li key={`feature-${index}`}>{proponent}</li>)
+                        data.proponents.map((proponent: ReactNode, index: number) => (
+                          <li key={`feature-${index}`}>{proponent}</li>
+                        ))
                       ) : (
                         <li className="text-slate-400">No proponents loaded...</li>
                       )}

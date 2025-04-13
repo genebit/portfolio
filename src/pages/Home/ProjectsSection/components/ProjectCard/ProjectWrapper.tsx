@@ -2,15 +2,15 @@ import { HTMLAttributes } from "react"
 
 import { cn } from "@/lib/utils"
 
-import { Project } from "../../types/Project"
-import { Gallery } from "../../types/Gallery"
 import ProjectGallery from "./ProjectGallery"
 import ProjectViewDetail from "./ProjectViewDetail"
 
 import "react-image-gallery/styles/css/image-gallery.css"
+import { Screenshot } from "@/types/Screenshot"
+import { Project } from "@/types/Project"
 
 interface ProjectWrapperProps extends HTMLAttributes<HTMLElement> {
-  thumbnails: Gallery[]
+  thumbnails: Screenshot[]
   data: Project
 }
 

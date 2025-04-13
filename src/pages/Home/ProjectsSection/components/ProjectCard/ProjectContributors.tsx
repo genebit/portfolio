@@ -1,6 +1,6 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { Project } from "@/types/Project"
 import { HTMLAttributes } from "react"
-import { Project } from "../../types/Project"
 
 interface ProjectContributorsProps extends HTMLAttributes<HTMLElement> {
   project: Project
@@ -12,7 +12,7 @@ const ProjectContributors = ({ project }: ProjectContributorsProps) => {
       <h3 className="text-sm font-bold tracking-widest uppercase font-artegra">Project Contributors</h3>
       <div className="flex -space-x-2 rtl:space-x-reverse">
         <TooltipProvider>
-          {project.proponents.map((contributor, contributorIndex) => (
+          {project.proponents.map((contributor: string, contributorIndex: number) => (
             <Tooltip key={`${contributor}-${contributorIndex}`} delayDuration={100}>
               <TooltipTrigger>
                 <img
