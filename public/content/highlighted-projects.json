@@ -2,7 +2,49 @@
   {
     "date_from": "June 2024",
     "date_to": "Present",
-    "title": "Ateneo de Naga University – Project HRIS（Phase 1 and 2）",
+    "title": "Ateneo de Naga University – Project HRIS and ADNUONE（Phase 2）",
+    "subtitle": "Contract • Lead Backend Developer",
+    "screenshots": [
+      {
+        "original": "adnuone/adnuone-1.png",
+        "thumbnail": "adnuone/adnuone-1.png"
+      },
+      {
+        "original": "adnuone/adnuone-2.png",
+        "thumbnail": "adnuone/adnuone-2.png"
+      }
+    ],
+    "screenshot_note": "The website is currently under development.",
+    "tags": ["Oracle", "Laravel 10", "Livewire", "Tailwind", "Internal and Public"],
+    "description": "University's Employee Web Portal Service. Designed for employees to manage personal records, view assignments, records, affirmation, and file requests directly to HRMO and Heads.",
+    "description_full": null,
+    "video_links": [],
+    "proponents": ["Johcel Gene Bitara", "Miguel Damien Garcera", "Jiankarlo Belarmino", "Mark Niño Joseph Alden"],
+    "contributions": [
+      "Technical lead for HRIS and ADNUONE: a new web portal for Ateneo de Naga University employees to manage personal records, assignments, and file requests to heads."
+    ],
+    "features": [
+      "Employee Management",
+      "Authentication",
+      "Single Sign-on (SSO) Authentication",
+      "Employee Daily Time Record (DTR)",
+      "Confirmation and Approval of Schedules, Requests, and Leave",
+      "Email Notifications",
+      "Leave Management",
+      "Certification Requests",
+      "Contracts and Report Generation",
+      "Data Migration",
+      "Internal"
+    ],
+    "source_code_link": "https://mis-git.adnu.edu.ph/misadnu/adnuone.git",
+    "source_code_locked": true,
+    "live_demo_link": "https://services.adnu.edu.ph/adnuone",
+    "live_demo_locked": true
+  },
+  {
+    "date_from": "June 2024",
+    "date_to": "Present",
+    "title": "Ateneo de Naga University – Project HRIS（Phase 1）",
     "subtitle": "Contract • Lead Full-Stack Web Developer",
     "screenshots": [
       {
@@ -39,9 +81,9 @@
     "description": "University's Human Resource Information System (HRIS). Designed to manage employee records, HR processes, and centralize HR data to improve efficiency and reduce manual workloads.",
     "description_full": null,
     "video_links": [],
-    "proponents": ["Johcel Gene T. Bitara", "Miguel Damien L. Garcera"],
+    "proponents": ["Johcel Gene Bitara", "Miguel Damien Garcera"],
     "contributions": [
-      "Lead developer for HRIS: a new web portal for Ateneo de Naga University’s HRMO. Handled confidential access to HR records from the University’s database with careful measures in place.",
+      "Technical lead for HRIS: a new web portal for Ateneo de Naga University’s HRMO. Handled confidential access to HR records from the University’s database with careful measures in place.",
       "Developed key modules of the application ranging from reports, management, design, data processing/analysis, and hardware configuration resulting in a drastic improvement to the HR’s workflow in terms of eliminating the manual processes.",
       "Optimized data rendering and fetching of employee records on thousands of records by usage of optimized PL/SQL queries, views, procedures, indexing, functions, server-side implementations, batch processing and client-side rendering.",
       "Crafted and applied a data migration plan to perform a large-scale migration of up to 3M+ records from MySQL and Postgres to Oracle, resulting in unified data records of HRMO in the main database repository of the University.",
@@ -101,7 +143,7 @@
     "description": "A generic real-time queue management system solution for the University, enhancing user experience by reducing queue delays and eliminating the inconveniences associated with traditional queuing systems.",
     "description_full": null,
     "video_links": [],
-    "proponents": ["Johcel Gene T. Bitara", "Ryan Jay D. Rosano"],
+    "proponents": ["Johcel Gene Bitara", "Ryan Jay D. Rosano"],
     "contributions": [
       "Developed a queue management system solution for the University, which enhanced the user experience by reducing queue delays and eliminating the inconveniences associated with traditional queuing systems.",
       "Developed a comprehensive queue management system for the University Treasurer’s Office, integrating a QR code-based ticketing system and a real-time queue status view for clients, with customizable controls through admin management.",
@@ -160,7 +202,7 @@
     "description": "A real-time weather monitoring system for data analytics to Department of Agriculture stakeholders.",
     "description_full": null,
     "video_links": [],
-    "proponents": ["Johcel Gene T. Bitara", "Andrew Coros", "Samson Galicia Nollora Jr."],
+    "proponents": ["Johcel Gene Bitara", "Andrew Coros", "Samson Galicia Nollora Jr."],
     "contributions": [
       "Developed a weather monitoring system by processing and storing large number of datasets from a local API weather data.",
       "Optimized the API fetching process to achieve 80% efficiency, which improved the rendering of pin markers on the map view, reduced the load time of pages, and enhanced data processing for the filter page.",
