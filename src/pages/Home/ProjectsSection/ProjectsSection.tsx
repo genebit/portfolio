@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabTrigger } from "@/components/ui/tabs"
 import "@/pages/Home/ProjectsSection/ProjectsSection.css"
 import ScrollAnimation from "react-animate-on-scroll"
 import { RenderProjects, DesignFiles } from "./components/TabContent"
+import { highlightedProjects, miscProjects } from "@/lib/content"
 
 const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   const [activeTab, setActiveTab] = useState<string>(() => localStorage.getItem("active-projects-tab") ?? "highlighted")
@@ -36,14 +37,10 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
             <TabTrigger value="designFile" label="Design File" />
           </TabsList>
           <TabsContent value="highlighted" className="duration-1000 animate-in fade-in">
-            <RenderProjects
-              type="highlighted"
-              isActive={activeTab === "highlighted"}
-              dataFilePath="/content/highlighted-projects.json"
-            />
+            <RenderProjects type="highlighted" isActive={activeTab === "highlighted"} content={highlightedProjects} />
           </TabsContent>
           <TabsContent value="misc" className="duration-1000 animate-in fade-in">
-            <RenderProjects type="misc" isActive={activeTab === "misc"} dataFilePath="/content/misc-projects.json" />
+            <RenderProjects type="misc" isActive={activeTab === "misc"} content={miscProjects} />
           </TabsContent>
           <TabsContent value="designFile" className="duration-1000 animate-in fade-in">
             <DesignFiles />

@@ -1,26 +1,28 @@
+import { useEffect, useState } from "react"
+
+import { Project } from "@/types/Project"
+import { Screenshot } from "@/types/Screenshot"
+
+import ProjectContributors from "../ProjectCard/ProjectContributors"
 import {
   ProjectCard,
   ProjectDateSpan,
   ProjectDescription,
+  ProjectFooterButtons,
+  ProjectSubtitle,
   ProjectTag,
   ProjectTitle,
   ProjectWrapper,
-  ProjectSubtitle,
   TagWrapper,
-  ProjectFooterButtons,
 } from "../ProjectCard"
-import { useEffect, useState } from "react"
-import { Project } from "../../types/Project"
-import { Gallery } from "../../types/Gallery"
-import ProjectContributors from "../ProjectCard/ProjectContributors"
 
 interface RenderProjectsProps {
   isActive: boolean
   type: string
-  dataFilePath: string
+  content: Project[]
 }
 
-const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) => {
+const RenderProjects = ({ isActive, type, content }: RenderProjectsProps) => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -30,18 +32,15 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
 
     const fetchProjects = async () => {
       try {
-        const response = await fetch(dataFilePath)
-        const data = await response.json()
-
         // Define the base path for images
         const basePath = "/imgs/project-thumbnails/"
 
         // Update image paths in the data
-        const updated = data.map((project: Project) => ({
+        const updated = content.map((project: Project) => ({
           ...project,
           screenshots:
             project.screenshots.length > 0
-              ? project.screenshots.map((screenshot: Gallery) => ({
+              ? project.screenshots.map((screenshot: Screenshot) => ({
                   original: `${basePath}${screenshot.original}`,
                   thumbnail: `${basePath}${screenshot.thumbnail}`,
                   embedUrl: screenshot.embedUrl,
@@ -51,7 +50,7 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
                           <iframe
                             width="100%"
                             height="162"
-                            src={screenshot.embedUrl}
+                            src={screenshot?.embedUrl ?? undefined}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
@@ -77,7 +76,7 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
     }
 
     fetchProjects()
-  }, [dataFilePath, isActive, type])
+  }, [content, isActive, type])
 
   if (isLoading) return <div className="py-8 text-center">Loading projects...</div>
   if (error) return <div className="py-8 text-center text-red-500">{error}</div>
@@ -103,8 +102,8 @@ const RenderProjects = ({ isActive, type, dataFilePath }: RenderProjectsProps) =
               <ProjectDescription>{project.description}</ProjectDescription>
               <ProjectContributors project={project} />
               <ProjectFooterButtons
-                srcCodeUrl={project.source_code_link}
-                demoUrl={project.live_demo_link}
+                srcCodeUrl={project.source_code_link!}
+                demoUrl={project.live_demo_link!}
                 disableSrcCodeBtn={project.source_code_locked}
                 disableDemoBtn={project.live_demo_locked}
               />

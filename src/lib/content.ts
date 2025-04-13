@@ -1,32 +1,10 @@
-interface Screenshot {
-  original: string
-  thumbnail: string
-  embedUrl?: string | null
-}
+import { BlogPosts } from "@/types/BlogPost"
+import { Project } from "@/types/Project"
+import { Skill } from "@/types/Skill"
 
-interface Project {
-  date_from: string
-  date_to: string
-  title: string
-  subtitle: string
-  screenshots: Array<Screenshot>
-  screenshot_note: string | null
-  tags: Array<string>
-  description: string
-  description_full: string | null
-  video_links: Array<string>
-  proponents: Array<string>
-  contributions: Array<string>
-  features: Array<string>
-  source_code_link: string | null
-  source_code_locked: boolean
-  live_demo_link: string | null
-  live_demo_locked: boolean
-}
-
-const highlightedProjects: Array<Project> = [
+const highlightedProjects: Project[] = [
   {
-    date_from: "June 2024",
+    date_from: "February 2025",
     date_to: "Present",
     title: "Ateneo de Naga University – Project HRIS and ADNUONE（Phase 2）",
     subtitle: "Contract • Lead Backend Developer",
@@ -247,7 +225,7 @@ const highlightedProjects: Array<Project> = [
   },
 ]
 
-const miscProjects: Array<Project> = [
+const miscProjects: Project[] = [
   {
     date_from: "Oct 2023",
     date_to: "Apr 2024",
@@ -511,14 +489,7 @@ const miscProjects: Array<Project> = [
   },
 ]
 
-interface BlogPosts {
-  title: string
-  date_added: string
-  short_description: string
-  link: string
-}
-
-const blogPosts: Array<BlogPosts> = [
+const blogPosts: BlogPosts[] = [
   {
     title: "OpenVPN Setup Guide for DigitalOcean Droplet",
     date_added: "Mar 10, 2025",
@@ -552,47 +523,41 @@ const blogPosts: Array<BlogPosts> = [
   },
 ]
 
-interface Skill {
-  name: string
-  primary: boolean
-}
-
-const skills: Array<Skill> = [
-  { name: "gcp", primary: false },
-  { name: "digitalocean", primary: true },
-  { name: "mongodb", primary: false },
-  { name: "plsql", primary: false },
-  { name: "oracle", primary: true },
-  { name: "livewire", primary: false },
-  { name: "dotnet", primary: false },
-  { name: "express", primary: false },
-  { name: "firebase", primary: true },
-  { name: "laravel", primary: true },
-  { name: "nodejs", primary: true },
-  { name: "php", primary: true },
-  { name: "python", primary: false },
-  { name: "alpinejs", primary: true },
-  { name: "cs", primary: false },
-  { name: "css", primary: true },
-  { name: "dart", primary: false },
-  { name: "html", primary: true },
-  { name: "js", primary: true },
-  { name: "typescript", primary: true },
-  { name: "react", primary: true },
-  { name: "sass", primary: true },
-  { name: "unity", primary: false },
-  { name: "bash", primary: true },
-  { name: "powershell", primary: true },
-  { name: "docker", primary: true },
-  { name: "githubactions", primary: false },
-  { name: "figma", primary: true },
-  { name: "git", primary: true },
-  { name: "github", primary: true },
-  { name: "gitlab", primary: true },
-  { name: "vscode", primary: true },
-  { name: "lucidchart", primary: false },
-  { name: "windows", primary: false },
-  { name: "linux", primary: false },
+const skills: Skill[] = [
+  { name: "gcp", primary: false, label: "gcp" },
+  { name: "digitalocean", primary: true, label: "DO" },
+  { name: "mongodb", primary: false, label: "mongodb" },
+  { name: "plsql", primary: false, label: "plsql" },
+  { name: "oracle", primary: true, label: "oracle" },
+  { name: "livewire", primary: false, label: "livewire" },
+  { name: "dotnet", primary: false, label: "dotnet" },
+  { name: "express", primary: false, label: "express" },
+  { name: "firebase", primary: true, label: "firebase" },
+  { name: "laravel", primary: true, label: "laravel" },
+  { name: "nodejs", primary: true, label: "nodejs" },
+  { name: "php", primary: true, label: "php" },
+  { name: "alpinejs", primary: true, label: "alpinejs" },
+  { name: "cs", primary: false, label: "cs" },
+  { name: "css", primary: true, label: "css" },
+  { name: "dart", primary: false, label: "dart" },
+  { name: "html", primary: true, label: "html" },
+  { name: "js", primary: true, label: "js" },
+  { name: "typescript", primary: true, label: "TS" },
+  { name: "react", primary: true, label: "react" },
+  { name: "sass", primary: true, label: "sass" },
+  { name: "unity", primary: false, label: "unity" },
+  { name: "bash", primary: true, label: "bash" },
+  { name: "powershell", primary: true, label: "powershell" },
+  { name: "docker", primary: true, label: "docker" },
+  { name: "githubactions", primary: false, label: "githubactions" },
+  { name: "figma", primary: true, label: "figma" },
+  { name: "git", primary: true, label: "git" },
+  { name: "github", primary: true, label: "github" },
+  { name: "gitlab", primary: true, label: "gitlab" },
+  { name: "vscode", primary: true, label: "vscode" },
+  { name: "lucidchart", primary: false, label: "lucidchart" },
+  { name: "windows", primary: false, label: "windows" },
+  { name: "linux", primary: false, label: "linux" },
 ]
 
 export { highlightedProjects, miscProjects, blogPosts, skills }

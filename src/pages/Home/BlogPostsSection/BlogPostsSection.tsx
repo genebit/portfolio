@@ -1,9 +1,13 @@
 import { HTMLAttributes, useEffect, useState } from "react"
-import { Blog } from "./types/Project"
-import { cn } from "@/lib/utils"
-import { Card, CardContent } from "@/components/ui/card"
+
 import { Link } from "react-router-dom"
+
+import { cn } from "@/lib/utils"
+import { blogPosts } from "@/lib/content"
+import { Card, CardContent } from "@/components/ui/card"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+
+import { Blog } from "./types/Project"
 
 const BlogPostsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   const compCn = cn("p-0 ps-2 relative border-slate-950 dark:border-stone-700 border-s-2 ms-1", className)
@@ -15,10 +19,7 @@ const BlogPostsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("/content/blog-posts.json")
-        const data = await response.json()
-
-        setBlogs(data)
+        setBlogs(blogPosts)
       } catch (error) {
         setError("Error fetching the blogs")
         console.error("Error fetching the blogs:", error)

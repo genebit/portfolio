@@ -4,51 +4,10 @@ import Autoplay from "embla-carousel-autoplay"
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { useTheme } from "@/hooks/useTheme"
+import { Star } from "lucide-react"
+import { skills } from "@/lib/content"
 
 const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
-  const skills: Array<string> = [
-    // Cloud services
-    "gcp",
-    "digitalocean",
-    // Database
-    "mongodb",
-    "plsql",
-    "oracle",
-    // Backend
-    "livewire",
-    "dotnet",
-    "express",
-    "firebase",
-    "laravel",
-    "nodejs",
-    "php",
-    "python",
-    // Frontend
-    "alpinejs",
-    "cs",
-    "css",
-    "dart",
-    "html",
-    "js",
-    "typescript",
-    "react",
-    "sass",
-    "unity",
-    // Tools
-    "bash",
-    "powershell",
-    "docker",
-    "githubactions",
-    "figma",
-    "git",
-    "github",
-    "gitlab",
-    "vscode",
-    "lucidchart",
-    "windows",
-    "linux",
-  ]
-
   const SkillsCarousel = () => {
     const { theme } = useTheme()
     const plugin = useRef(Autoplay({ delay: 1500, stopOnInteraction: false }))
@@ -57,8 +16,24 @@ const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
       <Carousel plugins={[plugin.current]} className="w-full hover:cursor-grab active:cursor-grabbing">
         <CarouselContent>
           {skills.map((skill, index) => (
-            <CarouselItem key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none *:min-w-14">
-              <img src={`https://go-skill-icons.vercel.app/api/icons?i=${skill.toString()}&theme=${theme}`} alt="" />
+            <CarouselItem
+              key={index}
+              className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none *:min-w-14 relative"
+            >
+              <img
+                src={`https://go-skill-icons.vercel.app/api/icons?i=${skill.name.toString()}&theme=${theme}`}
+                alt={skill.name.toString()}
+              />
+              <div className="w-full">
+                {skill.primary === true ? (
+                  <span className="absolute top-0 right-0 w-3 h-3">
+                    <Star fill={theme === "light" ? "#000" : "#FFDF20"} stroke="#000" strokeWidth={1} size={18} />
+                  </span>
+                ) : null}
+                <small className="block mx-auto mt-2 tracking-widest uppercase font-artegra w-max text-slate-400 truncate max-w-[7ch]">
+                  {skill.label}
+                </small>
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
