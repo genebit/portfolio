@@ -1,6 +1,16 @@
 import { HTMLAttributes } from "react"
 
-import { BookOpen, FileQuestion, FolderArchive, Github, LibraryBig, MoonStar, Sun, UserRoundSearch } from "lucide-react"
+import {
+  BookOpen,
+  FileQuestion,
+  FolderArchive,
+  Github,
+  LibraryBig,
+  Medal,
+  MoonStar,
+  Sun,
+  UserRoundSearch,
+} from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -57,9 +67,10 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
       </div>
       <div className="flex flex-row items-center ms-auto 2xl:hidden top-3 right-10 animate-in fade-in">
         <RightSidebarLink icon={<FileQuestion size={20} />} jumpTo="about" label="About" />
-        <RightSidebarLink icon={<Github size={20} />} jumpTo="git-timeline" label="Git Timeline" />
+        <RightSidebarLink icon={<Github size={20} />} jumpTo="git-timeline" label="Git" />
         <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools" />
         <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
+        <RightSidebarLink icon={<Medal size={20} />} jumpTo="achievements" label="Awards" />
         <span className="opacity-50">|</span>
         <Sheet>
           <SheetTrigger asChild>

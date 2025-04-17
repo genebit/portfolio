@@ -2,7 +2,14 @@ import ScrollSpy from "react-ui-scrollspy"
 
 import HomeLayout from "@/layouts/Home/HomeLayout"
 import { RightSidebarHeading, RightSidebarLink, RightSidebarWrapper } from "@/layouts/Home/RightSidebar"
-import { AboutSection, GitTimelineSection, ProjectsSection, ToolsSection, BlogPostsSection } from "@/pages/Home"
+import {
+  AboutSection,
+  GitTimelineSection,
+  ProjectsSection,
+  ToolsSection,
+  BlogPostsSection,
+  AchievementSection,
+} from "@/pages/Home"
 
 import "animate.css"
 
@@ -17,6 +24,7 @@ const HomePage = () => {
           <GitTimelineSection className="mb-20" id="git-timeline" />
           <ToolsSection className="mb-20" id="tools" />
           <ProjectsSection className="mb-20" id="projects" />
+          <AchievementSection className="mb-20" id="achievements" />
         </ScrollSpy>
       </article>
       <RightSidebarWrapper>
@@ -25,6 +33,7 @@ const HomePage = () => {
         <RightSidebarLink jumpTo="git-timeline" label="Git Contribution" />
         <RightSidebarLink jumpTo="tools" label="Tools I Use" />
         <RightSidebarLink jumpTo="projects" label="Projects" />
+        <RightSidebarLink jumpTo="achievements" label="Achievements" />
         <RightSidebarHeading>Markdown Blog Posts</RightSidebarHeading>
         <BlogPostsSection />
       </RightSidebarWrapper>

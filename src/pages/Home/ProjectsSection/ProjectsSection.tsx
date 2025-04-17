@@ -28,7 +28,7 @@ const ProjectsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) =
         animateOnce={true}
       >
         <header>
-          <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">PROJECTS AND ACHIEVEMENTS</h3>
+          <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">CAREER AND SIDE PROJECTS</h3>
         </header>
         <Tabs value={activeTab} onValueChange={saveActiveTab} className="w-full md:min-h-[40rem]">
           <TabsList className="justify-start w-full bg-transparent border-b-2">

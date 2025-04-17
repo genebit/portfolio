@@ -1,43 +1,40 @@
-import { HTMLAttributes, useRef } from "react"
+import { HTMLAttributes } from "react"
 
-import Autoplay from "embla-carousel-autoplay"
-
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { useTheme } from "@/hooks/useTheme"
 import { Star } from "lucide-react"
 import { skills } from "@/lib/content"
+import Marquee from "react-fast-marquee"
 
 const ToolsSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   const SkillsCarousel = () => {
     const { theme } = useTheme()
-    const plugin = useRef(Autoplay({ delay: 1500, stopOnInteraction: false }))
 
     return (
-      <Carousel plugins={[plugin.current]} className="w-full hover:cursor-grab active:cursor-grabbing">
-        <CarouselContent>
-          {skills.map((skill, index) => (
-            <CarouselItem
-              key={index}
-              className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none *:min-w-14 relative"
-            >
-              <img
-                src={`https://go-skill-icons.vercel.app/api/icons?i=${skill.name.toString()}&theme=${theme}`}
-                alt={skill.name.toString()}
-              />
-              <div className="w-full">
-                {skill.primary === true ? (
-                  <span className="absolute top-0 right-0 w-3 h-3">
-                    <Star fill={theme === "light" ? "#000" : "#FFDF20"} stroke="#000" strokeWidth={1} size={18} />
-                  </span>
-                ) : null}
-                <small className="block mx-auto mt-2 tracking-widest uppercase font-artegra w-max text-slate-400 truncate max-w-[7ch]">
-                  {skill.label}
-                </small>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+      <Marquee
+        pauseOnHover={true}
+        gradient={true}
+        gradientColor={`${theme === "light" ? "white" : "#0C0A09"}`}
+        gradientWidth={75}
+      >
+        {skills.map((skill, index) => (
+          <div key={index} className="basis-1/12 min-w-[4.5rem] max-w-[4.5rem] select-none *:min-w-14 relative">
+            <img
+              src={`https://go-skill-icons.vercel.app/api/icons?i=${skill.name.toString()}&theme=${theme}`}
+              alt={skill.name.toString()}
+            />
+            <div className="static w-full">
+              {skill.primary === true ? (
+                <span className="absolute top-0 z-20 w-3 h-3 right-3.5">
+                  <Star fill={theme === "light" ? "#000" : "#FFDF20"} stroke="#000" strokeWidth={1} size={18} />
+                </span>
+              ) : null}
+              <small className="block mx-auto mt-2 tracking-widest uppercase font-artegra w-max text-slate-400 truncate max-w-[7ch]">
+                {skill.label}
+              </small>
+            </div>
+          </div>
+        ))}
+      </Marquee>
     )
   }
 

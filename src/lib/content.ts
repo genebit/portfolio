@@ -1,4 +1,5 @@
 import { BlogPosts } from "@/types/BlogPost"
+import { CardStack } from "@/types/CardStack"
 import { Project } from "@/types/Project"
 import { Skill } from "@/types/Skill"
 
@@ -560,4 +561,43 @@ const skills: Skill[] = [
   { name: "linux", primary: false, label: "linux" },
 ]
 
-export { highlightedProjects, miscProjects, blogPosts, skills }
+const achievements: CardStack[] = [
+  {
+    issuedDate: "Dec 2021",
+    name: "Freshmen Computer Programming Competition",
+    description: "18th Place among 97 freshmen participants.",
+    images: ["/docs/achievement/cp-1.png", "/docs/achievement/cp-2.png"],
+  },
+  {
+    issuedDate: "Oct 2022",
+    name: "Smartbooks and Power BI Certificate of Completion",
+    images: ["/docs/achievement/sap-2.png"],
+  },
+  {
+    issuedDate: "Jun 2024",
+    name: "SAP Business One DBMS for IT Certificate of Completion",
+    images: ["/docs/achievement/sap-1.png"],
+  },
+  {
+    issuedDate: "Jun 2024",
+    name: "AppCon2023 Development Contest Certificate of Participation",
+    images: ["/docs/achievement/appcon-1.png"],
+  },
+  {
+    issuedDate: "Dec 2024",
+    name: "Idea2Startup Qualifier and Fund Awardee",
+    images: [
+      "/docs/achievement/idea2startup-1.png",
+      "/docs/achievement/idea2startup-2.png",
+      "/docs/achievement/idea2startup-3.png",
+      "/docs/achievement/idea2startup-4.png",
+    ],
+  },
+  {
+    issuedDate: "Aug 2024",
+    name: "Level 1 Certified Data Center Technician（CDCT）",
+    images: ["/docs/achievement/vitro-1.png", "/docs/achievement/vitro-2.png", "/docs/achievement/vitro-3.png"],
+  },
+]
+
+export { highlightedProjects, miscProjects, blogPosts, skills, achievements }
