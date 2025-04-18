@@ -14,8 +14,17 @@ import {
 import "animate.css"
 
 import "@/pages/Home/HomePage.css"
+import { replaceSymbols, scrollToTop } from "@/lib/utils"
+import { useEffect } from "react"
 
 const HomePage = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      scrollToTop()
+      replaceSymbols()
+    }, 100)
+  }, [])
+
   return (
     <HomeLayout>
       <article className="article-container">

@@ -25,13 +25,9 @@ const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
     <>
       <DotBackground className={`z-0 ${theme === "light" ? "opacity-full" : "opacity-40"}`} />
       <TopNavbar />
-      {window.matchMedia("(max-width: 576px)").matches ? (
+      <ReactLenis root>
         <HomeContent>{children}</HomeContent>
-      ) : (
-        <ReactLenis root>
-          <HomeContent>{children}</HomeContent>
-        </ReactLenis>
-      )}
+      </ReactLenis>
       <Footer />
     </>
   )
