@@ -71,7 +71,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
         <RightSidebarLink icon={<LibraryBig size={20} />} jumpTo="tools" label="Tools" />
         <RightSidebarLink icon={<FolderArchive size={20} />} jumpTo="projects" label="Projects" />
         <RightSidebarLink icon={<Medal size={20} />} jumpTo="achievements" label="Awards" />
-        <span className="opacity-50">|</span>
+        <span className="mx-2 opacity-50">|</span>
         <Sheet>
           <SheetTrigger asChild>
             <div>
@@ -80,7 +80,7 @@ const TopNavbar = ({ children, className, ...props }: HTMLAttributes<HTMLElement
                   <TooltipTrigger asChild>
                     <Button
                       variant={"ghost"}
-                      className="mt-0.5 px-5 py-2 font-semibold no-underline uppercase transition-all ps-5 font-artegra"
+                      className="mt-0.5 px-2 py-2 font-semibold no-underline uppercase transition-all ps-2 font-artegra"
                     >
                       <BookOpen className="sm:hidden" size={20} />
                       <small className="hidden text-sm tracking-widest uppercase sm:inline-block">Blog</small>

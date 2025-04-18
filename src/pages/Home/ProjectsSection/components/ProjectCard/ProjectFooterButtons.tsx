@@ -31,9 +31,9 @@ const ProjectFooterButtons = ({
         className="w-full tracking-widest uppercase text-primary font-artegra"
         disabled={disableSrcCodeBtn}
       >
-        {disableSrcCodeBtn && <LockKeyhole size={20} className="me-1" />}
+        {disableSrcCodeBtn && <LockKeyhole size={14} className="me-1" />}
         <Link to={srcCodeUrl}>View Source Code</Link>
-        {!disableSrcCodeBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
+        {!disableSrcCodeBtn && <ArrowUpRightFromSquare size={14} className="ms-1" />}
       </Button>
     )
   }
@@ -41,9 +41,9 @@ const ProjectFooterButtons = ({
   const DemoButton = () => {
     return (
       <Button variant="default" className="w-full tracking-widest uppercase font-artegra" disabled={disableDemoBtn}>
-        {disableDemoBtn && <LockKeyhole size={20} className="me-1" />}
+        {disableDemoBtn && <LockKeyhole size={14} className="me-1" />}
         <Link to={demoUrl}>View Demo</Link>
-        {!disableDemoBtn && <ArrowUpRightFromSquare size={20} className="ms-1" />}
+        {!disableDemoBtn && <ArrowUpRightFromSquare size={14} className="ms-1" />}
       </Button>
     )
   }

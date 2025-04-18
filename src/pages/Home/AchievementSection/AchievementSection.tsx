@@ -23,7 +23,7 @@ const AchievementSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
         </header>
         <Marquee pauseOnHover={true} gradient={true} gradientColor={`${theme === "light" ? "white" : "#0C0A09"}`}>
           {achievements.map((ach, index) => (
-            <Card key={index} className="mx-2 h-max">
+            <Card key={`${ach.name.replace(" ", "")}-${index}`} className="mx-2 h-max">
               <CardContent className="relative py-3 w-60 h-80 md:w-96">
                 <time className="flex items-center gap-2 mb-2 text-sm text-slate-400">
                   <Calendar size={14} />
@@ -37,8 +37,8 @@ const AchievementSection = ({ className, ...props }: HTMLAttributes<HTMLElement>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious key={index} className="border-none" />
-                  <CarouselNext key={index} className="border-none" />
+                  <CarouselPrevious className="border-none" />
+                  <CarouselNext className="border-none" />
                 </Carousel>
                 <header className="mt-2">
                   <small className="font-semibold tracking-widest uppercase font-artegra text-slate-700 dark:text-slate-200">

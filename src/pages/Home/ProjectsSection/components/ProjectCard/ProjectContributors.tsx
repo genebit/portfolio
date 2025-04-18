@@ -1,4 +1,5 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useTheme } from "@/hooks/useTheme"
 import { Project } from "@/types/Project"
 import { HTMLAttributes } from "react"
 
@@ -7,6 +8,8 @@ interface ProjectContributorsProps extends HTMLAttributes<HTMLElement> {
 }
 
 const ProjectContributors = ({ project }: ProjectContributorsProps) => {
+  const { theme } = useTheme()
+
   return (
     <section>
       <h3 className="text-sm font-bold tracking-widest uppercase font-artegra">Project Contributors</h3>
@@ -17,7 +20,9 @@ const ProjectContributors = ({ project }: ProjectContributorsProps) => {
               <TooltipTrigger>
                 <img
                   className="transition-transform rounded-full dark:ring-2 dark:ring-stone-950 w-7 h-7 hover:scale-125"
-                  src={`https://ui-avatars.com/api/?name=${contributor}&background=FFF&color=0C0A09&bold=true`}
+                  src={`https://ui-avatars.com/api/?name=${contributor}&background=${
+                    theme === "light" ? "0C0A09" : "FFF"
+                  }&color=${theme === "light" ? "FFF" : "0C0A09"}&bold=true`}
                   alt={contributor}
                 />
               </TooltipTrigger>

@@ -34,7 +34,7 @@ const RightSidebarLink = ({ jumpTo, label, icon }: RightSidebarLinkProps) => {
     <a href={`#${jumpTo}`} onClick={(e) => onScrollSpyNavigate(e)}>
       <div
         data-to-scrollspy-id={jumpTo}
-        className="px-5 py-2 font-semibold no-underline uppercase transition-all ps-5 font-artegra"
+        className="px-2 py-2 font-semibold no-underline uppercase transition-all font-artegra"
       >
         <span className="sm:hidden">{icon}</span>
         <small className="hidden tracking-widest sm:inline-block">{label}</small>

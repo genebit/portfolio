@@ -7,11 +7,11 @@ const LoadingPage = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
   return (
     <div className={compCn} {...props}>
       <div className="relative inline-flex">
-        <div className="w-8 h-8 rounded-full bg-rose-500"></div>
-        <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-rose-500 animate-ping"></div>
-        <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-rose-500 animate-pulse"></div>
+        <div className="w-8 h-8 bg-black rounded-full dark:bg-primary"></div>
+        <div className="absolute top-0 left-0 w-8 h-8 bg-black rounded-full dark:bg-primary animate-ping"></div>
+        <div className="absolute top-0 left-0 w-8 h-8 bg-black rounded-full dark:bg-primary animate-pulse"></div>
       </div>
-      <small className="mt-3 font-bold tracking-wide uppercase font-artegra text-slate-400">Loading...</small>
+      <small className="mt-3 tracking-wide uppercase font-artegra text-slate-400">Loading...</small>
     </div>
   )
 }

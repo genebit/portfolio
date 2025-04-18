@@ -28,7 +28,7 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
                 <AccordionTrigger className="font-semibold">
                   <div className="flex items-center gap-3">
                     <Clapperboard size={20} />
-                    View my video resume
+                    Video Resume
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="rounded-md dark:bg-neutral-950">
