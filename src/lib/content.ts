@@ -488,6 +488,35 @@ const miscProjects: Project[] = [
     live_demo_link: "https://github.com/NexusphereCo/ebayan/releases/tag/v1.0.0",
     live_demo_locked: false,
   },
+  {
+    date_from: "Sep 2021",
+    date_to: "Sep 2021",
+    title: "ASCII Lookup Table",
+    subtitle: "Single-Page Application（SPA）",
+    screenshots: [
+      {
+        original: "ascii/ascii-1.png",
+        thumbnail: "ascii/ascii-1.png",
+      },
+      {
+        original: "ascii/ascii-2.png",
+        thumbnail: "ascii/ascii-2.png",
+      },
+    ],
+    screenshot_note: null,
+    tags: ["Nextjs"],
+    description:
+      "A clean lookup table for viewing ASCII characters. A simple project used as a lookup table during my（competitive）programming tasks in AdNU.",
+    description_full: null,
+    video_links: [],
+    proponents: ["Johcel Gene T. Bitara"],
+    contributions: ["Developed the website in static HTML,CSS, and JS then transitioned to Next.js for a revamp."],
+    features: ["Lookup Table", "Clean Design"],
+    source_code_link: "https://github.com/genebit/ascii",
+    source_code_locked: false,
+    live_demo_link: "genebit.github.io/ascii",
+    live_demo_locked: false,
+  },
 ]
 
 const blogPosts: BlogPosts[] = [
