@@ -5,7 +5,7 @@ const figmaEmbedLink: string =
 const githubProfileLink: string = "https://github.com/genebit"
 const mailTo: string = "mailto:genebitara@gmail.com"
 const linkedInProfileLink: string = "https://linkedin.com/in/gene-bitara"
-const resumeLink: string = "/docs/cv/resume.pdf"
+const resumeLink: string = "/docs/cv/resume/latest/resume.pdf"
 const cvLink: string = "/docs/cv/cv.pdf"
 
 const videoResumeYTLink: string = "https://www.youtube.com/embed/Ka6TW4kkGvU?si=asAw1SIvS-yaNQQi"
