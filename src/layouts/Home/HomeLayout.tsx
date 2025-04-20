@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react"
+import { HTMLAttributes, useEffect } from "react"
 
 import { ReactLenis } from "lenis/react"
 import { useTheme } from "@/hooks/useTheme"
@@ -8,6 +8,7 @@ import DotBackground from "@/components/ui/dot-background"
 import ContactSidebarWrapper from "@/layouts/Home/ContactSidebar/ContactSidebarWrapper"
 
 import "@/pages/Home/HomePage.css"
+import { replaceSymbols, scrollToTop } from "@/lib/utils"
 
 const HomeContent = ({ children }: HTMLAttributes<HTMLElement>) => {
   return (
@@ -20,6 +21,13 @@ const HomeContent = ({ children }: HTMLAttributes<HTMLElement>) => {
 
 const HomeLayout = ({ children }: HTMLAttributes<HTMLElement>) => {
   const { theme } = useTheme()
+
+  useEffect(() => {
+    setTimeout(() => {
+      scrollToTop()
+      replaceSymbols()
+    }, 300)
+  }, [])
 
   return (
     <>

@@ -16,11 +16,10 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
         <CardContent className="p-10 pb-5 dark:text-white">
           <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">About Me</h3>
           <p>
-            Hi! I am a Software Engineer passionate about learning software technologies in general; immersed in the
-            world of coding, designing, and software development. <br />
-            <br /> Currently finishing my degree as a 4th Year Bachelors of Science in Information Technology in Ateneo
-            De Naga University. Seeking opportunities, equipped with 5+ years of work experience on various software
-            technology tools to create a beautiful system design.
+            👋 Hi! I'm Johcel Gene T. Bitara — a passionate software engineer from the Philippines with a proven track
+            record of turning complex business requirements into elegant web solutions. I bring over five years of
+            hands-on development experience: three years in collaborative, enterprise-level environments, and two years
+            of dedicated self-learning since 2019.
           </p>
           <section>
             <Accordion type="single" collapsible className="w-full">

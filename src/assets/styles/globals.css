@@ -1,6 +1,7 @@
 @import "./typography/typography.css";
 @import "./scrollbar.css";
 @import "./selection.css";
+@import "./preloader.css";
 
 @tailwind base;
 @tailwind components;

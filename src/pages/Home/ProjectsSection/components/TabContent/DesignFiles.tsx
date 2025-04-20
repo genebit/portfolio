@@ -1,5 +1,7 @@
+import { Alert, AlertDescription } from "@/components/ui/alert"
 import { figmaEmbedLink } from "@/lib/constants"
 import LoadingPage from "@/pages/Loading/LoadingPage"
+import { Lightbulb } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const DesignFiles = () => {
@@ -19,9 +21,17 @@ const DesignFiles = () => {
   }, [])
 
   return (
-    <section className="mt-5 border rounded-md">
+    <section>
+      <p></p>
+      <Alert>
+        <Lightbulb className="w-4 h-4" />
+        <AlertDescription>
+          Contains some of my public figma designs that I've created throughout the years of self-learning and creating
+          mini projects.
+        </AlertDescription>
+      </Alert>
       {isLoading && <LoadingPage className="h-[20rem]" />}
-      <div className="overflow-hidden rounded-md">
+      <div className="mt-5 overflow-hidden border rounded-md">
         <iframe
           id="iframeElement"
           className={`w-full ${isLoading ? "hidden" : ""}`}
