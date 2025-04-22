@@ -15,6 +15,7 @@ import {
   ProjectWrapper,
   TagWrapper,
 } from "../ProjectCard"
+import { FullScreenContext } from "../ProjectCard/context/FullscreenContext"
 
 interface RenderProjectsProps {
   isActive: boolean
@@ -25,6 +26,7 @@ interface RenderProjectsProps {
 const RenderProjects = ({ isActive, type, content }: RenderProjectsProps) => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const RenderProjects = ({ isActive, type, content }: RenderProjectsProps) => {
                         <div className="rounded-md video-wrapper overflow-clip">
                           <iframe
                             width="100%"
-                            height="162"
+                            height={isFullscreen ? "768" : `162`}
                             src={screenshot?.embedUrl ?? undefined}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -76,7 +78,7 @@ const RenderProjects = ({ isActive, type, content }: RenderProjectsProps) => {
     }
 
     fetchProjects()
-  }, [content, isActive, type])
+  }, [content, isActive, isFullscreen, type])
 
   if (isLoading) return <div className="py-8 text-center">Loading projects...</div>
   if (error) return <div className="py-8 text-center text-red-500">{error}</div>
@@ -87,28 +89,38 @@ const RenderProjects = ({ isActive, type, content }: RenderProjectsProps) => {
     return (
       <ol className="relative ps-0 sm:ps-4 border-slate-950 dark:border-primary sm:border-s-2">
         {projects.map((project, index) => (
-          <ProjectCard key={`${type}-${project.title}-${index}`}>
-            <ProjectWrapper id={`${type}-project-${index + 1}`} thumbnails={project.screenshots} data={project}>
-              <ProjectDateSpan>{`${project.date_from} - ${project.date_to}`}</ProjectDateSpan>
-              <header>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectSubtitle>{project.subtitle}</ProjectSubtitle>
-                <TagWrapper>
-                  {project.tags.map((tag, tagIndex) => (
-                    <ProjectTag key={`${tag}-${tagIndex}`}>{tag}</ProjectTag>
-                  ))}
-                </TagWrapper>
-              </header>
-              <ProjectDescription>{project.description}</ProjectDescription>
-              <ProjectContributors project={project} />
-              <ProjectFooterButtons
-                srcCodeUrl={project.source_code_link!}
-                demoUrl={project.live_demo_link!}
-                disableSrcCodeBtn={project.source_code_locked}
-                disableDemoBtn={project.live_demo_locked}
-              />
-            </ProjectWrapper>
-          </ProjectCard>
+          <FullScreenContext.Provider
+            key={`c-${type}-${project.title}-${index}`}
+            value={{
+              isFullscreen: isFullscreen,
+              setIsFullscreen: (fullscreen: boolean) => {
+                setIsFullscreen(fullscreen)
+              },
+            }}
+          >
+            <ProjectCard key={`${type}-${project.title}-${index}`}>
+              <ProjectWrapper id={`${type}-project-${index + 1}`} thumbnails={project.screenshots} data={project}>
+                <ProjectDateSpan>{`${project.date_from} - ${project.date_to}`}</ProjectDateSpan>
+                <header>
+                  <ProjectTitle>{project.title}</ProjectTitle>
+                  <ProjectSubtitle>{project.subtitle}</ProjectSubtitle>
+                  <TagWrapper>
+                    {project.tags.map((tag, tagIndex) => (
+                      <ProjectTag key={`${tag}-${tagIndex}`}>{tag}</ProjectTag>
+                    ))}
+                  </TagWrapper>
+                </header>
+                <ProjectDescription>{project.description}</ProjectDescription>
+                <ProjectContributors project={project} />
+                <ProjectFooterButtons
+                  srcCodeUrl={project.source_code_link!}
+                  demoUrl={project.live_demo_link!}
+                  disableSrcCodeBtn={project.source_code_locked}
+                  disableDemoBtn={project.live_demo_locked}
+                />
+              </ProjectWrapper>
+            </ProjectCard>
+          </FullScreenContext.Provider>
         ))}
       </ol>
     )

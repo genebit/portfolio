@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Screenshot } from "@/types/Screenshot"
+import { useFullscreen } from "./context/FullscreenContext"
 
 interface ProjectGalleryProps extends HTMLAttributes<HTMLElement> {
   thumbnails: Screenshot[]
@@ -152,7 +153,7 @@ const BulletIndicator = ({ totalItems, currentIndex, className, ...props }: Bull
 
 const ProjectGallery = ({ thumbnails }: ProjectGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  const { isFullscreen, setIsFullscreen } = useFullscreen()
   const [totalItems, setTotalItems] = useState(0)
   const galleryRef = useRef<ImageGallery>(null)
 
