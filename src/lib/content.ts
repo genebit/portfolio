@@ -8,7 +8,7 @@ const highlightedProjects: Project[] = [
     date_from: "February 2025",
     date_to: "Present",
     title: "Ateneo de Naga University – Project HRIS and ADNUONE（Phase 2）",
-    subtitle: "Contract • Lead Backend Developer",
+    subtitle: "Contract • Application & Backend Developer",
     screenshots: [
       {
         original: "adnuone/adnuone-1.png",
@@ -27,7 +27,9 @@ const highlightedProjects: Project[] = [
     video_links: [],
     proponents: ["Johcel Gene Bitara", "Miguel Damien Garcera", "Jiankarlo Belarmino", "Mark Niño Joseph Alden"],
     contributions: [
-      "Technical lead for HRIS and ADNUONE: a new web portal for Ateneo de Naga University employees to manage personal records, assignments, and file requests to heads.",
+      "Designed the conceptual database schema in Oracle using ERD capable of handling different edge cases within the complexity of the business process in the University.",
+      "Wrote secure RESTful endpoints for the frontend team and provided documentation using the OpenAPI (Swagger) Documentation Generator— Scramble de:doc.",
+      "Assisted as the project manager for the development team, implementing clean Laravel architecture and building core ERP components—specifically the HRIS and ADNUONE employee portal system.",
     ],
     features: [
       "Employee Management",
@@ -51,7 +53,7 @@ const highlightedProjects: Project[] = [
     date_from: "June 2024",
     date_to: "Present",
     title: "Ateneo de Naga University – Project HRIS（Phase 1）",
-    subtitle: "Contract • Lead Full-Stack Web Developer",
+    subtitle: "Contract • Application Developer",
     screenshots: [
       {
         original: "hris/hris-1.png",
@@ -90,12 +92,9 @@ const highlightedProjects: Project[] = [
     video_links: [],
     proponents: ["Johcel Gene Bitara", "Miguel Damien Garcera"],
     contributions: [
-      "Technical lead for HRIS: a new web portal for Ateneo de Naga University’s HRMO. Handled confidential access to HR records from the University’s database with careful measures in place.",
-      "Developed key modules of the application ranging from reports, management, design, data processing/analysis, and hardware configuration resulting in a drastic improvement to the HR’s workflow in terms of eliminating the manual processes.",
-      "Optimized data rendering and fetching of employee records on thousands of records by usage of optimized PL/SQL queries, views, procedures, indexing, functions, server-side implementations, batch processing and client-side rendering.",
-      "Crafted and applied a data migration plan to perform a large-scale migration of up to 3M+ records from MySQL and Postgres to Oracle, resulting in unified data records of HRMO in the main database repository of the University.",
-      "Wrote clear technical and project documentation, i.e., ERD, user manual, gantt chart, swimlane, data dictionary, and code documentation.",
-      "Conducted a comprehensive testing phase, prototyping, and feedback to HRMO, and facilitated onboarding for HR officers to ensure smooth adoption and operational efficiency. Presented the data migration results to HRMO for future decision-making.",
+      "Designed the conceptual database schema in Oracle using ERD and optimized data rendering of thousands of records by PL/SQL queries, views, procedures, indexing, functions, SSR and CSR.",
+      "Crafted and applied a data migration plan to perform a large-scale migration of up to 3,000,000+ records from MySQL and Postgres to Oracle with a 99.82% success rate, resulting in unified data records.",
+      "Enforced clean architecture to the project with advanced OOP concepts. Wrote clear technical and project documentation, i.e., ERD, user manual, Gantt chart, swimlane, data dictionary, and code documentation.",
     ],
     features: [
       "Employee Management",
@@ -182,7 +181,7 @@ const highlightedProjects: Project[] = [
     date_from: "Sep 2022",
     date_to: "Oct 2023",
     title: "Department of Agriculture – Project DAAMIA",
-    subtitle: "Subcontract • Lead Full-Stack Web Developer",
+    subtitle: "Subcontract • Full-Stack Web Developer",
     screenshots: [
       {
         original: "daamia/daamia-1.png",
