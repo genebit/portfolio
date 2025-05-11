@@ -117,7 +117,7 @@ const highlightedProjects: Project[] = [
     date_from: "Jan 2024",
     date_to: "Mar 2024",
     title: "Ateneo de Naga University – Project RETSU",
-    subtitle: "Contract • Lead Full-Stack Web Developer",
+    subtitle: "Contract • Lead Application Developer",
     screenshots: [
       {
         original: "retsu/retsu-1.png",
