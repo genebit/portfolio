@@ -17,9 +17,9 @@ const AboutSection = ({ className, ...props }: HTMLAttributes<HTMLElement>) => {
           <h3 className="mb-3 font-bold tracking-widest uppercase font-artegra">About Me</h3>
           <p>
             👋 Hi! I'm Johcel Gene T. Bitara — a passionate software engineer from the Philippines with a proven track
-            record of turning complex business requirements into elegant web solutions. I bring over five years of
-            hands-on development experience: three years in collaborative, enterprise-level environments, and two years
-            of dedicated self-learning since 2019.
+            record of turning complex business requirements into elegant web solutions. I bring over years of hands-on
+            development experience: three years in collaborative, enterprise-level work environments, and two years of
+            dedicated self-learning since 2019.
           </p>
           <section>
             <Accordion type="single" collapsible className="w-full">
